@@ -9,11 +9,6 @@ public class Fruta : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Fruta"))
         {
-            
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Fruta"))
-        { 
             Destroy(collision.gameObject);
         }
     } 
