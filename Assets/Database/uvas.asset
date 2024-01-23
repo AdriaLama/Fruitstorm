@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c72fe69e818ce4aa54a2367bcd55d2, type: 3}
+  m_Name: uvas
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 0bdb1b30e410d86408e821e6cf540e0c, type: 3}
+  velocidad: 2.5
+  gold: 15
