@@ -10,3 +10,5 @@ public class ConfiguracionFruta : ScriptableObject
     public float velocidad;
     public float gold;
 }
+
+
