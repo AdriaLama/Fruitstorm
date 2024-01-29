@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: 21300000, guid: 6e5ddbd0143302946ac6ca25d8a4b952, type: 3}
-  velocidad: 0
+  velocidad: 4
   gold: 7.5
