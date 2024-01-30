@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class oll : MonoBehaviour
 {
+    public UI puntuacion;
     public List<ConfiguracionFruta> configuracionFrutas;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +16,7 @@ public class oll : MonoBehaviour
             collision.gameObject.transform.position = new Vector2 (collision.gameObject.transform.position.x, -2.8f);
             Destroy(collision.gameObject, 2);
 
+            puntuacion.life++;
         }
     }
 }
