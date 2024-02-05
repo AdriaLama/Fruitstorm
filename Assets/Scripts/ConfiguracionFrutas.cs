@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ConfiguracionFruta", menuName = "Configuraciones/ConfiguracionFruta")]
 public class ConfiguracionFruta : ScriptableObject
 {
-    public Sprite[] sprites;
+    public Sprite sprite;
     public float velocidad;
     public float gold;
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class oll : MonoBehaviour
+public class CollisionFruit : MonoBehaviour
 {
     public UI puntuacion;
     public List<ConfiguracionFruta> configuracionFrutas;

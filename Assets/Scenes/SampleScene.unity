@@ -770,7 +770,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.192731
+  orthographic size: 5.6435175
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -794,7 +794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -982,7 +982,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntuacion: {fileID: 226721231}
-  configuracionFrutas: []
+  configuracionFrutas:
+  - {fileID: 11400000, guid: ef63bbbf26862cb4dae3353406d08359, type: 2}
+  - {fileID: 11400000, guid: 4a8bb7e4a91b9674d9f1eacb67419778, type: 2}
+  - {fileID: 11400000, guid: 49fd8d1bf35eb8b4cbc46a634e7a7548, type: 2}
+  - {fileID: 11400000, guid: 862736f76cc49a842bbebf38489d2ba9, type: 2}
+  - {fileID: 11400000, guid: a579029666f8a064d88514472bdb5e51, type: 2}
+  - {fileID: 11400000, guid: ab9530a974b128040bdc311e2afb9963, type: 2}
+  - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
+  - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
 --- !u!1 &1203716511
 GameObject:
   m_ObjectHideFlags: 0

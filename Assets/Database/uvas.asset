@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c72fe69e818ce4aa54a2367bcd55d2, type: 3}
   m_Name: uvas
   m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: 0bdb1b30e410d86408e821e6cf540e0c, type: 3}
+  sprite: {fileID: 21300000, guid: 0bdb1b30e410d86408e821e6cf540e0c, type: 3}
   velocidad: 7.5
   gold: 15
