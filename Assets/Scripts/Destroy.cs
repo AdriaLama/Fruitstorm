@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DestroyFruit : MonoBehaviour
+public class Destroy : MonoBehaviour
 {
     public UI puntuacion;
     private ConfiguracionFruta configuracionActual;
@@ -26,6 +26,14 @@ public class DestroyFruit : MonoBehaviour
             }
 
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Bomba"))
+        {
+            Destroy(collision.gameObject);
+
+            puntuacion.life += 3;
+
+
         }
     }
     private int GetConfiguracionFruta(GameObject fruta)

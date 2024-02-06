@@ -5,9 +5,10 @@ using UnityEngine;
 public class SpawnBombas : MonoBehaviour
 {
     public GameObject Bomba;
-    private GameObject[] spawnedBombas;
+    private GameObject spawnedBombas;
     public float currTime = 0;
-    public float spawnTime = 1.0f;
+    public float spawnTime = 2f;
+    
     void Start()
     {
 
@@ -27,7 +28,8 @@ public class SpawnBombas : MonoBehaviour
     public void SpawnBomba()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
-        int n = Random.Range(0,spawnedBombas.Length);
-        Instantiate(spawnedBombas[n], spawnPosition, spawnedBombas[n].transform.rotation);
+        spawnedBombas = Instantiate(Bomba, spawnPosition, Quaternion.identity);
+
+  
     }
 }
