@@ -7,7 +7,7 @@ public class SpawnBombas : MonoBehaviour
     public GameObject Bomba;
     private GameObject spawnedBombas;
     public float currTime = 0;
-    public float spawnTime = 2f;
+    public float spawnTime = 1f;
     
     void Start()
     {

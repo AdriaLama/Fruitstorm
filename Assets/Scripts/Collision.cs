@@ -20,8 +20,7 @@ public class CollisionFruit : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bomba"))
         {
-            Rigidbody2D rb2 = collision.gameObject.GetComponent<Rigidbody2D>();
-            rb2.velocity = new Vector2(0, 0);
+            Destroy(collision.gameObject);
         }
     }
 }
