@@ -31,7 +31,7 @@ public class Destroy : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            puntuacion.life += 3;
+            puntuacion.life -= 1;
 
 
         }

@@ -15,8 +15,6 @@ public class CollisionFruit : MonoBehaviour
 
             collision.gameObject.transform.position = new Vector2 (collision.gameObject.transform.position.x, -2.8f);
             Destroy(collision.gameObject, 2);
-
-            puntuacion.life++;
         }
         if (collision.gameObject.CompareTag("Bomba"))
         {
