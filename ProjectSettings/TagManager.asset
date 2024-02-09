@@ -8,6 +8,8 @@ TagManager:
   - Fruta
   - Suelo
   - Bomba
+  - PowerUpInvertir
+  - PowerUpTinta
   layers:
   - Default
   - TransparentFX

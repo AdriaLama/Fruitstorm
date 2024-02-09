@@ -6,13 +6,23 @@ public class MovimientoPersonaje : MonoBehaviour
 {
  
     public float speed;
+    public float horizontal;
 
     Vector2 vector;
+    public bool invertirControles = false;
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        horizontal = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
+
+    }
+
+    public void Invertido()
+    {
+
+        horizontal = -horizontal;
+
 
     }
 }

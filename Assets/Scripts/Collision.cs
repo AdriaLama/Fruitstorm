@@ -20,5 +20,13 @@ public class CollisionFruit : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("PowerUpInvertir"))
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("PowerUpTinta"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
