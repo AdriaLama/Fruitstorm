@@ -18,7 +18,5 @@ public class LimitesMapa : MonoBehaviour
             transform.position = new Vector3(limiteXnegativo, transform.position.y, 0);
         }
     }
-
-
 }
 

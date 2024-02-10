@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpInvertir : MonoBehaviour
+public class PowerUpArma : MonoBehaviour
 {
     public GameObject Invertir;
-    private GameObject spawnedInvertir;
+    private GameObject spawnedArma;
     public float currTime;
     public float spawnTime;
 
@@ -16,13 +16,13 @@ public class PowerUpInvertir : MonoBehaviour
         if (currTime > spawnTime)
         {
             currTime = 0;
-            SpawnInvertir();
+            SpawnArma();
         }
     }
 
-    public void SpawnInvertir()
+    public void SpawnArma()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
-        spawnedInvertir = Instantiate(Invertir, spawnPosition, Quaternion.identity);
+        spawnedArma = Instantiate(Invertir, spawnPosition, Quaternion.identity);
     }
 }

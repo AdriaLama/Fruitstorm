@@ -9,6 +9,7 @@ public class Destroy : MonoBehaviour
     private ConfiguracionFruta configuracionActual;
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject ManchaDeTinta;
+    public MovimientoPersonaje movInvertido;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,10 +41,15 @@ public class Destroy : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUpTinta"))
         {
             Destroy(collision.gameObject);
-
             ManchaDeTinta.SetActive(true);
-
             StartCoroutine(DesactivarSprite(4f));
+        }
+
+        if (collision.gameObject.CompareTag("PowerUpInvertir"))
+        {
+            Destroy(collision.gameObject);
+            movInvertido.Invertido();
+            StartCoroutine(DesactivarInvertir(4f));
         }
     }
     public IEnumerator DesactivarSprite(float seconds)
@@ -51,6 +57,12 @@ public class Destroy : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         ManchaDeTinta.SetActive(false);
+    }
+    public IEnumerator DesactivarInvertir(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        movInvertido.Invertido();
     }
     private int GetConfiguracionFruta(GameObject fruta)
     {
