@@ -9,10 +9,6 @@ public class PowerUpInvertir : MonoBehaviour
     public float currTime;
     public float spawnTime;
     public MovimientoPersonaje movInvertido;
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -29,8 +25,6 @@ public class PowerUpInvertir : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
         spawnedInvertir = Instantiate(Invertir, spawnPosition, Quaternion.identity);
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,10 +33,6 @@ public class PowerUpInvertir : MonoBehaviour
         {
             Destroy(gameObject);
             movInvertido.Invertido();
-            
-            
-
-
         }
     }
 }

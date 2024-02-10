@@ -8,12 +8,6 @@ public class SpawnFrutas : MonoBehaviour
     private GameObject spawnedRaindrop;
     public float currTime = 0;
     public float spawnTime = 0.05f;
-
-    void Start()
-    {
-       
-    }
-
     void Update()
     {
         currTime += Time.deltaTime;

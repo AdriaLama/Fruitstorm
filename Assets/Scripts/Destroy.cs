@@ -8,6 +8,7 @@ public class Destroy : MonoBehaviour
     public UI puntuacion;
     private ConfiguracionFruta configuracionActual;
     public List<ConfiguracionFruta> configuracionFrutas;
+    public GameObject ManchaDeTinta;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,6 +36,21 @@ public class Destroy : MonoBehaviour
 
 
         }
+
+        if (collision.gameObject.CompareTag("PowerUpTinta"))
+        {
+            Destroy(collision.gameObject);
+
+            ManchaDeTinta.SetActive(true);
+
+            StartCoroutine(DesactivarSprite(4f));
+        }
+    }
+    public IEnumerator DesactivarSprite(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        ManchaDeTinta.SetActive(false);
     }
     private int GetConfiguracionFruta(GameObject fruta)
     {

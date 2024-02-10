@@ -11,7 +11,7 @@ public class UI : MonoBehaviour
     public int life;
     public TMP_Text lifes;
     public TMP_Text timer;
-    private float startingTime = 180f;
+    private float startingTime = 120f;
     float currentTime = 0f;
     bool timerIsActive = true;
     public GameObject gameOver;
