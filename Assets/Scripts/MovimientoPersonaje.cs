@@ -7,7 +7,7 @@ public class MovimientoPersonaje : MonoBehaviour
  
     public float speed;
     private bool invertido = false;
-
+   
     void Update()
     {
         float horizontal;
@@ -20,6 +20,8 @@ public class MovimientoPersonaje : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal");
         }
         transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
+
+     
     }
 
     public void Invertido()

@@ -10,6 +10,8 @@ TagManager:
   - Bomba
   - PowerUpInvertir
   - PowerUpTinta
+  - PowerUpArma
+  - Alien
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,8 @@ public class Destroy : MonoBehaviour
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject ManchaDeTinta;
     public MovimientoPersonaje movInvertido;
+    public GameObject Rifle;
+    public GameObject Alien;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,6 +52,13 @@ public class Destroy : MonoBehaviour
             Destroy(collision.gameObject);
             movInvertido.Invertido();
             StartCoroutine(DesactivarInvertir(4f));
+        }
+
+        if (collision.gameObject.CompareTag("PowerUpArma"))
+        {
+            Rifle.SetActive(true);
+            Destroy(collision.gameObject);
+            Alien.SetActive(true);
         }
     }
     public IEnumerator DesactivarSprite(float seconds)

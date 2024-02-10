@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUpArma : MonoBehaviour
 {
-    public GameObject Invertir;
+    public GameObject Arma;
     private GameObject spawnedArma;
     public float currTime;
     public float spawnTime;
@@ -18,11 +18,17 @@ public class PowerUpArma : MonoBehaviour
             currTime = 0;
             SpawnArma();
         }
+
+       
     }
 
     public void SpawnArma()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
-        spawnedArma = Instantiate(Invertir, spawnPosition, Quaternion.identity);
+        spawnedArma = Instantiate(Arma, spawnPosition, Quaternion.identity);
+
+        
     }
+
+
 }

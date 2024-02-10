@@ -8,6 +8,8 @@ public class Alien : MonoBehaviour
     public float LimiteAlienPos;
     public float LimiteAlienNeg;
     private bool movingRight = true;
+    public float alienLifes;
+
 
     void Update()
     {
@@ -32,4 +34,6 @@ public class Alien : MonoBehaviour
 
         transform.position = posicion;
     }
+
+
 }
