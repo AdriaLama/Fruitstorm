@@ -17,12 +17,14 @@ public class UI : MonoBehaviour
     public GameObject gameOver;
     public GameObject victory;
     public GameObject areUReady;
+    public GameObject Rifle;
 
 
     private void Start()
     {
         gameOver.SetActive(false);
         victory.SetActive(false);
+        areUReady.SetActive(false);
         currentTime = startingTime;
     }
 
@@ -60,6 +62,10 @@ public class UI : MonoBehaviour
             gameOver.SetActive(true);
             Time.timeScale = 0;
         }
+
+        if (areUReady.activeSelf) {
+            StartCoroutine(QuitarMensaje(3f));
+        }
     }
     void DisplayTime(float timeToDisplay)
     {
@@ -67,5 +73,14 @@ public class UI : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public IEnumerator QuitarMensaje(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        areUReady.SetActive(false);
+        SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
+        frenesi.spawnTime = 0.15f;
+        Rifle.SetActive(false);
     }
 }

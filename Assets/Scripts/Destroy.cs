@@ -13,7 +13,6 @@ public class Destroy : MonoBehaviour
     public GameObject Rifle;
     public GameObject Alien;
     public GameObject Aspiradora;
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

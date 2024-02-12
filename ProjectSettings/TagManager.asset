@@ -13,6 +13,7 @@ TagManager:
   - PowerUpArma
   - Alien
   - PowerUpAspiradora
+  - PowerUpMultiplicador
   layers:
   - Default
   - TransparentFX

@@ -6,44 +6,42 @@ public class Bala : MonoBehaviour
 {
     Rigidbody2D rb;
     public float bullet_speed;
+
   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(transform.right * bullet_speed);
     }
-
-    // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
         if (collision.gameObject.tag == "Alien")
         {
-            Alien alienLifes = FindObjectOfType<Alien>();
-            alienLifes.alienLifes--;
+            Alien alien = FindObjectOfType<Alien>();
+            alien.alienLifes--;
             
-            if (alienLifes.alienLifes <= 0) {
+            if (alien.alienLifes <= 0) {
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
                 UI uReady = FindObjectOfType<UI>();
                 uReady.areUReady.SetActive(true);
-                StartCoroutine(ActivarFrenesi(3f));
             }
-            else if (alienLifes.alienLifes > 0)
+            else if (alien.alienLifes > 0)
             {
                 Destroy(gameObject);
             }
             
         }
-       
-    }
-
-    public IEnumerator ActivarFrenesi(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        UI uReady = FindObjectOfType<UI>();
-        uReady.areUReady.SetActive(false);
-        SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
-        frenesi.spawnTime = 0.2f;
+        if (collision.gameObject.tag == "Fruta")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Bomba")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
