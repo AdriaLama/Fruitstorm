@@ -15,11 +15,14 @@ public class UI : MonoBehaviour
     float currentTime = 0f;
     bool timerIsActive = true;
     public GameObject gameOver;
-    
+    public GameObject victory;
+    public GameObject areUReady;
+
 
     private void Start()
     {
         gameOver.SetActive(false);
+        victory.SetActive(false);
         currentTime = startingTime;
     }
 
@@ -32,7 +35,7 @@ public class UI : MonoBehaviour
         if (punt >= 1000)
         {
             punt = 1000;
-            gameOver.SetActive(true);
+            victory.SetActive(true);
             Time.timeScale = 0;
         }
 

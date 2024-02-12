@@ -12,9 +12,12 @@ public class Destroy : MonoBehaviour
     public MovimientoPersonaje movInvertido;
     public GameObject Rifle;
     public GameObject Alien;
+    public GameObject Aspiradora;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("Fruta"))
         {
             int configuraciones = GetConfiguracionFruta(collision.gameObject);
@@ -60,6 +63,14 @@ public class Destroy : MonoBehaviour
             Destroy(collision.gameObject);
             Alien.SetActive(true);
         }
+        if (collision.gameObject.CompareTag("PowerUpAspiradora"))
+        {
+            Aspiradora.SetActive(true);
+            Aspiradora aspirar = FindObjectOfType<Aspiradora>();
+            aspirar.Aspirar();
+            Destroy(collision.gameObject);
+            StartCoroutine(ActivarAspiradora(8f));
+        }
     }
     public IEnumerator DesactivarSprite(float seconds)
     {
@@ -72,6 +83,13 @@ public class Destroy : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         movInvertido.Invertido();
+    }
+    public IEnumerator ActivarAspiradora(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Aspiradora aspirar = FindObjectOfType<Aspiradora>();
+        aspirar.Aspirar();
+        Aspiradora.SetActive(false);
     }
     private int GetConfiguracionFruta(GameObject fruta)
     {

@@ -23,16 +23,27 @@ public class Bala : MonoBehaviour
             alienLifes.alienLifes--;
             
             if (alienLifes.alienLifes <= 0) {
-                 Destroy(collision.gameObject);
-                 Destroy(gameObject);
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
+                UI uReady = FindObjectOfType<UI>();
+                uReady.areUReady.SetActive(true);
+                StartCoroutine(ActivarFrenesi(3f));
             }
             else if (alienLifes.alienLifes > 0)
             {
                 Destroy(gameObject);
-               
             }
             
         }
        
+    }
+
+    public IEnumerator ActivarFrenesi(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        UI uReady = FindObjectOfType<UI>();
+        uReady.areUReady.SetActive(false);
+        SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
+        frenesi.spawnTime = 0.2f;
     }
 }
