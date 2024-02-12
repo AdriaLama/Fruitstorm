@@ -36,5 +36,13 @@ public class CollisionFruit : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("PowerUpMultiplicador"))
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("PowerUpChrono"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

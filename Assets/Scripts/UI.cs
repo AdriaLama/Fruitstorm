@@ -34,9 +34,9 @@ public class UI : MonoBehaviour
     {
         puntuacion.text = punt.ToString();
         lifes.text = life.ToString();
-        if (punt >= 1000)
+        if (punt >= 2000)
         {
-            punt = 1000;
+            punt = 2000;
             victory.SetActive(true);
             Time.timeScale = 0;
         }

@@ -13,17 +13,19 @@ public class Destroy : MonoBehaviour
     public GameObject Rifle;
     public GameObject Alien;
     public GameObject Aspiradora;
-
+    public GameObject Invertido;
+    public GameObject Multiplicador;
+    public GameObject Chrono;
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.CompareTag("Fruta"))
         {
-            int configuraciones = GetConfiguracionFruta(collision.gameObject);
+            int configuracionGold = GetConfiguracionFruta(collision.gameObject);
 
-            if (configuraciones >= 0 && configuraciones < configuracionFrutas.Count)
+            if (configuracionGold >= 0 && configuracionGold < configuracionFrutas.Count)
             {
-                configuracionActual = configuracionFrutas[configuraciones];
+                configuracionActual = configuracionFrutas[configuracionGold];
                 puntuacion.punt += (int)configuracionActual.gold;
             }
             else
@@ -53,7 +55,9 @@ public class Destroy : MonoBehaviour
         {
             Destroy(collision.gameObject);
             movInvertido.Invertido();
+            Invertido.SetActive(true);
             StartCoroutine(DesactivarInvertir(4f));
+            StartCoroutine(QuitarEvento(2f));
         }
 
         if (collision.gameObject.CompareTag("PowerUpArma"))
@@ -69,6 +73,28 @@ public class Destroy : MonoBehaviour
             aspirar.Aspirar();
             Destroy(collision.gameObject);
             StartCoroutine(ActivarAspiradora(8f));
+        }
+        if (collision.gameObject.CompareTag("PowerUpMultiplicador"))
+        {
+            Destroy(collision.gameObject);
+            Multiplicador.SetActive(true);
+            StartCoroutine(QuitarEvento(2f));
+            foreach (ConfiguracionFruta configuracionx2 in configuracionFrutas)
+            {
+                configuracionx2.gold *= 2;           
+            }
+            StartCoroutine(DesactivarMultiplicador(5f));
+        }
+        if (collision.gameObject.CompareTag("PowerUpChrono"))
+        {
+            Destroy(collision.gameObject);
+            Chrono.SetActive(true);
+            StartCoroutine(QuitarEvento(2f));
+            foreach (ConfiguracionFruta configuracionSlow in configuracionFrutas)
+            {
+                configuracionSlow.velocidad /= 2;
+            }
+            StartCoroutine(DesactivarSlow(5f));
         }
     }
     public IEnumerator DesactivarSprite(float seconds)
@@ -89,6 +115,32 @@ public class Destroy : MonoBehaviour
         Aspiradora aspirar = FindObjectOfType<Aspiradora>();
         aspirar.Aspirar();
         Aspiradora.SetActive(false);
+    }
+    public IEnumerator DesactivarMultiplicador(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        foreach (ConfiguracionFruta configuracionx2 in configuracionFrutas)
+        {
+            configuracionx2.gold /= 2;
+        }
+    }
+    public IEnumerator DesactivarSlow(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        foreach (ConfiguracionFruta configuracionx2 in configuracionFrutas)
+        {
+            configuracionx2.velocidad *= 2;
+        }
+    }
+    public IEnumerator QuitarEvento(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        
+        Invertido.SetActive(false);
+        Multiplicador.SetActive(false);
+        Chrono.SetActive(false);
     }
     private int GetConfiguracionFruta(GameObject fruta)
     {
