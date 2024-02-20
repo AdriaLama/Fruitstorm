@@ -16,6 +16,7 @@ public class Destroy : MonoBehaviour
     public GameObject Invertido;
     public GameObject Multiplicador;
     public GameObject Chrono;
+    public GameObject Barrera;
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -96,6 +97,15 @@ public class Destroy : MonoBehaviour
             }
             StartCoroutine(DesactivarSlow(5f));
         }
+        if (collision.gameObject.CompareTag("PowerUpBarrera"))
+        {
+            Destroy(collision.gameObject);
+            Barrera.SetActive(true);
+            StartCoroutine(PonerBarrera(3f));
+            StartCoroutine(QuitarEvento(6f));
+
+        }
+
     }
     public IEnumerator DesactivarSprite(float seconds)
     {
@@ -141,6 +151,7 @@ public class Destroy : MonoBehaviour
         Invertido.SetActive(false);
         Multiplicador.SetActive(false);
         Chrono.SetActive(false);
+        Barrera.SetActive(false);
     }
     private int GetConfiguracionFruta(GameObject fruta)
     {
@@ -150,5 +161,9 @@ public class Destroy : MonoBehaviour
             return fruit.id;
         }
         return -1;
+    }
+    private IEnumerator PonerBarrera(float seconds)
+    {
+
     }
 }
