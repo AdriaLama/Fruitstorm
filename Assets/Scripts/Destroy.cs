@@ -162,8 +162,10 @@ public class Destroy : MonoBehaviour
         }
         return -1;
     }
-    private IEnumerator PonerBarrera(float seconds)
+    public IEnumerator PonerBarrera(float seconds)
     {
-
+        yield return new WaitForSeconds(seconds);
+        Barrera barrera = FindObjectOfType<Barrera>();
+        Barrera.SetActive(false);
     }
 }
