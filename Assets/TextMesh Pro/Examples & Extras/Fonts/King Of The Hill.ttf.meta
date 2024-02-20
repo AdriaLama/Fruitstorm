@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e239b447ff5b3784996899e2fe3c5a17
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - King Of The Hill
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 416795d26b3199548a7832c58b6a74a4, type: 3}
+  - {fileID: 12800000, guid: 85c5f1177e14dee49a5ccc31eb489cbe, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

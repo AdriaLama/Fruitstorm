@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 85c5f1177e14dee49a5ccc31eb489cbe
+guid: 8710b62a941aaf649b8f3680033acdb5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,9 +9,8 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - King Of The Hill
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 416795d26b3199548a7832c58b6a74a4, type: 3}
+  - King Of The Hill 2
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
