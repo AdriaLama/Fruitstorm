@@ -16,6 +16,7 @@ TagManager:
   - PowerUpMultiplicador
   - PowerUpChrono
   - PowerUpBarrera
+  - Barrera
   layers:
   - Default
   - TransparentFX

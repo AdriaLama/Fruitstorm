@@ -39,7 +39,6 @@ public class Destroy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bomba"))
         {
-
             if (!Barrera.activeSelf)
             {
                 Destroy(collision.gameObject);

@@ -29,7 +29,5 @@ public class SpawnBombas : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
         spawnedBombas = Instantiate(Bomba, spawnPosition, Quaternion.identity);
-
-  
     }
 }
