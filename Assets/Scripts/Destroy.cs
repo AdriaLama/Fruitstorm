@@ -17,6 +17,7 @@ public class Destroy : MonoBehaviour
     public GameObject Multiplicador;
     public GameObject Chrono;
     public GameObject Barrera;
+    public GameObject EscudoBarrera;
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -38,18 +39,24 @@ public class Destroy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bomba"))
         {
-            Destroy(collision.gameObject);
 
-            puntuacion.life -= 1;
+            if (!Barrera.activeSelf)
+            {
+                Destroy(collision.gameObject);
 
-
+                puntuacion.life -= 1;
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
         }
 
         if (collision.gameObject.CompareTag("PowerUpTinta"))
         {
             Destroy(collision.gameObject);
             ManchaDeTinta.SetActive(true);
-            StartCoroutine(DesactivarSprite(4f));
+            StartCoroutine(QuitarEvento(4f));
         }
 
         if (collision.gameObject.CompareTag("PowerUpInvertir"))
@@ -101,17 +108,12 @@ public class Destroy : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Barrera.SetActive(true);
-            StartCoroutine(PonerBarrera(3f));
+            EscudoBarrera.SetActive(true);
+            StartCoroutine(QuitarBarrera(3f));
             StartCoroutine(QuitarEvento(6f));
 
         }
 
-    }
-    public IEnumerator DesactivarSprite(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-
-        ManchaDeTinta.SetActive(false);
     }
     public IEnumerator DesactivarInvertir(float seconds)
     {
@@ -147,11 +149,12 @@ public class Destroy : MonoBehaviour
     public IEnumerator QuitarEvento(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        
+
+        ManchaDeTinta.SetActive(false);
         Invertido.SetActive(false);
         Multiplicador.SetActive(false);
         Chrono.SetActive(false);
-        Barrera.SetActive(false);
+        EscudoBarrera.SetActive(false);
     }
     private int GetConfiguracionFruta(GameObject fruta)
     {
@@ -162,10 +165,10 @@ public class Destroy : MonoBehaviour
         }
         return -1;
     }
-    public IEnumerator PonerBarrera(float seconds)
+    public IEnumerator QuitarBarrera(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        Barrera barrera = FindObjectOfType<Barrera>();
+        
         Barrera.SetActive(false);
     }
 }

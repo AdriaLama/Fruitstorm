@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUpBarrera : MonoBehaviour
 {
-    public GameObject Barrera;
+    public GameObject GameObject;
     private GameObject spawnedBarrera;
     public float currTime;
     public float spawnTime;
@@ -22,7 +22,7 @@ public class PowerUpBarrera : MonoBehaviour
     public void SpawnBarrera()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
-        spawnedBarrera = Instantiate(Barrera, spawnPosition, Quaternion.identity);
+        spawnedBarrera = Instantiate(GameObject, spawnPosition, Quaternion.identity);
     }
 }
 
