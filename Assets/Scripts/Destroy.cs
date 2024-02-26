@@ -108,8 +108,8 @@ public class Destroy : MonoBehaviour
             Destroy(collision.gameObject);
             Barrera.SetActive(true);
             EscudoBarrera.SetActive(true);
-            StartCoroutine(QuitarBarrera(3f));
-            StartCoroutine(QuitarEvento(6f));
+            StartCoroutine(QuitarBarrera(5f));
+            StartCoroutine(QuitarEvento(2f));
 
         }
 
