@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameObject: {fileID: 859723008}
   currTime: 0
-  spawnTime: 5
+  spawnTime: 24.6
 --- !u!61 &859723011
 BoxCollider2D:
   m_ObjectHideFlags: 0
