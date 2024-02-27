@@ -15,17 +15,16 @@ public class PauseMenu : MonoBehaviour
             isPaused = !isPaused;
             if (isPaused)
             {
-                Debug.Log("Pausing game");
-
+                Pause();
             }
             else
             {
-                Debug.Log("Resuming game");
+                Resume();
             }
         }
     }
 
-    void Pause()
+    public void Pause()
     {
         isPaused = true;
         Time.timeScale = 0f;
@@ -39,5 +38,21 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
     }
 
-    
+    public void Restart()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+        pauseMenuUI.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Options()
+    {
+        SceneManager.LoadScene("Opciones");
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
 }
