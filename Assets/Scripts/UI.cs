@@ -18,6 +18,7 @@ public class UI : MonoBehaviour
     public GameObject victory;
     public GameObject areUReady;
     public GameObject Rifle;
+    public GameObject Pausa;
 
 
     private void Start()
