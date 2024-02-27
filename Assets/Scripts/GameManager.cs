@@ -37,4 +37,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Juego");
     }
 
+    public void CargarOpciones()
+    {
+        SceneManager.LoadScene("Opciones");
+    }
+    public void VolverMenu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
 }
