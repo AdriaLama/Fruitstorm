@@ -6,44 +6,76 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public GameObject pauseMenuUI;
+    public GameObject optionsMenuUI;
+    public bool isPaused = false;
 
-    private void Awake()
-    {
-        if (Instance == null) { 
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-            Destroy(this);
-        }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Cancel"))
+        {
+            isPaused = !isPaused;
+            if (isPaused)
+            {
+                Pause();
+            }
+            else
+            {
+                Resume();
+            }
+        }
     }
 
-    public void CargarJuego()
+    public void Game()
     {
         SceneManager.LoadScene("Juego");
     }
 
-    public void CargarOpciones()
+    public void Options()
     {
-        SceneManager.LoadScene("Opciones");
+        optionsMenuUI.SetActive(true);
     }
-    public void VolverMenu()
+    public void BackToMenu()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        optionsMenuUI.SetActive(false);
     }
 
+    public void Pause()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        pauseMenuUI.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+        pauseMenuUI.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+        pauseMenuUI.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OptionsMenu()
+    {
+        optionsMenuUI.SetActive(true);
+    }
+
+    public void BackToPause()
+    {
+        optionsMenuUI.SetActive(false);
+    }
+
+    public void Quit()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MenuPrincipal");
+    }
 }
