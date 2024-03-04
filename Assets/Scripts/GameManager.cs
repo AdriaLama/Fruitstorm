@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.ShaderData;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,18 +30,21 @@ public class GameManager : MonoBehaviour
     public void Game()
     {
         SceneManager.LoadScene("Juego");
+        Time.timeScale = 1f;
     }
 
     public void Victory()
     {
         victory.SetActive(true);
         isPaused = true;
+        Time.timeScale = 0f;
     }
 
     public void Defeat()
     {
         defeat.SetActive(true);
         isPaused = true;
+        Time.timeScale = 0f;
     }
     public void Options()
     {
@@ -97,7 +99,6 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MenuPrincipal");
     }
