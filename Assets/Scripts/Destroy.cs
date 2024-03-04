@@ -8,7 +8,6 @@ public class Destroy : MonoBehaviour
     public UI puntuacion;
     private ConfiguracionFruta configuracionActual;
     public List<ConfiguracionFruta> configuracionFrutas;
-    public List<ConfiguracionPowerUps> configuracionPowerUps;
     public GameObject ManchaDeTinta;
     public MovimientoPersonaje movInvertido;
     public GameObject Rifle;
