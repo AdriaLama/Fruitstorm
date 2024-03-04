@@ -632,6 +632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   optionsMenuUI: {fileID: 16292284}
+  defeat: {fileID: 0}
+  victory: {fileID: 0}
   isPaused: 0
 --- !u!1 &524977086
 GameObject:
@@ -730,7 +732,7 @@ GameObject:
   - component: {fileID: 599375282}
   - component: {fileID: 599375281}
   m_Layer: 5
-  m_Name: Opciones
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,6 +1989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   optionsMenuUI: {fileID: 16292284}
+  defeat: {fileID: 0}
+  victory: {fileID: 0}
   isPaused: 0
 --- !u!4 &1470085086
 Transform:

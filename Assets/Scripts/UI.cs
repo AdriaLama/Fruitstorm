@@ -15,14 +15,12 @@ public class UI : MonoBehaviour
     public int life;
     public TMP_Text lifes;
     public TMP_Text timer;
-    private float startingTime = 120f;
+    private float startingTime = 121f;
     float currentTime = 0f;
     bool timerIsActive = true;
-    public GameObject gameOver;
-    public GameObject victory;
     public GameObject areUReady;
     public GameObject Rifle;
-    public GameManager Pausa;
+    private GameManager Pausa;
     public int secondsRemaining;
     public TMP_Text secondsRemainingTMP;
     public List<int> collectedFrutas;
@@ -32,10 +30,13 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        gameOver.SetActive(false);
-        victory.SetActive(false);
         areUReady.SetActive(false);
         currentTime = startingTime;
+        Pausa = FindObjectOfType<GameManager>();
+        if (Pausa == null)
+        {
+            Debug.LogError("GameManager instance not found!");
+        }
 
         collectedFrutas = new List<int>();
         for (int i = 0; i < 8; i++)
@@ -76,19 +77,15 @@ public class UI : MonoBehaviour
         {
             punt = 2000;
             secondsRemaining = Mathf.RoundToInt(currentTime);
-            victory.SetActive(true);
-            Pausa.isPaused = true;
-            Time.timeScale = 0;
             finalPunt = punt * secondsRemaining;
+            Pausa.Victory();
         }
 
         if (life <= 0)
         {
             life = 0;
-            gameOver.SetActive(true);
-            Pausa.isPaused = true;
-            Time.timeScale = 0f;
             finalPunt = punt;
+            Pausa.Defeat();
         }
         if (timerIsActive)
         {
@@ -102,10 +99,8 @@ public class UI : MonoBehaviour
             timer.text = "00:00";
             currentTime = 0;
             timerIsActive = false;
-            gameOver.SetActive(true);
-            Pausa.isPaused = true;
-            Time.timeScale = 0;
             finalPunt = punt;
+            Pausa.Defeat();
         }
 
         if (areUReady.activeSelf) {

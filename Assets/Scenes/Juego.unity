@@ -1218,11 +1218,8 @@ MonoBehaviour:
   life: 10
   lifes: {fileID: 316490352}
   timer: {fileID: 1273571829}
-  gameOver: {fileID: 1086100462}
-  victory: {fileID: 303104213}
   areUReady: {fileID: 1964487217}
   Rifle: {fileID: 134499062}
-  Pausa: {fileID: 1178500321}
   secondsRemaining: 0
   secondsRemainingTMP: {fileID: 963396321}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
@@ -1556,19 +1553,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303104213}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1051553488}
-  m_Father: {fileID: 759608282}
+  m_Father: {fileID: 2002922703}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.32000002, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.65000004}
-  m_AnchoredPosition: {x: 8.999989, y: 0}
-  m_SizeDelta: {x: 453.411, y: 166.34}
+  m_AnchoredPosition: {x: 172.73827, y: -79.168434}
+  m_SizeDelta: {x: 125.85425, y: 17.722046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &316490351
 GameObject:
@@ -2183,7 +2180,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1178500321}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Retry
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4510,44 +4507,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &759608281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 759608282}
-  m_Layer: 5
-  m_Name: Game Over
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &759608282
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759608281}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1086100463}
-  - {fileID: 303104214}
-  m_Father: {fileID: 2002922703}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.47956252, y: 0.4545261}
-  m_AnchorMax: {x: 0.5265625, y: 0.53647757}
-  m_AnchoredPosition: {x: -5.920105, y: 0}
-  m_SizeDelta: {x: 10, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &776798307
 GameObject:
   m_ObjectHideFlags: 0
@@ -7835,19 +7794,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086100462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1877646814}
-  m_Father: {fileID: 759608282}
+  m_Father: {fileID: 2002922703}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.32000002, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.65000004}
-  m_AnchoredPosition: {x: 8.999989, y: 0}
-  m_SizeDelta: {x: 453.411, y: 166.34}
+  m_AnchoredPosition: {x: 172.73827, y: -79.168434}
+  m_SizeDelta: {x: 125.85425, y: 17.722046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1098266329
 GameObject:
@@ -8089,8 +8048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 547792133}
   optionsMenuUI: {fileID: 1386710473}
-  Defeat: {fileID: 1086100462}
-  Victory: {fileID: 303104213}
+  defeat: {fileID: 1086100462}
+  victory: {fileID: 303104213}
   isPaused: 0
 --- !u!4 &1178500322
 Transform:
@@ -8746,7 +8705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2:00
+  m_text: 02:01
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
   m_sharedMaterial: {fileID: 7855675040902675768, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
@@ -12726,7 +12685,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1178500321}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Retry
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13641,8 +13600,8 @@ RectTransform:
   - {fileID: 1574913413}
   - {fileID: 1602715534}
   - {fileID: 1311724404}
-  - {fileID: 1040277470}
   - {fileID: 416801686}
+  - {fileID: 1040277470}
   m_Father: {fileID: 1086100463}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14349,7 +14308,8 @@ RectTransform:
   - {fileID: 547792134}
   - {fileID: 2004713484}
   - {fileID: 1386710474}
-  - {fileID: 759608282}
+  - {fileID: 1086100463}
+  - {fileID: 303104214}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14372,8 +14332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 547792133}
   optionsMenuUI: {fileID: 1386710473}
-  Defeat: {fileID: 0}
-  Victory: {fileID: 0}
+  defeat: {fileID: 1086100462}
+  victory: {fileID: 303104213}
   isPaused: 0
 --- !u!1 &2004220143
 GameObject:
