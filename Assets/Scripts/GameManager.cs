@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public GameObject defeat;
     public GameObject victory;
     public bool isPaused = false;
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     void Update()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -83,8 +88,11 @@ public class GameManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        isPaused = false;
-        Time.timeScale = 1f;
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OptionsMenu()
