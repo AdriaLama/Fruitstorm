@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
+    public GameObject Defeat;
+    public GameObject Victory;
     public bool isPaused = false;
 
     void Update()
@@ -18,10 +20,14 @@ public class GameManager : MonoBehaviour
             if (isPaused)
             {
                 Pause();
+                Time.timeScale = 0f;
             }
             else
             {
+                Time.timeScale = 1f;
                 Resume();
+                
+
             }
         }
     }
@@ -59,6 +65,13 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f;
         pauseMenuUI.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Retry()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

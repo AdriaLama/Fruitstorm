@@ -22,6 +22,7 @@ public class UI : MonoBehaviour
     public GameObject victory;
     public GameObject areUReady;
     public GameObject Rifle;
+    public GameManager Pausa;
     public int secondsRemaining;
     public TMP_Text secondsRemainingTMP;
     public List<int> collectedFrutas;
@@ -76,6 +77,7 @@ public class UI : MonoBehaviour
             punt = 2000;
             secondsRemaining = Mathf.RoundToInt(currentTime);
             victory.SetActive(true);
+            Pausa.isPaused = true;
             Time.timeScale = 0;
             finalPunt = punt * secondsRemaining;
         }
@@ -84,7 +86,8 @@ public class UI : MonoBehaviour
         {
             life = 0;
             gameOver.SetActive(true);
-            Time.timeScale = 0;
+            Pausa.isPaused = true;
+            Time.timeScale = 0f;
             finalPunt = punt;
         }
         if (timerIsActive)
@@ -100,6 +103,7 @@ public class UI : MonoBehaviour
             currentTime = 0;
             timerIsActive = false;
             gameOver.SetActive(true);
+            Pausa.isPaused = true;
             Time.timeScale = 0;
             finalPunt = punt;
         }
