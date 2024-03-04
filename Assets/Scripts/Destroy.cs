@@ -23,12 +23,16 @@ public class Destroy : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Fruta"))
         {
-            int configuracionGold = GetConfiguracionFruta(collision.gameObject);
+            int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
 
-            if (configuracionGold >= 0 && configuracionGold < configuracionFrutas.Count)
+            if (configuracionFrutaID != -1 && configuracionFrutaID < configuracionFrutas.Count)
             {
-                configuracionActual = configuracionFrutas[configuracionGold];
-                puntuacion.punt += (int)configuracionActual.gold;
+                ConfiguracionFruta configuracionFruta = configuracionFrutas[configuracionFrutaID];
+
+                puntuacion.punt += (int)configuracionFruta.gold;
+
+                RecolectarFruta(configuracionFrutaID);
+                RecolectarFrutaDefeat(configuracionFrutaID);
             }
             else
             {
@@ -155,7 +159,13 @@ public class Destroy : MonoBehaviour
         Chrono.SetActive(false);
         EscudoBarrera.SetActive(false);
     }
-    private int GetConfiguracionFruta(GameObject fruta)
+    public IEnumerator QuitarBarrera(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        Barrera.SetActive(false);
+    }
+    public int GetConfiguracionFruta(GameObject fruta)
     {
         FrutasSprites fruit = fruta.GetComponent<FrutasSprites>();
         if(fruit != null)
@@ -164,10 +174,20 @@ public class Destroy : MonoBehaviour
         }
         return -1;
     }
-    public IEnumerator QuitarBarrera(float seconds)
+
+    public void RecolectarFruta(int idFruta)
     {
-        yield return new WaitForSeconds(seconds);
-        
-        Barrera.SetActive(false);
+        if (idFruta >= 0 && idFruta < puntuacion.collectedFrutas.Count)
+        {
+            puntuacion.collectedFrutas[idFruta]++;
+        }
+    }
+
+    public void RecolectarFrutaDefeat(int idFruta)
+    {
+        if (idFruta >= 0 && idFruta < puntuacion.collectedFrutasDefeat.Count)
+        {
+            puntuacion.collectedFrutasDefeat[idFruta]++;
+        }
     }
 }

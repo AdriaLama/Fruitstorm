@@ -8,6 +8,10 @@ public class UI : MonoBehaviour
 {
     public int punt;
     public TMP_Text puntuacion;
+    public TMP_Text goldEarned;
+    public TMP_Text goldEarnedDefeat;
+    public int finalPunt;
+    public TMP_Text finalGoldEarned;
     public int life;
     public TMP_Text lifes;
     public TMP_Text timer;
@@ -18,8 +22,12 @@ public class UI : MonoBehaviour
     public GameObject victory;
     public GameObject areUReady;
     public GameObject Rifle;
-    public GameObject Pausa;
-
+    public int secondsRemaining;
+    public TMP_Text secondsRemainingTMP;
+    public List<int> collectedFrutas;
+    public TMP_Text[] collectedFrutasText;
+    public List<int> collectedFrutasDefeat;
+    public TMP_Text[] collectedFrutasDefeatText;
 
     private void Start()
     {
@@ -27,6 +35,19 @@ public class UI : MonoBehaviour
         victory.SetActive(false);
         areUReady.SetActive(false);
         currentTime = startingTime;
+
+        collectedFrutas = new List<int>();
+        for (int i = 0; i < 8; i++)
+        {
+            collectedFrutas.Add(0);
+        }
+
+        collectedFrutasDefeat = new List<int>();
+        for (int i = 0; i < 8; i++)
+        {
+            collectedFrutasDefeat.Add(0);
+        }
+
     }
 
 
@@ -34,12 +55,29 @@ public class UI : MonoBehaviour
     void Update()
     {
         puntuacion.text = punt.ToString();
+        goldEarned.text = punt.ToString();
+        goldEarnedDefeat.text = punt.ToString();
+        finalGoldEarned.text = finalPunt.ToString();
+        secondsRemainingTMP.text = secondsRemaining.ToString();
         lifes.text = life.ToString();
+
+        for (int i = 0; i < collectedFrutasText.Length; i++)
+        {
+            collectedFrutasText[i].text = collectedFrutas[i].ToString();
+        }
+
+        for (int i = 0; i < collectedFrutasDefeatText.Length; i++)
+        {
+            collectedFrutasDefeatText[i].text = collectedFrutasDefeat[i].ToString();
+        }
+
         if (punt >= 2000)
         {
             punt = 2000;
+            secondsRemaining = Mathf.RoundToInt(currentTime);
             victory.SetActive(true);
             Time.timeScale = 0;
+            finalPunt = punt * secondsRemaining;
         }
 
         if (life <= 0)
@@ -47,6 +85,7 @@ public class UI : MonoBehaviour
             life = 0;
             gameOver.SetActive(true);
             Time.timeScale = 0;
+            finalPunt = punt;
         }
         if (timerIsActive)
         {
@@ -62,6 +101,7 @@ public class UI : MonoBehaviour
             timerIsActive = false;
             gameOver.SetActive(true);
             Time.timeScale = 0;
+            finalPunt = punt;
         }
 
         if (areUReady.activeSelf) {
