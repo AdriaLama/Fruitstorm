@@ -1222,6 +1222,7 @@ MonoBehaviour:
   victory: {fileID: 303104213}
   areUReady: {fileID: 1964487217}
   Rifle: {fileID: 134499062}
+  Pausa: {fileID: 1178500321}
   secondsRemaining: 0
   secondsRemainingTMP: {fileID: 963396321}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
@@ -2182,7 +2183,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1178500321}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7826,7 +7827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1086100463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8088,6 +8089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 547792133}
   optionsMenuUI: {fileID: 1386710473}
+  Defeat: {fileID: 1086100462}
+  Victory: {fileID: 303104213}
   isPaused: 0
 --- !u!4 &1178500322
 Transform:
@@ -12723,7 +12726,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1178500321}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14369,6 +14372,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 547792133}
   optionsMenuUI: {fileID: 1386710473}
+  Defeat: {fileID: 0}
+  Victory: {fileID: 0}
   isPaused: 0
 --- !u!1 &2004220143
 GameObject:
