@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
+    public GameObject shopMenuUI;
     public GameObject defeat;
     public GameObject victory;
     public bool isPaused = false;
@@ -66,6 +67,12 @@ public class GameManager : MonoBehaviour
     public void BackToMenu()
     {
         optionsMenuUI.SetActive(false);
+        shopMenuUI.SetActive(false);
+    }
+
+    public void Shop()
+    {
+        shopMenuUI.SetActive(true);
     }
 
     public void Pause()
