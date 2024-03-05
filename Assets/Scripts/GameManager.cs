@@ -26,11 +26,11 @@ public class GameManager : MonoBehaviour
                 isPaused = !isPaused;
                 if (isPaused && !optionsMenuUI.activeSelf)
                 {
-                    Paused();
+                    Pause();
                 }
                 else if (!isPaused && !optionsMenuUI.activeSelf)
                 {
-                    Continue();
+                    Resume();
                 }
                 else if (!isPaused && optionsMenuUI.activeSelf)
                 {
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
                     if (isPaused && optionsMenuUI.activeSelf)
                     {
                         optionsMenuUI.SetActive(false);
-                        Paused();
+                        Pause();
                     }
                 }
             }
@@ -90,25 +90,13 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        isPaused = !isPaused;
+        isPaused = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }
     public void Resume()
     {
-        isPaused = !isPaused;
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-    }
-
-    public void Paused()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    public void Continue()
-    {
+        isPaused = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
     }
