@@ -6,16 +6,24 @@ using static UnityEditor.ShaderData;
 
 public class UITienda : MonoBehaviour
 {
-    public int gold = 0;
+    public int gold;
     public TMP_Text goldTMP;
-    public int costSpeed;
+    public int costSpeed = 5000;
     public TMP_Text costSpeedTMP;
-    public int levelSpeed;
+    public int levelSpeed = 1;
     public TMP_Text levelSpeedTMP;
-    public int costBasket;
+    public int costBasket = 5000;
     public TMP_Text costBasketTMP;
-    public int levelBasket;
+    public int levelBasket = 1;
     public TMP_Text levelBasketTMP;
+    private float speed;
+
+    void Awake()
+    {
+        speed = PlayerPrefs.GetFloat("speed");
+        gold = PlayerPrefs.GetInt("gold");
+    }
+
     void Update()
     {
         costSpeedTMP.text = costSpeed.ToString();
@@ -23,17 +31,23 @@ public class UITienda : MonoBehaviour
         costBasketTMP.text = costBasket.ToString();
         levelBasketTMP.text = levelBasket.ToString();
         goldTMP.text = gold.ToString();
-        UI ui = FindObjectOfType<UI>();
-        gold = ui.finalPunt;
+    }
 
-        for (levelSpeed = 1; levelSpeed <= 5; levelSpeed++)
+    public void LevelUpSpeed()
+    {
+        if (gold >= costSpeed)
         {
+            speed *= 1.25f;
+            PlayerPrefs.SetFloat("speedlvlup", speed);
+            PlayerPrefs.Save();
+            levelSpeed++;
+            gold -= costSpeed;
             costSpeed += 5000;
         }
+    }
 
-        for (levelBasket = 1; levelBasket <= 5; levelBasket++)
-        {
-            costBasket += 5000;
-        }
+    public void LevelUpBasket()
+    {
+
     }
 }

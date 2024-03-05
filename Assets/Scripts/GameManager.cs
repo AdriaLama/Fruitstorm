@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public GameObject defeat;
     public GameObject victory;
     public bool isPaused = false;
-    private float playerSpeed;
 
     private void Start()
     {
@@ -122,24 +121,6 @@ public class GameManager : MonoBehaviour
     public void BackToPause()
     {
         optionsMenuUI.SetActive(false);
-    }
-
-    public void LevelUpSpeed()
-    {
-        MovimientoPersonaje speed = FindObjectOfType<MovimientoPersonaje>();
-        UITienda ui = FindObjectOfType<UITienda>();
-
-        if (ui.gold > ui.costSpeed)
-        {
-            speed.speed *= 1.25f;
-            playerSpeed = speed.speed;
-            ui.levelSpeed++;
-        }
-    }
-
-    public void LevelUpBasket()
-    {
-        
     }
 
     public void Quit()

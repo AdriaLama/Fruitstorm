@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
- 
-    public float speed;
+
+    private float speed;
     private bool invertido = false;
     public Sprite jodebayayiyas;
     public Sprite Player;
@@ -16,6 +16,9 @@ public class MovimientoPersonaje : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        speed = 10f;
+        PlayerPrefs.SetFloat("speedlvlup", speed);
+        PlayerPrefs.Save();
     }
     private void Start()
     {
@@ -26,6 +29,10 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Update()
     {
+        
+        PlayerPrefs.SetFloat("speed", speed);
+        PlayerPrefs.Save();
+
         float horizontal;
         if (invertido)
         {
