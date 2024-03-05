@@ -30,6 +30,7 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
+        finalPunt = 0;
         areUReady.SetActive(false);
         currentTime = startingTime;
         Pausa = FindObjectOfType<GameManager>();
