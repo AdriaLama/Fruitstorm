@@ -110,4 +110,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MenuPrincipal");
     }
+
+    public void Exit()
+    {
+       Application.Quit();
+        
+    }
 }
