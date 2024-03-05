@@ -21,26 +21,37 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            isPaused = !isPaused;
-            if (isPaused && !(optionsMenuUI.activeSelf))
+            if (SceneManager.GetActiveScene().name == "Juego")
             {
-                Paused();
-            }
-            else if (!isPaused && !(optionsMenuUI.activeSelf))
-            {
-                Continue();
-            }
-            else if (!isPaused && optionsMenuUI.activeSelf) {
-                isPaused = true;
-                if (isPaused && optionsMenuUI.activeSelf)
+                isPaused = !isPaused;
+                if (isPaused && !optionsMenuUI.activeSelf)
                 {
-                    optionsMenuUI.SetActive(false);
                     Paused();
                 }
+                else if (!isPaused && !optionsMenuUI.activeSelf)
+                {
+                    Continue();
+                }
+                else if (!isPaused && optionsMenuUI.activeSelf)
+                {
+                    isPaused = true;
+                    if (isPaused && optionsMenuUI.activeSelf)
+                    {
+                        optionsMenuUI.SetActive(false);
+                        Paused();
+                    }
+                }
+            }
+            else if (SceneManager.GetActiveScene().name == "MenuPrincipal")
+            {
+                if (optionsMenuUI.activeSelf || shopMenuUI.activeSelf)
+                {
+                    BackToMenu();
+                }
+                
             }
         }
 
-     
     }
 
     public void Game()
