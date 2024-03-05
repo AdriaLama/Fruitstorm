@@ -21,13 +21,21 @@ public class GameManager : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             isPaused = !isPaused;
-            if (isPaused)
+            if (isPaused && !(optionsMenuUI.activeSelf))
             {
                 Paused();
             }
-            else
+            else if (!isPaused && !(optionsMenuUI.activeSelf))
             {
                 Continue();
+            }
+            else if (!isPaused && optionsMenuUI.activeSelf) {
+                isPaused = true;
+                if (isPaused && optionsMenuUI.activeSelf)
+                {
+                    optionsMenuUI.SetActive(false);
+                    Paused();
+                }
             }
         }
     }
