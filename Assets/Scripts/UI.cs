@@ -52,8 +52,6 @@ public class UI : MonoBehaviour
 
     }
 
-
-
     void Update()
     {
         puntuacion.text = punt.ToString();

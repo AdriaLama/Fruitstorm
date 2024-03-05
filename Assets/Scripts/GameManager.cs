@@ -21,37 +21,27 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            if (SceneManager.GetActiveScene().name == "Juego")
+            if (SceneManager.GetActiveScene().name == "Juego" && !(optionsMenuUI.activeInHierarchy))
             {
                 isPaused = !isPaused;
-                if (isPaused && !optionsMenuUI.activeSelf)
+                if (isPaused)
                 {
-                    Pause();
+                    Paused();
                 }
-                else if (!isPaused && !optionsMenuUI.activeSelf)
+                else if (!isPaused)
                 {
-                    Resume();
-                }
-                else if (!isPaused && optionsMenuUI.activeSelf)
-                {
-                    isPaused = true;
-                    if (isPaused && optionsMenuUI.activeSelf)
-                    {
-                        optionsMenuUI.SetActive(false);
-                        Pause();
-                    }
+                    Continue();
                 }
             }
             else if (SceneManager.GetActiveScene().name == "MenuPrincipal")
             {
-                if (optionsMenuUI.activeSelf || shopMenuUI.activeSelf)
+                if (optionsMenuUI.activeInHierarchy || shopMenuUI.activeInHierarchy)
                 {
-                    BackToMenu();
+                    optionsMenuUI.SetActive(false);
                 }
-                
+
             }
         }
-
     }
 
     public void Game()
@@ -90,13 +80,25 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        isPaused = true;
+        isPaused = !isPaused;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }
     public void Resume()
     {
-        isPaused = false;
+        isPaused = !isPaused;
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void Paused()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Continue()
+    {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
     }
