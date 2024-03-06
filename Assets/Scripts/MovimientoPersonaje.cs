@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovimientoPersonaje : MonoBehaviour
 {
 
-    private float speed;
+    private float speed = 10f;
     private bool invertido = false;
     public Sprite jodebayayiyas;
     public Sprite Player;
@@ -16,15 +16,11 @@ public class MovimientoPersonaje : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        speed = 10f;
-        PlayerPrefs.SetFloat("speedlvlup", speed);
-        PlayerPrefs.Save();
+        PlayerPrefs.GetFloat("speedlvlup", speed);
     }
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-       
     }
 
     void Update()
@@ -63,6 +59,11 @@ public class MovimientoPersonaje : MonoBehaviour
         transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
 
 
+
+    }
+
+    public void UpdateSpeed()
+    {
 
     }
 

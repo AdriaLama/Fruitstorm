@@ -12,7 +12,6 @@ public class UI : MonoBehaviour
     public TMP_Text goldEarnedDefeat;
     public int finalPunt;
     public TMP_Text finalGoldEarned;
-    public int totalGold = 0;
     public int life;
     public TMP_Text lifes;
     public TMP_Text timer;
@@ -81,8 +80,7 @@ public class UI : MonoBehaviour
             punt = 2000;
             secondsRemaining = Mathf.RoundToInt(currentTime);
             finalPunt = punt * secondsRemaining;
-            totalGold += finalPunt;
-            PlayerPrefs.SetInt("gold", totalGold);
+            PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Victory();
         }
@@ -91,8 +89,7 @@ public class UI : MonoBehaviour
         {
             life = 0;
             finalPunt = punt;
-            totalGold += punt;
-            PlayerPrefs.SetInt("gold", totalGold);
+            PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Defeat();
         }
@@ -109,8 +106,7 @@ public class UI : MonoBehaviour
             currentTime = 0;
             timerIsActive = false;
             finalPunt = punt;
-            totalGold += punt;
-            PlayerPrefs.SetInt("gold", totalGold);
+            PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Defeat();
         }
