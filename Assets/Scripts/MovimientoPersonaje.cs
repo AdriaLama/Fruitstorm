@@ -1,35 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
 
     private float speed = 10f;
     private bool invertido = false;
-    public Sprite CaminarIzquierda;
-    public Sprite Player;
-    public SpriteRenderer spriteRenderer;
+    public GameObject Player;
     public Animator anim;
+    private SpriteRenderer spriteRenderer;
+
 
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
+        anim =GetComponentInChildren<Animator>();
+        spriteRenderer = Player.GetComponent<SpriteRenderer>();
         PlayerPrefs.GetFloat("speedlvlup", speed);
-    }
-    private void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        
+
         PlayerPrefs.SetFloat("speed", speed);
         PlayerPrefs.Save();
 
         float horizontal;
+       
         if (invertido)
         {
             horizontal = Input.GetAxis("HorizontalInvertido");
@@ -41,19 +40,24 @@ public class MovimientoPersonaje : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                spriteRenderer.sprite = CaminarIzquierda;
-                spriteRenderer.transform.localScale = new Vector3(1, 1, 1);
-                anim.SetTrigger("AnimacionCaminar");
+
+                anim.SetTrigger("Caminar");
+                spriteRenderer.flipX = false;
 
 
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-                spriteRenderer.sprite = CaminarIzquierda;
+
+                anim.SetTrigger("Caminar");
+                spriteRenderer.flipX = true;
+
             }
             else
             {
-                spriteRenderer.sprite = Player;
+
+                anim.SetTrigger("Parado");
+
             }
         }
         transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
