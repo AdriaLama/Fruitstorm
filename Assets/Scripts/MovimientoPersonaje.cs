@@ -7,7 +7,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     private float speed = 10f;
     private bool invertido = false;
-    public Sprite jodebayayiyas;
+    public Sprite CaminarIzquierda;
     public Sprite Player;
     public SpriteRenderer spriteRenderer;
     public Animator anim;
@@ -41,15 +41,15 @@ public class MovimientoPersonaje : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                spriteRenderer.sprite = jodebayayiyas;
+                spriteRenderer.sprite = CaminarIzquierda;
                 spriteRenderer.transform.localScale = new Vector3(1, 1, 1);
-                anim.SetTrigger("jodiendopachiris");
+                anim.SetTrigger("AnimacionCaminar");
 
 
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-                spriteRenderer.sprite = jodebayayiyas;
+                spriteRenderer.sprite = CaminarIzquierda;
             }
             else
             {
