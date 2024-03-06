@@ -196,7 +196,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
   - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
   ManchaDeTinta: {fileID: 396338204}
-  movInvertido: {fileID: 102361002}
+  movInvertido: {fileID: 344191806}
   Rifle: {fileID: 134499062}
   Alien: {fileID: 754128808}
   Aspiradora: {fileID: 275739497}
@@ -6079,7 +6079,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.249
+  m_Volume: 0.125
   m_Pitch: 1
   Loop: 1
   Mute: 0
