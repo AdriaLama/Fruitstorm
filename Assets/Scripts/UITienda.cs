@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using static UnityEditor.ShaderData;
-using UnityEngine.UI;
+using TMPro;
 
 public class UITienda : MonoBehaviour
 {
@@ -66,6 +62,14 @@ public class UITienda : MonoBehaviour
         PlayerPrefs.SetInt("costSpeed", costSpeed);
         PlayerPrefs.Save();*/
         costSpeed = PlayerPrefs.GetInt("costSpeed");
+        /*levelBasket = 1;
+        PlayerPrefs.SetInt("levelBasket", levelBasket);
+        PlayerPrefs.Save();*/
+        levelBasket = PlayerPrefs.GetInt("levelBasket");
+        /*costBasket = 5000;
+        PlayerPrefs.SetInt("costBasket", costBasket);
+        PlayerPrefs.Save();*/
+        costBasket = PlayerPrefs.GetInt("costBasket");
     }
 
     public void LevelUpSpeed()
@@ -91,6 +95,19 @@ public class UITienda : MonoBehaviour
 
     public void LevelUpBasket()
     {
+        if (totalGold >= costBasket)
+        {
 
+            levelBasket++;
+            PlayerPrefs.SetInt("levelBasket", levelBasket);
+            PlayerPrefs.Save();
+            totalGold -= costBasket;
+            totalGoldSpent += costBasket;
+            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
+            PlayerPrefs.Save();
+            costBasket += 5000;
+            PlayerPrefs.SetInt("costSpeed", costBasket);
+            PlayerPrefs.Save();
+        }
     }
 }
