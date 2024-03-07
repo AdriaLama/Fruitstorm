@@ -18,27 +18,48 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         anim =GetComponentInChildren<Animator>();
         spriteRenderer = Player.GetComponent<SpriteRenderer>();
+        PlayerPrefs.SetFloat("speed", speed);
+        PlayerPrefs.Save();
         PlayerPrefs.GetFloat("speedlvlup", speed);
     }
 
     void Update()
     {
 
-        PlayerPrefs.SetFloat("speed", speed);
-        PlayerPrefs.Save();
-
         float horizontal;
        
         if (invertido)
         {
+
             horizontal = Input.GetAxis("HorizontalInvertido");
+            
+            if (Input.GetKey(KeyCode.LeftArrow) || horizontal > 0)
+            {
+
+                anim.SetTrigger("Caminar");
+                spriteRenderer.flipX = true;
+
+
+            }
+            else if (Input.GetKey(KeyCode.RightArrow) || horizontal < 0)
+            {
+
+                anim.SetTrigger("Caminar");
+                spriteRenderer.flipX = false;
+
+            }
+            else
+            {
+
+                anim.SetTrigger("Parado");
+
+            }
         }
         else
         {
             horizontal = Input.GetAxis("Horizontal");
 
-
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) || horizontal < 0)
             {
 
                 anim.SetTrigger("Caminar");
@@ -46,7 +67,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
 
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.RightArrow) || horizontal > 0)
             {
 
                 anim.SetTrigger("Caminar");
@@ -61,9 +82,6 @@ public class MovimientoPersonaje : MonoBehaviour
             }
         }
         transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
-
-
-
     }
 
     public void UpdateSpeed()

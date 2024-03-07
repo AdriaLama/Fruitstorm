@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static UnityEditor.ShaderData;
+using UnityEngine.UI;
 
 public class UITienda : MonoBehaviour
 {
@@ -20,14 +21,15 @@ public class UITienda : MonoBehaviour
     public int levelBasket = 1;
     public TMP_Text levelBasketTMP;
     private float speed;
+    public int initialLevelSpeed = 0;
 
     void Awake()
     {
         speed = PlayerPrefs.GetFloat("speed");
         gold = PlayerPrefs.GetInt("gold");
         totalGold = PlayerPrefs.GetInt("totalGold");
-        totalGoldSpeed = PlayerPrefs.GetInt("totalGoldPay");
         ActualizarOro();
+        ActualizarTienda();
     }
 
     void Update()
@@ -37,46 +39,61 @@ public class UITienda : MonoBehaviour
         costBasketTMP.text = costBasket.ToString();
         levelBasketTMP.text = levelBasket.ToString();
         goldTMP.text = totalGold.ToString();
-
-        if (!hasBought)
-        {
-            totalGoldSpeed = 0;
-        }
     }
 
     public void ActualizarOro()
     {
         totalGold += gold;
 
-        if (hasBought)
+        if (initialLevelSpeed >= levelSpeed)
         {
-            totalGold -= totalGoldSpeed;
-            totalGoldSpeed = 0;
-        }
-
-        PlayerPrefs.SetInt("totalGold", totalGold);
-        PlayerPrefs.Save();
-    }
-    
-
-public void LevelUpSpeed()
-    {
-        if (totalGold >= costSpeed)
-        {
-            hasBought = true;
-            speed *= 1.25f;
-            PlayerPrefs.SetFloat("speedlvlup", speed);
-            PlayerPrefs.Save();
-            levelSpeed++;
-            totalGold -= costSpeed;
-            totalGoldSpeed += costSpeed;
-            PlayerPrefs.SetInt("totalGoldSpeed", totalGoldSpeed);
-            PlayerPrefs.Save();
-            costSpeed += 5000;
+            totalGoldSpeed = PlayerPrefs.GetInt("totalGoldPay");
         }
         else
         {
-            hasBought = false;
+            totalGoldSpeed = 0;
+            PlayerPrefs.SetInt("DontPay", totalGoldSpeed);
+            PlayerPrefs.Save();
+            totalGoldSpeed = PlayerPrefs.GetInt("DontPay");
+        }
+
+        totalGold -= totalGoldSpeed;
+        //totalGold = 0;
+        PlayerPrefs.SetInt("totalGold", totalGold);
+        PlayerPrefs.Save();
+    }
+
+    public void ActualizarTienda()
+    {
+        /*levelSpeed = 1;
+        PlayerPrefs.SetInt("levelSpeed", levelSpeed);
+        PlayerPrefs.Save();*/
+        levelSpeed = PlayerPrefs.GetInt("levelSpeed");
+        /*costSpeed = 5000;
+        PlayerPrefs.SetInt("costSpeed", costSpeed);
+        PlayerPrefs.Save();*/
+        costSpeed = PlayerPrefs.GetInt("costSpeed");
+    }
+
+
+    public void LevelUpSpeed()
+    {
+        if (totalGold >= costSpeed)
+        {
+            speed *= 1.25f;
+            PlayerPrefs.SetFloat("speedlvlup", speed);
+            PlayerPrefs.Save();
+            initialLevelSpeed++;
+            levelSpeed++;
+            PlayerPrefs.SetInt("levelSpeed", levelSpeed);
+            PlayerPrefs.Save();
+            totalGold -= costSpeed;
+            totalGoldSpeed += costSpeed;
+            PlayerPrefs.SetInt("totalGoldPay", totalGoldSpeed);
+            PlayerPrefs.Save();
+            costSpeed += 5000;
+            PlayerPrefs.SetInt("costSpeed", costSpeed);
+            PlayerPrefs.Save();
         }
     }
 

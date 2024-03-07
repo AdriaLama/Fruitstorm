@@ -6,11 +6,11 @@ using UnityEngine;
 public class Destroy : MonoBehaviour
 {
     public UI puntuacion;
-    private ConfiguracionFruta configuracionActual;
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject ManchaDeTinta;
     public MovimientoPersonaje movInvertido;
     public GameObject Rifle;
+    public GameObject Cesta;
     public GameObject Alien;
     public GameObject Aspiradora;
     public GameObject Invertido;
@@ -18,6 +18,7 @@ public class Destroy : MonoBehaviour
     public GameObject Chrono;
     public GameObject Barrera;
     public GameObject EscudoBarrera;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -73,6 +74,7 @@ public class Destroy : MonoBehaviour
 
         if (collision.gameObject.CompareTag("PowerUpArma"))
         {
+            Cesta.SetActive(false);
             Rifle.SetActive(true);
             Destroy(collision.gameObject);
             Alien.SetActive(true);

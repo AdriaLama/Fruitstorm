@@ -7,7 +7,6 @@ public class Bala : MonoBehaviour
     Rigidbody2D rb;
     public float bullet_speed;
 
-  
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

@@ -197,13 +197,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
   ManchaDeTinta: {fileID: 396338204}
   movInvertido: {fileID: 344191806}
-  Rifle: {fileID: 134499062}
+  Rifle: {fileID: 1054705958}
+  Cesta: {fileID: 6448898}
   Alien: {fileID: 754128808}
-  Aspiradora: {fileID: 275739497}
+  Aspiradora: {fileID: 786270577}
   Invertido: {fileID: 466831338}
   Multiplicador: {fileID: 1487105205}
   Chrono: {fileID: 2093739055}
-  Barrera: {fileID: 1678804868}
+  Barrera: {fileID: 970776230}
   EscudoBarrera: {fileID: 1557764061}
 --- !u!61 &6448902
 BoxCollider2D:
@@ -1421,7 +1422,8 @@ MonoBehaviour:
   lifes: {fileID: 316490352}
   timer: {fileID: 1273571829}
   areUReady: {fileID: 1964487217}
-  Rifle: {fileID: 134499062}
+  Rifle: {fileID: 1054705958}
+  Cesta: {fileID: 6448898}
   secondsRemaining: 0
   secondsRemainingTMP: {fileID: 963396321}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
@@ -4916,7 +4918,7 @@ MonoBehaviour:
   speed: 10
   LimiteAlienPos: 8.25
   LimiteAlienNeg: -8.7
-  alienLifes: 15
+  alienLifes: 10
 --- !u!61 &754128813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5150,7 +5152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786270577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 8.8, z: 0}
+  m_LocalPosition: {x: -0.15, y: 8.63, z: 0}
   m_LocalScale: {x: 3.9649017, y: 2.8496165, z: 0.8485534}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7302,6 +7304,7 @@ MonoBehaviour:
   ManchaDeTinta: {fileID: 396338204}
   movInvertido: {fileID: 102361002}
   Rifle: {fileID: 134499062}
+  Cesta: {fileID: 0}
   Alien: {fileID: 754128808}
   Aspiradora: {fileID: 275739497}
   Invertido: {fileID: 466831338}
@@ -8153,7 +8156,7 @@ GameObject:
   - component: {fileID: 1054705963}
   - component: {fileID: 1054705962}
   - component: {fileID: 1054705961}
-  - component: {fileID: 1054705960}
+  - component: {fileID: 1054705964}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
@@ -8169,27 +8172,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054705958}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.22, y: 5.78, z: 0}
+  m_LocalPosition: {x: -0.84, y: 11.49, z: 0}
   m_LocalScale: {x: 1.3366984, y: 2.062129, z: 0.18124612}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 344191805}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1054705960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054705958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5facd2b38b950b74fb36ea7f5ad447a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bala: {fileID: 7630763377150100793, guid: 6d6ddac3ad93b7545bcb87c218be6f9b, type: 3}
-  RiflePersonaje: {fileID: 1054705958}
 --- !u!50 &1054705961
 Rigidbody2D:
   serializedVersion: 4
@@ -8314,6 +8303,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1054705964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054705958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5facd2b38b950b74fb36ea7f5ad447a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bala: {fileID: 7630763377150100793, guid: 6d6ddac3ad93b7545bcb87c218be6f9b, type: 3}
+  RiflePersonaje: {fileID: 1054705958}
 --- !u!1 &1058356530
 GameObject:
   m_ObjectHideFlags: 0

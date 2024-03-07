@@ -20,6 +20,7 @@ public class UI : MonoBehaviour
     bool timerIsActive = true;
     public GameObject areUReady;
     public GameObject Rifle;
+    public GameObject Cesta;
     private GameManager Pausa;
     public int secondsRemaining;
     public TMP_Text secondsRemainingTMP;
@@ -130,5 +131,6 @@ public class UI : MonoBehaviour
         SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
         frenesi.spawnTime = 0.15f;
         Rifle.SetActive(false);
+        Cesta.SetActive(true);
     }
 }
