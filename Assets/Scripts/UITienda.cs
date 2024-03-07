@@ -72,8 +72,8 @@ public class UITienda : MonoBehaviour
     {
         if (totalGold >= costSpeed)
         {
-            speed *= 1.5f;
-            PlayerPrefs.SetFloat("speed", speed);
+            speed *= 1.25f;
+            //speed = 10f;
             PlayerPrefs.SetFloat("speedlvlup", speed);
             PlayerPrefs.Save();
             levelSpeed++;
