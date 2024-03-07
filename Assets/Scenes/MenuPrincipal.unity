@@ -217,6 +217,7 @@ MonoBehaviour:
   costBasketTMP: {fileID: 756190601}
   levelBasket: 1
   levelBasketTMP: {fileID: 524296736}
+  initialLevelSpeed: 0
 --- !u!1 &91527690
 GameObject:
   m_ObjectHideFlags: 0
