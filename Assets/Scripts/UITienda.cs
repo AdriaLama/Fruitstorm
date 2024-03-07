@@ -9,8 +9,7 @@ public class UITienda : MonoBehaviour
 {
     public int gold;
     public int totalGold = 0;
-    public int totalGoldSpeed = 0;
-    public bool hasBought = false;
+    public int totalGoldSpent = 0;
     public TMP_Text goldTMP;
     public int costSpeed = 5000;
     public TMP_Text costSpeedTMP;
@@ -20,14 +19,14 @@ public class UITienda : MonoBehaviour
     public TMP_Text costBasketTMP;
     public int levelBasket = 1;
     public TMP_Text levelBasketTMP;
-    private float speed;
-    public int initialLevelSpeed = 0;
+    public float speed;
 
     void Awake()
     {
-        speed = PlayerPrefs.GetFloat("speed");
         gold = PlayerPrefs.GetInt("gold");
         totalGold = PlayerPrefs.GetInt("totalGold");
+        totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
+        speed = PlayerPrefs.GetFloat("speed");
         ActualizarOro();
         ActualizarTienda();
     }
@@ -45,19 +44,13 @@ public class UITienda : MonoBehaviour
     {
         totalGold += gold;
 
-        if (initialLevelSpeed >= levelSpeed)
-        {
-            totalGoldSpeed = PlayerPrefs.GetInt("totalGoldPay");
-        }
-        else
-        {
-            totalGoldSpeed = 0;
-            PlayerPrefs.SetInt("DontPay", totalGoldSpeed);
-            PlayerPrefs.Save();
-            totalGoldSpeed = PlayerPrefs.GetInt("DontPay");
-        }
+        totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
 
-        totalGold -= totalGoldSpeed;
+        totalGold -= totalGoldSpent;
+        totalGoldSpent = 0;
+        PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
+        PlayerPrefs.Save();
+
         //totalGold = 0;
         PlayerPrefs.SetInt("totalGold", totalGold);
         PlayerPrefs.Save();
@@ -75,21 +68,20 @@ public class UITienda : MonoBehaviour
         costSpeed = PlayerPrefs.GetInt("costSpeed");
     }
 
-
     public void LevelUpSpeed()
     {
         if (totalGold >= costSpeed)
         {
-            speed *= 1.25f;
+            speed *= 1.5f;
+            PlayerPrefs.SetFloat("speed", speed);
             PlayerPrefs.SetFloat("speedlvlup", speed);
             PlayerPrefs.Save();
-            initialLevelSpeed++;
             levelSpeed++;
             PlayerPrefs.SetInt("levelSpeed", levelSpeed);
             PlayerPrefs.Save();
             totalGold -= costSpeed;
-            totalGoldSpeed += costSpeed;
-            PlayerPrefs.SetInt("totalGoldPay", totalGoldSpeed);
+            totalGoldSpent += costSpeed;
+            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
             PlayerPrefs.Save();
             costSpeed += 5000;
             PlayerPrefs.SetInt("costSpeed", costSpeed);

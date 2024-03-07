@@ -79,8 +79,7 @@ public class UI : MonoBehaviour
         if (punt >= 2000)
         {
             punt = 2000;
-            secondsRemaining = Mathf.RoundToInt(currentTime);
-            finalPunt = punt * secondsRemaining;
+            finalPunt = punt * life;
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Victory();
