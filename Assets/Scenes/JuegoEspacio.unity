@@ -4329,6 +4329,10 @@ MonoBehaviour:
   Chrono: {fileID: 82560172}
   Barrera: {fileID: 814113255}
   EscudoBarrera: {fileID: 1589241488}
+  scaleX: 0.8
+  newScaleX: 0
+  scaleY: 0.8
+  newScaleY: 0
 --- !u!61 &563197976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8277,9 +8281,9 @@ MonoBehaviour:
   timer: {fileID: 98685936}
   areUReady: {fileID: 1836850558}
   Rifle: {fileID: 76561265}
-  Cesta: {fileID: 0}
-  secondsRemaining: 0
-  secondsRemainingTMP: {fileID: 1068212654}
+  Cesta: {fileID: 563197972}
+  remainingLifes: 0
+  remainingLifesTMP: {fileID: 0}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasText:
   - {fileID: 114900304}

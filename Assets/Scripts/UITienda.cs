@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class UITienda : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class UITienda : MonoBehaviour
     public int levelBasket = 1;
     public TMP_Text levelBasketTMP;
     public float speed;
+    public float scaleX;
+    public float scaleY;
 
     void Awake()
     {
@@ -23,6 +26,14 @@ public class UITienda : MonoBehaviour
         totalGold = PlayerPrefs.GetInt("totalGold");
         totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
         speed = PlayerPrefs.GetFloat("speed");
+        /*PlayerPrefs.SetFloat("speedlvlup", speed);
+        PlayerPrefs.Save();*/
+        scaleX = PlayerPrefs.GetFloat("scaleX");
+        scaleY = PlayerPrefs.GetFloat("scaleY");
+        /*PlayerPrefs.SetFloat("newScaleX", scaleX);
+        PlayerPrefs.Save();
+        PlayerPrefs.SetFloat("newScaleY", scaleY);
+        PlayerPrefs.Save();*/
         ActualizarOro();
         ActualizarTienda();
     }
@@ -100,6 +111,7 @@ public class UITienda : MonoBehaviour
             //speed = 10f;
             PlayerPrefs.SetFloat("speedlvlup", speed);
             PlayerPrefs.Save();
+
             levelSpeed++;
             PlayerPrefs.SetInt("levelSpeed", levelSpeed);
             PlayerPrefs.Save();
@@ -117,6 +129,14 @@ public class UITienda : MonoBehaviour
     {
         if (totalGold >= costBasket)
         {
+            scaleX += 0.1f;
+            scaleY += 0.1f;
+            //scaleX = 0.8f;
+            //scaleY = 0.8f;
+            PlayerPrefs.SetFloat("newScaleX", scaleX);
+            PlayerPrefs.Save();
+            PlayerPrefs.SetFloat("newScaleY", scaleY);
+            PlayerPrefs.Save();
 
             levelBasket++;
             PlayerPrefs.SetInt("levelBasket", levelBasket);

@@ -18,6 +18,19 @@ public class Destroy : MonoBehaviour
     public GameObject Chrono;
     public GameObject Barrera;
     public GameObject EscudoBarrera;
+    public float scaleX = 0.8f;
+    public float newScaleX;
+    public float scaleY = 0.8f;
+    public float newScaleY;
+
+    private void Awake()
+    {
+        //scaleX = 0.8f;
+        //scaleY = 0.8f;
+        PlayerPrefs.SetFloat("scaleX", scaleX);
+        PlayerPrefs.SetFloat("scaleY", scaleY);
+        UpdateBasket();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -191,5 +204,22 @@ public class Destroy : MonoBehaviour
         {
             puntuacion.collectedFrutasDefeat[idFruta]++;
         }
+    }
+
+    public void UpdateBasket()
+    {
+        newScaleX = PlayerPrefs.GetFloat("newScaleX");
+        newScaleY = PlayerPrefs.GetFloat("newScaleY");
+        //newScaleX = 0.8f;
+        //newScaleY = 0.8f;
+        scaleX = newScaleX;
+        scaleY = newScaleY;
+        PlayerPrefs.SetFloat("scaleX", scaleX);
+        PlayerPrefs.SetFloat("scaleY", scaleY);
+
+        Cesta.transform.localScale = new Vector3(scaleX, scaleY, 1f);
+
+        Vector3 newLocalPosition = new Vector3(Cesta.transform.localPosition.x, Cesta.transform.localPosition.y, Cesta.transform.localPosition.z);
+        Cesta.transform.localPosition = newLocalPosition;
     }
 }

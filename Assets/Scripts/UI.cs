@@ -22,8 +22,8 @@ public class UI : MonoBehaviour
     public GameObject Rifle;
     public GameObject Cesta;
     private GameManager Pausa;
-    public int secondsRemaining;
-    public TMP_Text secondsRemainingTMP;
+    public int remainingLifes;
+    public TMP_Text remainingLifesTMP;
     public List<int> collectedFrutas;
     public TMP_Text[] collectedFrutasText;
     public List<int> collectedFrutasDefeat;
@@ -63,7 +63,7 @@ public class UI : MonoBehaviour
         goldEarned.text = punt.ToString();
         goldEarnedDefeat.text = punt.ToString();
         finalGoldEarned.text = finalPunt.ToString();
-        secondsRemainingTMP.text = secondsRemaining.ToString();
+        remainingLifesTMP.text = remainingLifes.ToString();
         lifes.text = life.ToString();
 
         for (int i = 0; i < collectedFrutasText.Length; i++)
@@ -79,7 +79,8 @@ public class UI : MonoBehaviour
         if (punt >= 2000)
         {
             punt = 2000;
-            finalPunt = punt * life;
+            remainingLifes = life;
+            finalPunt = punt * remainingLifes;
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Victory();

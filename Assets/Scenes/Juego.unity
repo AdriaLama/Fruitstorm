@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 6448898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1, y: 10.316194, z: 0}
-  m_LocalScale: {x: 0.77926546, y: 0.80350834, z: 0.75147027}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.75147027}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 344191805}
@@ -1426,8 +1426,8 @@ MonoBehaviour:
   areUReady: {fileID: 1964487217}
   Rifle: {fileID: 1054705958}
   Cesta: {fileID: 6448898}
-  secondsRemaining: 0
-  secondsRemainingTMP: {fileID: 963396321}
+  remainingLifes: 0
+  remainingLifesTMP: {fileID: 963396321}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasText:
   - {fileID: 526357445}
@@ -6884,7 +6884,7 @@ GameObject:
   - component: {fileID: 963396322}
   - component: {fileID: 963396321}
   m_Layer: 5
-  m_Name: SegundosRestantes
+  m_Name: VidasRestantes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7165,7 +7165,7 @@ GameObject:
   - component: {fileID: 971718555}
   - component: {fileID: 971718556}
   m_Layer: 0
-  m_Name: Cesta
+  m_Name: cesta
   m_TagString: Cesta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15981,7 +15981,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2004713489}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
