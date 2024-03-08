@@ -54,6 +54,26 @@ public class UITienda : MonoBehaviour
 
     public void ActualizarTienda()
     {
+        if (!PlayerPrefs.HasKey("levelSpeed"))
+        {
+            levelSpeed = 1;
+            PlayerPrefs.SetInt("levelSpeed", levelSpeed);
+        }
+        if (!PlayerPrefs.HasKey("costSpeed"))
+        {
+            costSpeed = 5000;
+            PlayerPrefs.SetInt("costSpeed", costSpeed);
+        }
+        if (!PlayerPrefs.HasKey("levelBasket"))
+        {
+            levelBasket = 1;
+            PlayerPrefs.SetInt("levelBasket", levelBasket);
+        }
+        if (!PlayerPrefs.HasKey("costBasket"))
+        {
+            costBasket = 5000;
+            PlayerPrefs.SetInt("costBasket", costBasket);
+        }
         /*levelSpeed = 1;
         PlayerPrefs.SetInt("levelSpeed", levelSpeed);
         PlayerPrefs.Save();*/
@@ -76,7 +96,7 @@ public class UITienda : MonoBehaviour
     {
         if (totalGold >= costSpeed)
         {
-            speed *= 1.25f;
+            speed += 1f;
             //speed = 10f;
             PlayerPrefs.SetFloat("speedlvlup", speed);
             PlayerPrefs.Save();
