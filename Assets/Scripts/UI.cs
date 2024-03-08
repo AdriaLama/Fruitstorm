@@ -28,13 +28,19 @@ public class UI : MonoBehaviour
     public TMP_Text[] collectedFrutasText;
     public List<int> collectedFrutasDefeat;
     public TMP_Text[] collectedFrutasDefeatText;
+    private AudioSource audioSource;
+    private AudioClip Frenesi;
+
 
     private void Awake()
     {
+       
         finalPunt = 0;
     }
     private void Start()
-    {
+    { 
+        audioSource = GetComponent<AudioSource>();
+        Frenesi = Resources.Load<AudioClip>("Frenesi");
         areUReady.SetActive(false);
         currentTime = startingTime;
         Pausa = FindObjectOfType<GameManager>();
@@ -125,12 +131,15 @@ public class UI : MonoBehaviour
     }
 
     public IEnumerator QuitarMensaje(float seconds)
-    {
+    { 
+       
         yield return new WaitForSeconds(seconds);
+        audioSource.PlayOneShot(Frenesi);
         areUReady.SetActive(false);
         SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
         frenesi.spawnTime = 0.15f;
         Rifle.SetActive(false);
         Cesta.SetActive(true);
+        
     }
 }
