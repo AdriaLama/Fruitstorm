@@ -38,7 +38,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
-
+                transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
 
             }
             else if (Input.GetKey(KeyCode.RightArrow) || horizontal < 0)
@@ -46,7 +46,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
-
+                transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
             }
             else
             {
@@ -64,7 +64,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
-
+                transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
 
             }
             else if (Input.GetKey(KeyCode.RightArrow) || horizontal > 0)
@@ -72,7 +72,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
-
+                transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
             }
             else
             {
@@ -81,7 +81,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
             }
         }
-        transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
+        
     }
 
     public void UpdateSpeed()
