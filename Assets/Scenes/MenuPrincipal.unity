@@ -989,7 +989,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 550490991}
+  - {fileID: 1002697405}
   - {fileID: 1606829688}
   - {fileID: 468984227}
   - {fileID: 136658766}
@@ -1412,80 +1412,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &550490990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 550490991}
-  - component: {fileID: 550490993}
-  - component: {fileID: 550490992}
-  m_Layer: 5
-  m_Name: Rayo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &550490991
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550490990}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0002739518, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: -10.000001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1002697405}
-  m_Father: {fileID: 391936399}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.031}
-  m_AnchorMin: {x: 0.4381667, y: 0.5157785}
-  m_AnchorMax: {x: 0.5676251, y: 0.7023753}
-  m_AnchoredPosition: {x: -4.540024, y: 0}
-  m_SizeDelta: {x: -26.000046, y: 22.012001}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &550490992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550490990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0476a04a7e9a2e8468f1d748745798ec, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &550490993
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550490990}
-  m_CullTransparentMesh: 1
 --- !u!1 &599375279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,8 +1716,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.31500003, y: 0.4322556}
   m_AnchorMax: {x: 0.64568746, y: 0.5333722}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 4.945984, y: 4.8030014}
+  m_AnchoredPosition: {x: -4.8799133, y: 52}
+  m_SizeDelta: {x: 9.7598, y: 38.148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636894072
 MonoBehaviour:
@@ -2405,7 +2331,7 @@ GameObject:
   - component: {fileID: 791907611}
   - component: {fileID: 791907610}
   m_Layer: 5
-  m_Name: sandia
+  m_Name: Sandia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2428,8 +2354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.52239585, y: 0.44637612}
   m_AnchorMax: {x: 0.55300003, y: 0.5251881}
-  m_AnchoredPosition: {x: 2.9, y: -22.5}
-  m_SizeDelta: {x: 297.886, y: 179.021}
+  m_AnchoredPosition: {x: 19.1, y: 35}
+  m_SizeDelta: {x: 301.049, y: 180.075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &791907610
 MonoBehaviour:
@@ -2478,7 +2404,7 @@ GameObject:
   - component: {fileID: 1002697407}
   - component: {fileID: 1002697406}
   m_Layer: 5
-  m_Name: Nube
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2491,20 +2417,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002697404}
-  m_LocalRotation: {x: -0, y: -0, z: 0.0002739518, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 636894071}
   - {fileID: 791907609}
-  m_Father: {fileID: 550490991}
+  m_Father: {fileID: 391936399}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.22000001}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.092544556, y: 144.38351}
-  m_SizeDelta: {x: 1696.48, y: 643.30566}
+  m_AnchorMin: {x: 0.15685417, y: 0.64215434}
+  m_AnchorMax: {x: 0.8222084, y: 0.9698863}
+  m_AnchoredPosition: {x: 24.659, y: -118.7}
+  m_SizeDelta: {x: 282.129, y: 196.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002697406
 MonoBehaviour:
@@ -2526,7 +2452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9195c2658ea2bdc4aab8acc24359bc0a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 89431ec560caf6e429818834a1b1f858, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3324,6 +3250,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327616664}
   m_CullTransparentMesh: 1
+--- !u!1 &1416680612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416680613}
+  m_Layer: 0
+  m_Name: Fondos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416680613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416680612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 239.66512, y: 201.38007, z: 1.0977085}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1422189391
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,6 +77,11 @@ public class UITienda : MonoBehaviour
             costBasket = 5000;
             PlayerPrefs.SetInt("costBasket", costBasket);
         }
+        if (!PlayerPrefs.HasKey("speed"))
+        {
+            speed = 10;
+            PlayerPrefs.SetFloat("speed", speed);
+        }
         if (!PlayerPrefs.HasKey("speedlvlup"))
         {
             speed = 10;
