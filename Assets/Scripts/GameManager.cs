@@ -33,13 +33,17 @@ public class GameManager : MonoBehaviour
                     Continue();
                 }
             }
-            else if (SceneManager.GetActiveScene().name == "MenuPrincipal")
+            else if (SceneManager.GetActiveScene().name == "JuegoEspacio" && !(optionsMenuUI.activeInHierarchy))
             {
-                if (optionsMenuUI.activeInHierarchy || shopMenuUI.activeInHierarchy)
+                isPaused = !isPaused;
+                if (isPaused)
                 {
-                    optionsMenuUI.SetActive(false);
+                    Paused();
                 }
-
+                else if (!isPaused)
+                {
+                    Continue();
+                }
             }
         }
     }
@@ -47,6 +51,11 @@ public class GameManager : MonoBehaviour
     public void Game()
     {
         SceneManager.LoadScene("Juego");
+        Time.timeScale = 1f;
+    }
+    public void Space()
+    {
+        SceneManager.LoadScene("Espacio");
         Time.timeScale = 1f;
     }
 
@@ -131,6 +140,16 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void QuitSpace()
+    {
+        UI ui = FindObjectOfType<UI>();
+        ui.finalPunt = 0;
+        PlayerPrefs.SetInt("gold", ui.finalPunt);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MenuEspacio");
     }
 
     public void Exit()
