@@ -50,12 +50,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void GameSpace()
-    {
-        SceneManager.LoadScene("JuegoEspacio");
-        Time.timeScale = 1f;
-    }
-
     public void Victory()
     {
         victory.SetActive(true);

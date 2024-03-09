@@ -17,8 +17,6 @@ public class MovimientoPersonaje : MonoBehaviour
 
     private void Awake()
     {
-        speed = PlayerPrefs.GetFloat("speed");
-
         //speed = 10f;
         PlayerPrefs.SetFloat("speed", speed);
         anim =GetComponentInChildren<Animator>();
@@ -37,6 +35,7 @@ public class MovimientoPersonaje : MonoBehaviour
             
             if (Input.GetKey(KeyCode.LeftArrow) || horizontal > 0)
             {
+
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
@@ -44,13 +43,16 @@ public class MovimientoPersonaje : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.RightArrow) || horizontal < 0)
             {
+
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
             }
             else
             {
+
                 anim.SetTrigger("Parado");
+
             }
         }
         else
@@ -59,6 +61,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftArrow) || horizontal < 0)
             {
+
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
@@ -66,13 +69,16 @@ public class MovimientoPersonaje : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.RightArrow) || horizontal > 0)
             {
+
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
             }
             else
             {
+
                 anim.SetTrigger("Parado");
+
             }
         }
         

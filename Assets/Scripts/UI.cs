@@ -34,6 +34,7 @@ public class UI : MonoBehaviour
 
     private void Awake()
     {
+       
         finalPunt = 0;
     }
     private void Start()
@@ -133,6 +134,7 @@ public class UI : MonoBehaviour
     { 
        
         yield return new WaitForSeconds(seconds);
+        audioSource.PlayOneShot(Frenesi);
         areUReady.SetActive(false);
         SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
         frenesi.spawnTime = 0.15f;
