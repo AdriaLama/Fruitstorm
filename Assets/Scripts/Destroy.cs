@@ -22,13 +22,17 @@ public class Destroy : MonoBehaviour
     public float newScaleX;
     public float scaleY = 0.8f;
     public float newScaleY;
+    public float pos = 10.5f;
+    public float newPos;
 
     private void Awake()
     {
         //scaleX = 0.8f;
         //scaleY = 0.8f;
+        //pos = 10.5f;
         PlayerPrefs.SetFloat("scaleX", scaleX);
         PlayerPrefs.SetFloat("scaleY", scaleY);
+        PlayerPrefs.SetFloat("pos", pos);
         UpdateBasket();
     }
 
@@ -73,7 +77,7 @@ public class Destroy : MonoBehaviour
         {
             Destroy(collision.gameObject);
             ManchaDeTinta.SetActive(true);
-            StartCoroutine(QuitarEvento(4f));
+            StartCoroutine(QuitarEvento(3f));
         }
 
         if (collision.gameObject.CompareTag("PowerUpInvertir"))
@@ -129,7 +133,6 @@ public class Destroy : MonoBehaviour
             EscudoBarrera.SetActive(true);
             StartCoroutine(QuitarBarrera(5f));
             StartCoroutine(QuitarEvento(2f));
-
         }
 
     }
@@ -210,16 +213,18 @@ public class Destroy : MonoBehaviour
     {
         newScaleX = PlayerPrefs.GetFloat("newScaleX");
         newScaleY = PlayerPrefs.GetFloat("newScaleY");
+        newPos = PlayerPrefs.GetFloat("newPos");
         //newScaleX = 0.8f;
         //newScaleY = 0.8f;
+        //newPos = 10.5f;
         scaleX = newScaleX;
         scaleY = newScaleY;
+        pos = newPos;
         PlayerPrefs.SetFloat("scaleX", scaleX);
         PlayerPrefs.SetFloat("scaleY", scaleY);
+        PlayerPrefs.SetFloat("pos", pos);
 
         Cesta.transform.localScale = new Vector3(scaleX, scaleY, 1f);
-
-        Vector3 newLocalPosition = new Vector3(Cesta.transform.localPosition.x, Cesta.transform.localPosition.y, Cesta.transform.localPosition.z);
-        Cesta.transform.localPosition = newLocalPosition;
+        Cesta.transform.localPosition = new Vector3(Cesta.transform.localPosition.x, pos, Cesta.transform.localPosition.z);
     }
 }

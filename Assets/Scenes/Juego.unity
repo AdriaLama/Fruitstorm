@@ -151,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6448898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 10.316194, z: 0}
+  m_LocalPosition: {x: -0.1, y: 10.5, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.75147027}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -206,6 +206,12 @@ MonoBehaviour:
   Chrono: {fileID: 2093739055}
   Barrera: {fileID: 970776230}
   EscudoBarrera: {fileID: 1557764061}
+  scaleX: 0.8
+  newScaleX: 0
+  scaleY: 0.8
+  newScaleY: 0
+  pos: 0
+  newPos: 0
 --- !u!61 &6448902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7477,6 +7483,12 @@ MonoBehaviour:
   Chrono: {fileID: 2093739055}
   Barrera: {fileID: 1678804868}
   EscudoBarrera: {fileID: 1557764061}
+  scaleX: 0.8
+  newScaleX: 0
+  scaleY: 0.8
+  newScaleY: 0
+  pos: 0
+  newPos: 0
 --- !u!111 &971718556
 Animation:
   m_ObjectHideFlags: 0

@@ -19,21 +19,13 @@ public class UITienda : MonoBehaviour
     public float speed;
     public float scaleX;
     public float scaleY;
+    public float pos;
 
     void Awake()
     {
         gold = PlayerPrefs.GetInt("gold");
         totalGold = PlayerPrefs.GetInt("totalGold");
         totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
-        speed = PlayerPrefs.GetFloat("speed");
-        /*PlayerPrefs.SetFloat("speedlvlup", speed);
-        PlayerPrefs.Save();*/
-        scaleX = PlayerPrefs.GetFloat("scaleX");
-        scaleY = PlayerPrefs.GetFloat("scaleY");
-        /*PlayerPrefs.SetFloat("newScaleX", scaleX);
-        PlayerPrefs.Save();
-        PlayerPrefs.SetFloat("newScaleY", scaleY);
-        PlayerPrefs.Save();*/
         ActualizarOro();
         ActualizarTienda();
     }
@@ -85,6 +77,26 @@ public class UITienda : MonoBehaviour
             costBasket = 5000;
             PlayerPrefs.SetInt("costBasket", costBasket);
         }
+        if (!PlayerPrefs.HasKey("speedlvlup"))
+        {
+            speed = 10;
+            PlayerPrefs.SetFloat("speedlvlup", speed);
+        }
+        if (!PlayerPrefs.HasKey("newScaleX"))
+        {
+            scaleX = 0.8f;
+            PlayerPrefs.SetFloat("newScaleX", scaleX);
+        }
+        if (!PlayerPrefs.HasKey("newScaleY"))
+        {
+            scaleY = 0.8f;
+            PlayerPrefs.SetFloat("newScaleY", scaleY);
+        }
+        if (!PlayerPrefs.HasKey("newPos"))
+        {
+            pos = 10.5f;
+            PlayerPrefs.SetFloat("newPos", pos);
+        }
         /*levelSpeed = 1;
         PlayerPrefs.SetInt("levelSpeed", levelSpeed);
         PlayerPrefs.Save();*/
@@ -101,6 +113,26 @@ public class UITienda : MonoBehaviour
         PlayerPrefs.SetInt("costBasket", costBasket);
         PlayerPrefs.Save();*/
         costBasket = PlayerPrefs.GetInt("costBasket");
+        /*speed = 10f;
+        PlayerPrefs.SetFloat("speedlvlup", speed);
+        PlayerPrefs.Save();
+        speed = PlayerPrefs.GetFloat("speedlvlup");*/
+        speed = PlayerPrefs.GetFloat("speed");
+        /*scaleX = 0.8f;
+        PlayerPrefs.SetFloat("newScaleX", scaleX);
+        PlayerPrefs.Save();
+        scaleX = PlayerPrefs.GetFloat("newScaleX");*/
+        scaleX = PlayerPrefs.GetFloat("scaleX");
+        /*scaleY = 0.8f;
+        PlayerPrefs.SetFloat("newScaleY", scaleY);
+        PlayerPrefs.Save();
+        scaleY = PlayerPrefs.GetFloat("newScaleY");*/
+        scaleY = PlayerPrefs.GetFloat("scaleY");
+        /*pos = 10.5f;
+        PlayerPrefs.SetFloat("newPos", pos);
+        PlayerPrefs.Save();
+        pos = PlayerPrefs.GetFloat("newPos");*/
+        pos = PlayerPrefs.GetFloat("pos");
     }
 
     public void LevelUpSpeed()
@@ -131,11 +163,15 @@ public class UITienda : MonoBehaviour
         {
             scaleX += 0.1f;
             scaleY += 0.1f;
+            pos += 0.25f;
             //scaleX = 0.8f;
             //scaleY = 0.8f;
+            //pos = 10.5f;
             PlayerPrefs.SetFloat("newScaleX", scaleX);
             PlayerPrefs.Save();
             PlayerPrefs.SetFloat("newScaleY", scaleY);
+            PlayerPrefs.Save();
+            PlayerPrefs.SetFloat("newPos", pos);
             PlayerPrefs.Save();
 
             levelBasket++;
@@ -146,7 +182,7 @@ public class UITienda : MonoBehaviour
             PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
             PlayerPrefs.Save();
             costBasket += 5000;
-            PlayerPrefs.SetInt("costSpeed", costBasket);
+            PlayerPrefs.SetInt("costBasket", costBasket);
             PlayerPrefs.Save();
         }
     }
