@@ -20,9 +20,12 @@ public class UITienda : MonoBehaviour
     public float scaleX;
     public float scaleY;
     public float pos;
+    private AudioSource audioSource;
+    private AudioClip Mejoras;
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         gold = PlayerPrefs.GetInt("gold");
         totalGold = PlayerPrefs.GetInt("totalGold");
         totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
@@ -143,7 +146,7 @@ public class UITienda : MonoBehaviour
             //speed = 10f;
             PlayerPrefs.SetFloat("speedlvlup", speed);
             PlayerPrefs.Save();
-
+            audioSource.PlayOneShot(Mejoras);
             levelSpeed++;
             PlayerPrefs.SetInt("levelSpeed", levelSpeed);
             PlayerPrefs.Save();
@@ -173,7 +176,7 @@ public class UITienda : MonoBehaviour
             PlayerPrefs.Save();
             PlayerPrefs.SetFloat("newPos", pos);
             PlayerPrefs.Save();
-
+            audioSource.PlayOneShot(Mejoras);
             levelBasket++;
             PlayerPrefs.SetInt("levelBasket", levelBasket);
             PlayerPrefs.Save();

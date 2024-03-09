@@ -29,8 +29,8 @@ public class UI : MonoBehaviour
     public List<int> collectedFrutasDefeat;
     public TMP_Text[] collectedFrutasDefeatText;
     private AudioSource audioSource;
-    private AudioClip Frenesi;
-
+    private AudioClip MusicaJuego;
+    public GameObject FondoTormenta;
 
     private void Awake()
     {
@@ -39,8 +39,7 @@ public class UI : MonoBehaviour
     }
     private void Start()
     { 
-        audioSource = GetComponent<AudioSource>();
-        Frenesi = Resources.Load<AudioClip>("Frenesi");
+       audioSource = GetComponent<AudioSource>();
         areUReady.SetActive(false);
         currentTime = startingTime;
         Pausa = FindObjectOfType<GameManager>();
@@ -84,21 +83,25 @@ public class UI : MonoBehaviour
 
         if (punt >= 2000)
         {
+            
             punt = 2000;
             remainingLifes = life;
             finalPunt = punt * remainingLifes;
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Victory();
+            audioSource.Pause();
         }
 
         if (life <= 0)
         {
+            
             life = 0;
             finalPunt = punt;
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Defeat();
+            audioSource.Pause();
         }
         if (timerIsActive)
         {
@@ -134,7 +137,7 @@ public class UI : MonoBehaviour
     { 
        
         yield return new WaitForSeconds(seconds);
-        audioSource.PlayOneShot(Frenesi);
+        FondoTormenta.SetActive(true);
         areUReady.SetActive(false);
         SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
         frenesi.spawnTime = 0.15f;

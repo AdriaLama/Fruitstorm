@@ -6,6 +6,14 @@ public class CollisionFruit : MonoBehaviour
 {
     public UI puntuacion;
     public List<ConfiguracionFruta> configuracionFrutas;
+    private AudioSource audioSource;
+    private AudioClip Arma;
+    private AudioClip agujeroNegro;
+
+    private void Awake()
+    {
+            audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Fruta"))
@@ -30,6 +38,7 @@ public class CollisionFruit : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("PowerUpArma"))
         {
+            audioSource.PlayOneShot(Arma);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("PowerUpAspiradora"))

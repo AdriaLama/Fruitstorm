@@ -12,6 +12,7 @@ public class MovimientoPersonaje : MonoBehaviour
     public GameObject Player;
     public Animator anim;
     private SpriteRenderer spriteRenderer;
+   
 
 
 
