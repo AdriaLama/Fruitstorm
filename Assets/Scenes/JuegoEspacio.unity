@@ -8081,10 +8081,10 @@ MonoBehaviour:
   lifes: {fileID: 802983120}
   timer: {fileID: 98685936}
   areUReady: {fileID: 1836850558}
-  Rifle: {fileID: 0}
-  Cesta: {fileID: 0}
+  Rifle: {fileID: 1921445073}
+  Cesta: {fileID: 1955962900}
   remainingLifes: 0
-  remainingLifesTMP: {fileID: 0}
+  remainingLifesTMP: {fileID: 802983120}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasText:
   - {fileID: 114900304}
@@ -14369,7 +14369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da75281a7d5a71c40a4949bfd9772ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntuacion: {fileID: 0}
+  puntuacion: {fileID: 1187907584}
   configuracionFrutas:
   - {fileID: 11400000, guid: ef63bbbf26862cb4dae3353406d08359, type: 2}
   - {fileID: 11400000, guid: 4a8bb7e4a91b9674d9f1eacb67419778, type: 2}
@@ -14379,17 +14379,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab9530a974b128040bdc311e2afb9963, type: 2}
   - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
   - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
-  ManchaDeTinta: {fileID: 0}
-  movInvertido: {fileID: 0}
+  ManchaDeTinta: {fileID: 1812976179}
+  movInvertido: {fileID: 1011935694}
   Rifle: {fileID: 1921445073}
   Cesta: {fileID: 1955962900}
-  Alien: {fileID: 0}
+  Alien: {fileID: 49175529}
   Aspiradora: {fileID: 1641239519}
-  Invertido: {fileID: 0}
-  Multiplicador: {fileID: 0}
-  Chrono: {fileID: 0}
+  Invertido: {fileID: 2106799735}
+  Multiplicador: {fileID: 493725959}
+  Chrono: {fileID: 82560172}
   Barrera: {fileID: 1147621832}
-  EscudoBarrera: {fileID: 0}
+  EscudoBarrera: {fileID: 1589241488}
   scaleX: 0.8
   newScaleX: 0
   scaleY: 0.8
