@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.ShaderData;
 
 public class UISpace : MonoBehaviour
 {

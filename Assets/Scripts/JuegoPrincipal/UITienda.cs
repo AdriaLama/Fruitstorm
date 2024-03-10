@@ -27,6 +27,7 @@ public class UITienda : MonoBehaviour
     public TMP_Text costSpaceText;
     public int costRevenge = 1000;
     public TMP_Text costRevengeText;
+    
 
     void Awake()
     {
@@ -203,7 +204,10 @@ public class UITienda : MonoBehaviour
             totalGold -= costSpace;
             totalGoldSpent += costSpace;
             PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
-            PlayerPrefs.Save(); 
+            PlayerPrefs.Save();
+            gold = 0;
+            PlayerPrefs.SetInt("gold", gold);
+            PlayerPrefs.Save();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("MenuEspacio");
         }
@@ -218,9 +222,11 @@ public class UITienda : MonoBehaviour
             totalGoldSpent += costRevenge;
             PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
             PlayerPrefs.Save();
+            gold = 0;
+            PlayerPrefs.SetInt("gold", gold);
+            PlayerPrefs.Save();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("SpaceInvaders");
         }
-
     }
 }
