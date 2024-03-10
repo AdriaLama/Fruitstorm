@@ -14,9 +14,24 @@ public class Enemies : MonoBehaviour
     private bool hasReachedPlayer = false;
     private float initialYPosition;
 
+    public GameObject balaPrefab;
+    public float intervaloDisparo = 3f;
+    Collider2D coll;
+    private bool hasStartedShooting = false;
+
     void Start()
     {
-        initialYPosition = transform.position.y; 
+        initialYPosition = transform.position.y;
+
+        coll = GetComponent<Collider2D>();
+        if (coll.CompareTag("MiniBoss") || coll.CompareTag("MiniBoss2"))
+        {
+            intervaloDisparo = 2f;
+        }
+        if (coll.CompareTag("Boss"))
+        {
+            intervaloDisparo = 1f;
+        }
     }
     void Update()
     {
@@ -27,6 +42,11 @@ public class Enemies : MonoBehaviour
         else
         {
             LookAtPlayer();
+            if (!hasStartedShooting)
+            {
+                InvokeRepeating("Disparar", 0f, intervaloDisparo);
+                hasStartedShooting = true;
+            }
         }
     }
     void Move()
@@ -48,5 +68,10 @@ public class Enemies : MonoBehaviour
         Vector3 direction = (player.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+    }
+    void Disparar()
+    {
+        GameObject temp = Instantiate(balaPrefab, transform.position, transform.rotation);
+        Destroy(temp, 1);
     }
 }

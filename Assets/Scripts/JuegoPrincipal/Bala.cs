@@ -13,7 +13,7 @@ public class Bala : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemies enemy = FindObjectOfType<Enemies>();
+        Enemies enemy = collision.gameObject.GetComponent<Enemies>();
         Oleadas waves = FindObjectOfType<Oleadas>();
 
 

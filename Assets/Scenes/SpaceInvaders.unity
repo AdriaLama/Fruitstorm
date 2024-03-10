@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 21671865}
   - component: {fileID: 21671864}
   - component: {fileID: 21671863}
-  - component: {fileID: 21671862}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -159,20 +158,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &21671862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21671860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!61 &21671863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -263,6 +248,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &21671866
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -328,7 +315,6 @@ GameObject:
   - component: {fileID: 56120827}
   - component: {fileID: 56120826}
   - component: {fileID: 56120825}
-  - component: {fileID: 56120824}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -351,20 +337,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &56120824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56120822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &56120825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -455,6 +427,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &56120828
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -520,7 +494,6 @@ GameObject:
   - component: {fileID: 85341102}
   - component: {fileID: 85341101}
   - component: {fileID: 85341100}
-  - component: {fileID: 85341099}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -543,20 +516,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &85341099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85341097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &85341100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -647,6 +606,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &85341103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -712,7 +673,6 @@ GameObject:
   - component: {fileID: 114479931}
   - component: {fileID: 114479930}
   - component: {fileID: 114479929}
-  - component: {fileID: 114479928}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy2
@@ -735,20 +695,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114479928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114479926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &114479929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -839,6 +785,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &114479932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -904,7 +852,6 @@ GameObject:
   - component: {fileID: 149023963}
   - component: {fileID: 149023962}
   - component: {fileID: 149023961}
-  - component: {fileID: 149023960}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -927,20 +874,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &149023960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149023958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &149023961
 Rigidbody2D:
   serializedVersion: 4
@@ -1031,6 +964,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &149023964
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1135,7 +1070,6 @@ GameObject:
   - component: {fileID: 193973415}
   - component: {fileID: 193973414}
   - component: {fileID: 193973413}
-  - component: {fileID: 193973412}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy2
@@ -1158,20 +1092,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &193973412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193973410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &193973413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1262,6 +1182,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &193973416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1327,7 +1249,6 @@ GameObject:
   - component: {fileID: 197055097}
   - component: {fileID: 197055096}
   - component: {fileID: 197055095}
-  - component: {fileID: 197055094}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -1350,20 +1271,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &197055094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197055092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &197055095
 Rigidbody2D:
   serializedVersion: 4
@@ -1454,6 +1361,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &197055098
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1519,7 +1428,6 @@ GameObject:
   - component: {fileID: 213784718}
   - component: {fileID: 213784717}
   - component: {fileID: 213784716}
-  - component: {fileID: 213784715}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy2
@@ -1542,20 +1450,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &213784715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213784713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &213784716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1646,6 +1540,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &213784719
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1775,7 +1671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216068879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3797, y: 1.1419, z: 0}
+  m_LocalPosition: {x: 0.16, y: -0.11, z: 0}
   m_LocalScale: {x: 1.791797, y: 1.7126778, z: 1.57}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1843,7 +1739,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.078804
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1887,7 +1783,6 @@ GameObject:
   - component: {fileID: 330882686}
   - component: {fileID: 330882685}
   - component: {fileID: 330882684}
-  - component: {fileID: 330882683}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -1910,20 +1805,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &330882683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330882681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &330882684
 Rigidbody2D:
   serializedVersion: 4
@@ -2014,6 +1895,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &330882687
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2147,7 +2030,6 @@ GameObject:
   - component: {fileID: 466941842}
   - component: {fileID: 466941841}
   - component: {fileID: 466941840}
-  - component: {fileID: 466941839}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy2
@@ -2170,20 +2052,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &466941839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466941837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &466941840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2274,6 +2142,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &466941843
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2339,7 +2209,6 @@ GameObject:
   - component: {fileID: 568378472}
   - component: {fileID: 568378471}
   - component: {fileID: 568378470}
-  - component: {fileID: 568378469}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -2362,20 +2231,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &568378469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568378467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!61 &568378470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2466,6 +2321,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &568378473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2531,7 +2388,6 @@ GameObject:
   - component: {fileID: 601798689}
   - component: {fileID: 601798688}
   - component: {fileID: 601798687}
-  - component: {fileID: 601798686}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -2554,20 +2410,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &601798686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601798684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &601798687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2658,6 +2500,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &601798690
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2735,7 +2579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700171243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2773,7 +2617,6 @@ GameObject:
   - component: {fileID: 797308574}
   - component: {fileID: 797308573}
   - component: {fileID: 797308572}
-  - component: {fileID: 797308571}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy2
@@ -2796,20 +2639,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &797308571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797308569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &797308572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2900,6 +2729,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &797308575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3005,7 +2836,6 @@ GameObject:
   - component: {fileID: 820702737}
   - component: {fileID: 820702736}
   - component: {fileID: 820702735}
-  - component: {fileID: 820702734}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy2
@@ -3028,20 +2858,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &820702734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820702732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &820702735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3132,6 +2948,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &820702738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3197,7 +3015,6 @@ GameObject:
   - component: {fileID: 899770633}
   - component: {fileID: 899770632}
   - component: {fileID: 899770631}
-  - component: {fileID: 899770630}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -3220,20 +3037,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &899770630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899770628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &899770631
 Rigidbody2D:
   serializedVersion: 4
@@ -3324,6 +3127,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 7057646299091120901, guid: a598ab4dc8292a7479df77f75661dfac, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &899770634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3388,7 +3193,6 @@ GameObject:
   - component: {fileID: 948270193}
   - component: {fileID: 948270192}
   - component: {fileID: 948270191}
-  - component: {fileID: 948270190}
   - component: {fileID: 948270189}
   m_Layer: 0
   m_Name: MiniBoss
@@ -3457,20 +3261,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.2}
   m_EdgeRadius: 0
---- !u!114 &948270190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948270187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &948270191
 Rigidbody2D:
   serializedVersion: 4
@@ -3516,6 +3306,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &948270193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3762,7 +3554,6 @@ GameObject:
   - component: {fileID: 1028709633}
   - component: {fileID: 1028709632}
   - component: {fileID: 1028709631}
-  - component: {fileID: 1028709630}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss
@@ -3785,20 +3576,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1028709630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028709628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &1028709631
 Rigidbody2D:
   serializedVersion: 4
@@ -3889,6 +3666,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 2
 --- !u!212 &1028709634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3954,7 +3733,6 @@ GameObject:
   - component: {fileID: 1095644494}
   - component: {fileID: 1095644493}
   - component: {fileID: 1095644492}
-  - component: {fileID: 1095644491}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -3977,20 +3755,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1095644491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095644489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &1095644492
 Rigidbody2D:
   serializedVersion: 4
@@ -4081,6 +3845,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1095644495
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4146,7 +3912,6 @@ GameObject:
   - component: {fileID: 1143186463}
   - component: {fileID: 1143186462}
   - component: {fileID: 1143186461}
-  - component: {fileID: 1143186460}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -4169,20 +3934,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1143186460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143186458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &1143186461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4273,6 +4024,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1143186464
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4338,7 +4091,6 @@ GameObject:
   - component: {fileID: 1173741172}
   - component: {fileID: 1173741171}
   - component: {fileID: 1173741170}
-  - component: {fileID: 1173741169}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -4361,20 +4113,6 @@ Transform:
   m_Father: {fileID: 950376920}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1173741169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173741167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &1173741170
 Rigidbody2D:
   serializedVersion: 4
@@ -4465,6 +4203,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1173741173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4530,7 +4270,6 @@ GameObject:
   - component: {fileID: 1197211182}
   - component: {fileID: 1197211181}
   - component: {fileID: 1197211180}
-  - component: {fileID: 1197211179}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -4553,20 +4292,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1197211179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197211177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &1197211180
 Rigidbody2D:
   serializedVersion: 4
@@ -4657,6 +4382,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1197211183
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4722,7 +4449,6 @@ GameObject:
   - component: {fileID: 1219697843}
   - component: {fileID: 1219697842}
   - component: {fileID: 1219697841}
-  - component: {fileID: 1219697840}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -4745,20 +4471,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1219697840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219697838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &1219697841
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4849,6 +4561,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1219697844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4914,7 +4628,6 @@ GameObject:
   - component: {fileID: 1222224850}
   - component: {fileID: 1222224849}
   - component: {fileID: 1222224848}
-  - component: {fileID: 1222224847}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -4937,20 +4650,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1222224847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222224845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &1222224848
 Rigidbody2D:
   serializedVersion: 4
@@ -5041,6 +4740,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1222224851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5105,7 +4806,6 @@ GameObject:
   - component: {fileID: 1314045204}
   - component: {fileID: 1314045203}
   - component: {fileID: 1314045202}
-  - component: {fileID: 1314045201}
   - component: {fileID: 1314045200}
   m_Layer: 0
   m_Name: MiniBoss
@@ -5174,20 +4874,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.2}
   m_EdgeRadius: 0
---- !u!114 &1314045201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314045198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &1314045202
 Rigidbody2D:
   serializedVersion: 4
@@ -5233,6 +4919,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1314045204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5298,7 +4986,6 @@ GameObject:
   - component: {fileID: 1407083860}
   - component: {fileID: 1407083859}
   - component: {fileID: 1407083858}
-  - component: {fileID: 1407083857}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -5321,20 +5008,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1407083857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407083855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &1407083858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5425,6 +5098,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1407083861
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5490,7 +5165,6 @@ GameObject:
   - component: {fileID: 1548509011}
   - component: {fileID: 1548509010}
   - component: {fileID: 1548509009}
-  - component: {fileID: 1548509008}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemy
@@ -5513,20 +5187,6 @@ Transform:
   m_Father: {fileID: 166669189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1548509008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548509006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 3
 --- !u!61 &1548509009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5617,6 +5277,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1548509012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5732,7 +5394,6 @@ GameObject:
   - component: {fileID: 1614755953}
   - component: {fileID: 1614755952}
   - component: {fileID: 1614755951}
-  - component: {fileID: 1614755950}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -5755,20 +5416,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1614755950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614755948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &1614755951
 Rigidbody2D:
   serializedVersion: 4
@@ -5859,6 +5506,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &1614755954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6128,7 +5777,6 @@ GameObject:
   - component: {fileID: 2022517735}
   - component: {fileID: 2022517734}
   - component: {fileID: 2022517733}
-  - component: {fileID: 2022517732}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: MiniBoss2
@@ -6151,20 +5799,6 @@ Transform:
   m_Father: {fileID: 807615423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2022517732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022517730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 218d410b24b2e774880d728a1a9b9d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
-  intervaloDisparo: 2
 --- !u!50 &2022517733
 Rigidbody2D:
   serializedVersion: 4
@@ -6255,6 +5889,8 @@ MonoBehaviour:
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
+  balaPrefab: {fileID: 75471365817007501, guid: 52d82a78c0aa11e40ae06b96e9cda209, type: 3}
+  intervaloDisparo: 3
 --- !u!212 &2022517736
 SpriteRenderer:
   m_ObjectHideFlags: 0
