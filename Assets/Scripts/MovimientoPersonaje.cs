@@ -12,7 +12,8 @@ public class MovimientoPersonaje : MonoBehaviour
     public GameObject Player;
     public Animator anim;
     private SpriteRenderer spriteRenderer;
-   
+    public GameObject RiflePersonaje;
+
 
 
 
@@ -42,6 +43,7 @@ public class MovimientoPersonaje : MonoBehaviour
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
 
             }
+            
             else if (Input.GetKey(KeyCode.RightArrow) || horizontal < 0)
             {
 
