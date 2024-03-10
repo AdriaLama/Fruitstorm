@@ -149,8 +149,8 @@ public class UITienda : MonoBehaviour
     public void LevelUpSpeed()
     {
         if (totalGold >= costSpeed)
-        { 
-            AudioSource.PlayClipAtPoint(Mejoras, transform.position);
+        {
+            audioSource.PlayOneShot(Mejoras);
             speed += 1f;
             //speed = 10f;
             PlayerPrefs.SetFloat("speedlvlup", speed);
@@ -173,7 +173,7 @@ public class UITienda : MonoBehaviour
     {
         if (totalGold >= costBasket)
         {
-            AudioSource.PlayClipAtPoint(Mejoras, transform.position);
+            audioSource.PlayOneShot(Mejoras);
             scaleX += 0.1f;
             scaleY += 0.1f;
             pos += 0.25f;

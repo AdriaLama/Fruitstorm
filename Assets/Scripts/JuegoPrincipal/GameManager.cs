@@ -161,4 +161,10 @@ public class GameManager : MonoBehaviour
     {
        Application.Quit();
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Creditos");
+    }
 }
