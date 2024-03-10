@@ -5,7 +5,9 @@ using UnityEngine;
 public class DisparoNave : MonoBehaviour
 {
     public GameObject bala;
-    Collider2D coll;    
+    Collider2D coll;
+    private AudioSource audioSource;
+    public AudioClip BalaNave;
     void Start()
     {
         coll = GetComponent<Collider2D>();
@@ -16,6 +18,7 @@ public class DisparoNave : MonoBehaviour
         {
             GameObject temp = Instantiate(bala, transform.position, transform.rotation);
             Destroy(temp, 1);
+            AudioSource.PlayClipAtPoint(BalaNave, transform.position);
         }
     }
 }

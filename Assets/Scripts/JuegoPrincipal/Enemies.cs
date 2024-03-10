@@ -19,6 +19,7 @@ public class Enemies : MonoBehaviour
     Collider2D coll;
     private bool hasStartedShooting = false;
 
+
     void Start()
     {
         initialYPosition = transform.position.y;
