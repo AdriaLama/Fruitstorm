@@ -2136,6 +2136,7 @@ MonoBehaviour:
   newSpeed: 0
   Player: {fileID: 344191801}
   anim: {fileID: 1231940562}
+  RiflePersonaje: {fileID: 1054705958}
 --- !u!114 &344191807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4936,7 +4937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754128808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2086.882, y: -1045.3312, z: 14.762327}
+  m_LocalPosition: {x: -2086.882, y: -1044.46, z: 14.762327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4958,7 +4959,7 @@ MonoBehaviour:
   speed: 10
   LimiteAlienPos: 8.25
   LimiteAlienNeg: -8.7
-  alienLifes: 10
+  alienLifes: 15
 --- !u!61 &754128813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7904,8 +7905,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054705958}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.84, y: 11.49, z: 0}
-  m_LocalScale: {x: 1.3366984, y: 2.062129, z: 0.18124612}
+  m_LocalPosition: {x: -0.82, y: 12.704, z: 0}
+  m_LocalScale: {x: 1.2671679, y: 1.2457504, z: 0.17184396}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 344191805}
@@ -7970,7 +7971,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.4181404, y: -0.52127314}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7981,7 +7982,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.24, y: 7.68}
+  m_Size: {x: 9.403719, y: 1.7932644}
   m_EdgeRadius: 0
 --- !u!212 &1054705963
 SpriteRenderer:
@@ -15024,7 +15025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arma: {fileID: 1951543500}
   currTime: 0
-  spawnTime: 90
+  spawnTime: 10
 --- !u!50 &1951543504
 Rigidbody2D:
   serializedVersion: 4

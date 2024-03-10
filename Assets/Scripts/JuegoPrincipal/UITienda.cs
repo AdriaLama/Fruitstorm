@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class UITienda : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class UITienda : MonoBehaviour
     public float pos;
     private AudioSource audioSource;
     public AudioClip Mejoras;
+    public int costSpace = 1000;
+    public TMP_Text costSpaceText;
 
     void Awake()
     {
@@ -80,6 +83,7 @@ public class UITienda : MonoBehaviour
             costBasket = 5000;
             PlayerPrefs.SetInt("costBasket", costBasket);
         }
+     
         if (!PlayerPrefs.HasKey("speedlvlup"))
         {
             speed = 10;
@@ -189,5 +193,18 @@ public class UITienda : MonoBehaviour
             PlayerPrefs.SetInt("costBasket", costBasket);
             PlayerPrefs.Save();
         }
+    }
+
+    public void GoSpace()
+    {
+        if (totalGold >= costSpace) { 
+            totalGold -= costSpace;
+            totalGoldSpent += costSpace;
+            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
+            PlayerPrefs.Save(); 
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("MenuEspacio");
+        }
+
     }
 }
