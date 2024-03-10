@@ -24,6 +24,8 @@ public class Destroy : MonoBehaviour
     public float newScaleY;
     public float pos = 10.5f;
     public float newPos;
+    public AudioClip Arma;
+    public AudioClip agujeroNegro;
 
     private void Awake()
     {
@@ -92,6 +94,7 @@ public class Destroy : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUpArma"))
         {
             Cesta.SetActive(false);
+            AudioSource.PlayClipAtPoint(Arma, transform.position); 
             Rifle.SetActive(true);
             Destroy(collision.gameObject);
             Alien.SetActive(true);
@@ -99,10 +102,11 @@ public class Destroy : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUpAspiradora"))
         {
             Aspiradora.SetActive(true);
+            AudioSource.PlayClipAtPoint(agujeroNegro, transform.position);
             Aspiradora aspirar = FindObjectOfType<Aspiradora>();
             aspirar.Aspirar();
             Destroy(collision.gameObject);
-            StartCoroutine(ActivarAspiradora(8f));
+            StartCoroutine(ActivarAspiradora(5f));
         }
         if (collision.gameObject.CompareTag("PowerUpMultiplicador"))
         {

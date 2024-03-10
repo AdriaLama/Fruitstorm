@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Juego.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/MenuPrincipalEspacio.unity
+    path: Assets/Scenes/MenuEspacio.unity
     guid: 33597e99df7eae44f8494c20e47d247c
   - enabled: 1
-    path: Assets/Scenes/JuegoEspacio.unity
+    path: Assets/Scenes/Espacio.unity
     guid: bb446ab98dc02cc4da83f901ff3f1f56
   - enabled: 0
     path: Assets/Scenes/Opciones.unity

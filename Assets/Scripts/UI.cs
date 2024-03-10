@@ -29,8 +29,7 @@ public class UI : MonoBehaviour
     public List<int> collectedFrutasDefeat;
     public TMP_Text[] collectedFrutasDefeatText;
     private AudioSource audioSource;
-    private AudioClip MusicaJuego;
-    public GameObject FondoTormenta;
+    public AudioClip MusicaJuego;
 
     private void Awake()
     {
@@ -137,8 +136,8 @@ public class UI : MonoBehaviour
     { 
        
         yield return new WaitForSeconds(seconds);
-        FondoTormenta.SetActive(true);
         areUReady.SetActive(false);
+        audioSource.pitch *= 1.3f;
         SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
         frenesi.spawnTime = 0.15f;
         Rifle.SetActive(false);

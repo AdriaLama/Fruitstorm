@@ -3,7 +3,10 @@ guid: 0caa4643aad292b4b8e5a565d43e9f4f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - puntuacion: {instanceID: 0}
+  - Arma: {fileID: 8300000, guid: 02093db2240e1a544ab93b298f68fea1, type: 3}
+  - agujeroNegro: {fileID: 8300000, guid: 761cb20aaf45ebd4780e9dcbb0daa43f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
