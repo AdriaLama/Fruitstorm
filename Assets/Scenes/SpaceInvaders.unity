@@ -11484,10 +11484,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 27bc8a4c1e0725d4bb7e0e0a1a3346a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3efdb2435a5f5e640ba1de66832e28b0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.041
-  m_Pitch: 0.6
+  m_Volume: 0.142
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -14640,6 +14640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bala: {fileID: 2029191472695741543, guid: 789524d959c706c49b3eb2c1944bee0e, type: 3}
+  BalaNave: {fileID: 8300000, guid: 71952c7cfdb00494bb69da472de4dadb, type: 3}
 --- !u!114 &1745732818
 MonoBehaviour:
   m_ObjectHideFlags: 0
