@@ -99,6 +99,7 @@ public class Destroy : MonoBehaviour
             Rifle.SetActive(true);
             Destroy(collision.gameObject);
             Alien.SetActive(true);
+
         }
         if (collision.gameObject.CompareTag("PowerUpAspiradora"))
         {
