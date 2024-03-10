@@ -324,6 +324,7 @@ MonoBehaviour:
   costSpaceText: {fileID: 1402320467}
   costRevenge: 1000
   costRevengeText: {fileID: 0}
+  OuterSpace: {fileID: 1834878403}
 --- !u!82 &65049687
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1521,7 +1522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &371646697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1739,8 +1740,8 @@ RectTransform:
   - {fileID: 1468879784}
   - {fileID: 438839432}
   - {fileID: 211689391}
-  - {fileID: 371646697}
   - {fileID: 1834878404}
+  - {fileID: 371646697}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5414,8 +5415,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.26
-  m_fontSizeBase: 32.26
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -27,6 +27,7 @@ public class UITienda : MonoBehaviour
     public TMP_Text costSpaceText;
     public int costRevenge = 1000;
     public TMP_Text costRevengeText;
+    public GameObject OuterSpace;
     
 
     void Awake()
