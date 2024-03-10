@@ -15,6 +15,7 @@ public class Bala : MonoBehaviour
     {
         Enemies enemy = collision.gameObject.GetComponent<Enemies>();
         Oleadas waves = FindObjectOfType<Oleadas>();
+        UISpace punt = FindObjectOfType<UISpace>();
 
 
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy2")

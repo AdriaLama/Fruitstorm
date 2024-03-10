@@ -13,16 +13,16 @@ public class BalaEnemies : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        MovimientoNave player = FindObjectOfType<MovimientoNave>();
+        UISpace punt = FindObjectOfType<UISpace>();
         if (collision.gameObject.tag == "Player")
         {
-            player.shipLifes--;
-            if (player.shipLifes <= 0)
+            punt.life--;
+            if (punt.life <= 0)
             {
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
             }
-            else if (player.shipLifes > 0)
+            else if (punt.life > 0)
             {
                 Destroy(gameObject);
             }

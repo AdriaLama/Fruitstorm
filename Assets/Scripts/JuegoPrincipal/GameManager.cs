@@ -34,7 +34,19 @@ public class GameManager : MonoBehaviour
                     Continue();
                 }
             }
-            else if (SceneManager.GetActiveScene().name == "JuegoEspacio" && !(optionsMenuUI.activeInHierarchy))
+            else if (SceneManager.GetActiveScene().name == "Espacio" && !(optionsMenuUI.activeInHierarchy))
+            {
+                isPaused = !isPaused;
+                if (isPaused)
+                {
+                    Paused();
+                }
+                else if (!isPaused)
+                {
+                    Continue();
+                }
+            }
+            else if (SceneManager.GetActiveScene().name == "SpaceInvaders" && !(optionsMenuUI.activeInHierarchy))
             {
                 isPaused = !isPaused;
                 if (isPaused)
@@ -135,10 +147,6 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
-        UI ui = FindObjectOfType<UI>();
-        ui.finalPunt = 0;
-        PlayerPrefs.SetInt("gold", ui.finalPunt);
-        PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MenuPrincipal");
     }

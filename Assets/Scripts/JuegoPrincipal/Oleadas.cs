@@ -10,6 +10,7 @@ public class Oleadas : MonoBehaviour
 
     private int remainingEnemiesInFirstWave;
     private int remainingEnemiesInSecondWave;
+    private int remainingEnemiesInThirdWave;
 
     void Start()
     {
@@ -32,6 +33,13 @@ public class Oleadas : MonoBehaviour
         {
             SegundaOleada.SetActive(false);
             UltimaOleada.SetActive(true);
+            remainingEnemiesInThirdWave = GameObject.FindGameObjectsWithTag("Boss").Length +
+            GameObject.FindGameObjectsWithTag("MiniBoss2").Length;
+        }
+
+        if (remainingEnemiesInFirstWave == 0 && remainingEnemiesInSecondWave == 0 && remainingEnemiesInThirdWave == 0)
+        {
+            UltimaOleada.SetActive(false);
         }
     }
 

@@ -2149,8 +2149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5666403603c8dc349886c89f4c3a71ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limiteXnegativo: -8.6
-  limiteXpositivo: 8.6
+  limiteXnegativo: -9.9
+  limiteXpositivo: 9.8
 --- !u!61 &344191808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15025,7 +15025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arma: {fileID: 1951543500}
   currTime: 0
-  spawnTime: 10
+  spawnTime: 90
 --- !u!50 &1951543504
 Rigidbody2D:
   serializedVersion: 4

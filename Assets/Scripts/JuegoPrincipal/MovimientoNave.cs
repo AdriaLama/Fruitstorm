@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovimientoNave : MonoBehaviour
 {
     public float speed;
-    public float shipLifes;
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");

@@ -34,7 +34,6 @@ public class UI : MonoBehaviour
 
     private void Awake()
     {
-       
         finalPunt = 0;
     }
     private void Start()
