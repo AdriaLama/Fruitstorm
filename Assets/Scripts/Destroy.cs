@@ -26,6 +26,7 @@ public class Destroy : MonoBehaviour
     public float newPos;
     public AudioClip Arma;
     public AudioClip agujeroNegro;
+    public AudioClip QuitarVida;
 
     private void Awake()
     {
@@ -66,7 +67,7 @@ public class Destroy : MonoBehaviour
             if (!Barrera.activeSelf)
             {
                 Destroy(collision.gameObject);
-
+                AudioSource.PlayClipAtPoint(QuitarVida, transform.position);
                 puntuacion.life -= 1;
             }
             else

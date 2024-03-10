@@ -3182,8 +3182,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 773779f9e1d11e74c92dad4c9b3b5a93, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_PlayOnAwake: 1
+  m_Volume: 0.701
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6939,10 +6939,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1076918620}
+  - {fileID: 1955962901}
   - {fileID: 1921445078}
   - {fileID: 1147621836}
   - {fileID: 1641239522}
-  - {fileID: 1955962901}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8107,8 +8107,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 36069a5ea87051349a52de4f72f73924, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_PlayOnAwake: 1
+  m_Volume: 0.701
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8392,7 +8392,8 @@ MonoBehaviour:
   - {fileID: 897533695}
   - {fileID: 1563141289}
   - {fileID: 424882992}
-  MusicaJuego: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
+  MusicaJuego: {fileID: 8300000, guid: 27bc8a4c1e0725d4bb7e0e0a1a3346a6, type: 3}
+  MusicaJuegoRapida: {fileID: 0}
 --- !u!4 &1187907585
 Transform:
   m_ObjectHideFlags: 0
@@ -8418,10 +8419,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 27bc8a4c1e0725d4bb7e0e0a1a3346a6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.041
-  m_Pitch: 1
+  m_Pitch: 0.6
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -8628,7 +8629,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06717396, y: 0.15658844}
+  m_Offset: {x: 0.23140574, y: 0.15658855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8639,7 +8640,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.709394, y: 4.391241}
+  m_Size: {x: 16.029358, y: 4.391241}
   m_EdgeRadius: 0
 --- !u!212 &1226978755
 SpriteRenderer:
@@ -14719,8 +14720,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955962900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.85, y: 10.5, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.72727}
+  m_LocalPosition: {x: -0.8499998, y: 10.499998, z: 0}
+  m_LocalScale: {x: 0.8000001, y: 0.79999983, z: 0.72727007}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1011935692}
@@ -14780,8 +14781,9 @@ MonoBehaviour:
   newScaleY: 0
   pos: 0
   newPos: 0
-  Arma: {fileID: 0}
-  agujeroNegro: {fileID: 0}
+  Arma: {fileID: 8300000, guid: 02093db2240e1a544ab93b298f68fea1, type: 3}
+  agujeroNegro: {fileID: 8300000, guid: 761cb20aaf45ebd4780e9dcbb0daa43f, type: 3}
+  QuitarVida: {fileID: 8300000, guid: 3ba032e762d3c87408b8df2d3f9f4c49, type: 3}
 --- !u!61 &1955962904
 BoxCollider2D:
   m_ObjectHideFlags: 0
