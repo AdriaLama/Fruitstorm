@@ -3688,6 +3688,7 @@ MonoBehaviour:
   scaleX: 0
   scaleY: 0
   pos: 0
+  Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
 --- !u!4 &1695931142
 Transform:
   m_ObjectHideFlags: 0

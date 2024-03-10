@@ -216,7 +216,7 @@ MonoBehaviour:
   newPos: 0
   Arma: {fileID: 8300000, guid: 02093db2240e1a544ab93b298f68fea1, type: 3}
   agujeroNegro: {fileID: 8300000, guid: 761cb20aaf45ebd4780e9dcbb0daa43f, type: 3}
-  QuitarVida: {fileID: 0}
+  QuitarVida: {fileID: 8300000, guid: 3ba032e762d3c87408b8df2d3f9f4c49, type: 3}
 --- !u!61 &6448902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15024,7 +15024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arma: {fileID: 1951543500}
   currTime: 0
-  spawnTime: 10
+  spawnTime: 90
 --- !u!50 &1951543504
 Rigidbody2D:
   serializedVersion: 4

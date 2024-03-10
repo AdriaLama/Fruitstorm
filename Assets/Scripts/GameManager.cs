@@ -143,11 +143,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void QuitSpace()
-    {
-        UI ui = FindObjectOfType<UI>();
-        ui.finalPunt = 0;
-        PlayerPrefs.SetInt("gold", ui.finalPunt);
-        PlayerPrefs.Save();
+    { 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MenuEspacio");
     }

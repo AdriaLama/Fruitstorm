@@ -21,7 +21,7 @@ public class UITienda : MonoBehaviour
     public float scaleY;
     public float pos;
     private AudioSource audioSource;
-    private AudioClip Mejoras;
+    public AudioClip Mejoras;
 
     void Awake()
     {
@@ -141,12 +141,13 @@ public class UITienda : MonoBehaviour
     public void LevelUpSpeed()
     {
         if (totalGold >= costSpeed)
-        {
+        { 
+            AudioSource.PlayClipAtPoint(Mejoras, transform.position);
             speed += 1f;
             //speed = 10f;
             PlayerPrefs.SetFloat("speedlvlup", speed);
             PlayerPrefs.Save();
-            audioSource.PlayOneShot(Mejoras);
+           
             levelSpeed++;
             PlayerPrefs.SetInt("levelSpeed", levelSpeed);
             PlayerPrefs.Save();
@@ -164,6 +165,7 @@ public class UITienda : MonoBehaviour
     {
         if (totalGold >= costBasket)
         {
+            AudioSource.PlayClipAtPoint(Mejoras, transform.position);
             scaleX += 0.1f;
             scaleY += 0.1f;
             pos += 0.25f;
@@ -176,7 +178,6 @@ public class UITienda : MonoBehaviour
             PlayerPrefs.Save();
             PlayerPrefs.SetFloat("newPos", pos);
             PlayerPrefs.Save();
-            audioSource.PlayOneShot(Mejoras);
             levelBasket++;
             PlayerPrefs.SetInt("levelBasket", levelBasket);
             PlayerPrefs.Save();
