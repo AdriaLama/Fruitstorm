@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -2136,7 +2136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -2316,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -2494,7 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -2723,7 +2723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -2942,7 +2942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -3123,7 +3123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesLifes: 5
   miniBossLifes: 10
-  bossLifes: 50
+  bossLifes: 25
   player: {fileID: 1745732816}
   speed: 5
   stopDistance: 6
@@ -3301,7 +3301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -3661,7 +3661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -3840,7 +3840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -4018,7 +4018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -4198,7 +4198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -4377,7 +4377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -4555,7 +4555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -4735,7 +4735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -5092,7 +5092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -5271,7 +5271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58ac3cebf846e4c9a5d71c4935ba5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLifes: 5
+  enemiesLifes: 3
   miniBossLifes: 10
   bossLifes: 50
   player: {fileID: 1745732816}
@@ -5501,7 +5501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
@@ -5623,7 +5623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  shipLifes: 50
+  shipLifes: 25
 --- !u!114 &1745732819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5884,7 +5884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLifes: 5
-  miniBossLifes: 10
+  miniBossLifes: 5
   bossLifes: 50
   player: {fileID: 1745732816}
   speed: 5
