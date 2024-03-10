@@ -25,6 +25,8 @@ public class UITienda : MonoBehaviour
     public AudioClip Mejoras;
     public int costSpace = 1000;
     public TMP_Text costSpaceText;
+    public int costRevenge = 1000;
+    public TMP_Text costRevengeText;
 
     void Awake()
     {
@@ -204,6 +206,20 @@ public class UITienda : MonoBehaviour
             PlayerPrefs.Save(); 
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("MenuEspacio");
+        }
+
+    }
+
+    public void Revenge()
+    {
+        if (totalGold >= costRevenge)
+        {
+            totalGold -= costRevenge;
+            totalGoldSpent += costRevenge;
+            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("SpaceInvaders");
         }
 
     }
