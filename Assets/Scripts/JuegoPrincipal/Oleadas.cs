@@ -24,6 +24,7 @@ public class Oleadas : MonoBehaviour
     {
         if (remainingEnemiesInFirstWave == 0)
         {
+            PrimeraOleada.SetActive(false);
             SegundaOleada.SetActive(true);
             remainingEnemiesInSecondWave = GameObject.FindGameObjectsWithTag("Enemy2").Length +
             GameObject.FindGameObjectsWithTag("MiniBoss2").Length;
@@ -52,6 +53,10 @@ public class Oleadas : MonoBehaviour
         else if (enemyTag == "Enemy2" || enemyTag == "MiniBoss2")
         {
             remainingEnemiesInSecondWave--;
+        }
+        else if(enemyTag == "MiniBoss2" || enemyTag == "Boss")
+        {
+            remainingEnemiesInThirdWave--;
         }
     }
 }
