@@ -17,6 +17,14 @@ TagManager:
   - PowerUpChrono
   - PowerUpBarrera
   - Barrera
+  - Building
+  - Enemy
+  - Pared1
+  - Pared2
+  - MiniBoss
+  - Enemy2
+  - MiniBoss2
+  - Boss
   layers:
   - Default
   - TransparentFX

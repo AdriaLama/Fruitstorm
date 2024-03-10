@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bala : MonoBehaviour
+public class Bullets : MonoBehaviour
 {
     Rigidbody2D rb;
     public float bullet_speed;
