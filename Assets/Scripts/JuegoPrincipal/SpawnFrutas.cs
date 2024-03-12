@@ -22,6 +22,6 @@ public class SpawnFrutas : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
         spawnedRaindrop = Instantiate(Fruta, spawnPosition, Quaternion.identity);
-        spawnedRaindrop.GetComponent<FrutasSprites>().SpawnRaindrop();
+        spawnedRaindrop.GetComponent<FrutasSprites>().Frutas();
     }
 }

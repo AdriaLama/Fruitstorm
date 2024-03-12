@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c72fe69e818ce4aa54a2367bcd55d2, type: 3}
   m_Name: limon
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 799dc05c5a9e62442b194e8367d4638c, type: 3}
+  sprite: {fileID: 21300000, guid: 5edbdaf2ece8f154d9a121b2afe684aa, type: 3}
   velocidad: 3
   gold: 10
+  collider: {fileID: 7757593111291019935, guid: 3db818b40ff38ae44b8d16062038b7f0, type: 3}

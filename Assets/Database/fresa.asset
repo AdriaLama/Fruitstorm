@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09c72fe69e818ce4aa54a2367bcd55d2, type: 3}
-  m_Name: uvas
+  m_Name: fresa
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 0bdb1b30e410d86408e821e6cf540e0c, type: 3}
-  velocidad: 7.5
-  gold: 30
+  sprite: {fileID: 21300000, guid: 7ea8a8557e2e8c544927a836b8bd8ccf, type: 3}
+  velocidad: 3
+  gold: 10
+  collider: {fileID: 8808134821541787088, guid: 2bcef34a834434f4e8b8b533fef7573c, type: 3}

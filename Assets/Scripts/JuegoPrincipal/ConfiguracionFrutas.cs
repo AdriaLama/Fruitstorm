@@ -9,6 +9,7 @@ public class ConfiguracionFruta : ScriptableObject
     public Sprite sprite;
     public float velocidad;
     public float gold;
+    public Collider2D collider;
 }
 
 

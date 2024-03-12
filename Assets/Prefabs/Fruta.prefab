@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8722931882517359707}
   - component: {fileID: -3420008541378153041}
   - component: {fileID: 730041541995120327}
-  - component: {fileID: -8926543035165536503}
+  - component: {fileID: 3508170536352817843}
   - component: {fileID: -2808493522643806239}
   m_Layer: 0
   m_Name: Fruta
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &-3420008541378153041
 SpriteRenderer:
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-8926543035165536503
+--- !u!61 &3508170536352817843
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -180,3 +180,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab9530a974b128040bdc311e2afb9963, type: 2}
   - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
   - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
+  id: 0

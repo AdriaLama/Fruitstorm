@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09c72fe69e818ce4aa54a2367bcd55d2, type: 3}
-  m_Name: "pi\xF1a"
+  m_Name: mango
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 875383c521c4ef54bba441c227d6d031, type: 3}
+  sprite: {fileID: 21300000, guid: e857fcee973996d45901bd4101b04d42, type: 3}
   velocidad: 7.5
   gold: 30
+  collider: {fileID: 5524405900418401543, guid: 06f1ac9d93890464e9a9b9921bfa5a29, type: 3}
