@@ -13546,7 +13546,6 @@ GameObject:
   - component: {fileID: 1659828033}
   - component: {fileID: 1659828034}
   - component: {fileID: 1659828035}
-  - component: {fileID: 1659828036}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Bomba
@@ -13595,7 +13594,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -159516584, guid: 0c328271b34715b46acc005c9a02d5b2, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13603,7 +13602,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1659828032
@@ -13614,7 +13613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659828029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.0084, y: 5.87, z: 0}
+  m_LocalPosition: {x: -12.41, y: 5.87, z: 0}
   m_LocalScale: {x: 0.90059304, y: 0.8927054, z: 8.181143}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13708,27 +13707,6 @@ MonoBehaviour:
   Bomba: {fileID: 5117872838922108449, guid: 1ac36f9b244186c44b3a0924e2d40149, type: 3}
   currTime: 0
   spawnTime: 1
---- !u!95 &1659828036
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659828029}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb9ff1012a3ce0b4c9e99cd556a7406b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1706663075
 GameObject:
   m_ObjectHideFlags: 0
@@ -16646,6 +16624,8 @@ MonoBehaviour:
   puntuacion: {fileID: 226721231}
   configuracionFrutas: []
   animator: {fileID: 0}
+  AnimacionBomba: {fileID: 0}
+  Bomba: {fileID: 5117872838922108449, guid: 1ac36f9b244186c44b3a0924e2d40149, type: 3}
 --- !u!50 &2072537808
 Rigidbody2D:
   serializedVersion: 4

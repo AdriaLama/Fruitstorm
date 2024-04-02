@@ -7,6 +7,8 @@ public class Collision : MonoBehaviour
     public UI puntuacion;
     public List<ConfiguracionFruta> configuracionFrutas;
     public Animator animator;
+    public GameObject AnimacionBomba;
+    public GameObject Bomba;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,8 +24,11 @@ public class Collision : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bomba"))
         {
+
             Destroy(collision.gameObject);
+
             animator.SetBool("Bomb", true);
+           
         }
         if (collision.gameObject.CompareTag("PowerUpInvertir"))
         {
