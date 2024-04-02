@@ -16,7 +16,7 @@ public class UI : MonoBehaviour
     public TMP_Text lifes;
     public TMP_Text timer;
     private float startingTime = 121f;
-    float currentTime = 0f;
+    public float currentTime = 0f;
     bool timerIsActive = true;
     public GameObject areUReady;
     public GameObject Rifle;
