@@ -13,10 +13,6 @@ public class MovimientoPersonaje : MonoBehaviour
     public Animator anim;
     private SpriteRenderer spriteRenderer;
     public GameObject RiflePersonaje;
-
-
-
-
     private void Awake()
     {
         //speed = 10f;

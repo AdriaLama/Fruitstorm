@@ -16,8 +16,7 @@ public class UI : MonoBehaviour
     public TMP_Text lifes;
     public TMP_Text timer;
     private float startingTime = 121f;
-    public float currentTime = 0f;
-    bool timerIsActive = true;
+    public float currentTime = 121f;
     public GameObject areUReady;
     public GameObject Rifle;
     public GameObject Cesta;
@@ -37,8 +36,7 @@ public class UI : MonoBehaviour
         finalPunt = 0;
     }
     private void Start()
-    { 
-       
+    {
         audioSource = GetComponent<AudioSource>();
         areUReady.SetActive(false);
         currentTime = startingTime;
@@ -64,6 +62,22 @@ public class UI : MonoBehaviour
 
     void Update()
     {
+        currentTime -= 1 * Time.deltaTime;
+        DisplayTime(currentTime);
+
+        if (currentTime <= 0)
+        {
+            timer.text = life.ToString();
+            timer.text = "00:00";
+            currentTime = 0;
+            finalPunt = punt;
+            PlayerPrefs.SetInt("gold", finalPunt);
+            PlayerPrefs.Save();
+            Pausa.Defeat();
+            audioSource.Pause();
+            Time.timeScale = 0f;
+        }
+
         puntuacion.text = punt.ToString();
         goldEarned.text = punt.ToString();
         goldEarnedDefeat.text = punt.ToString();
@@ -92,29 +106,9 @@ public class UI : MonoBehaviour
             Pausa.Victory();
             audioSource.Pause();
         }
-
         if (life <= 0)
         {
-            
             life = 0;
-            finalPunt = punt;
-            PlayerPrefs.SetInt("gold", finalPunt);
-            PlayerPrefs.Save();
-            Pausa.Defeat();
-            audioSource.Pause();
-        }
-        if (timerIsActive)
-        {
-            currentTime -= 1 * Time.deltaTime;
-            DisplayTime(currentTime);
-        }
-
-        if (currentTime <= 0)
-        {
-            timer.text = life.ToString();
-            timer.text = "00:00";
-            currentTime = 0;
-            timerIsActive = false;
             finalPunt = punt;
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();

@@ -12,13 +12,10 @@ public class Rifle : MonoBehaviour
     void Start()
     {
         coll = GetComponent<Collider2D>();
-
     }
-
 
     void Update()
     {
-
         if (Input.GetButtonDown("Jump") && coll.enabled && RiflePersonaje.activeSelf)
         {
             GameObject temp = Instantiate(Bala, transform.position, transform.rotation);
