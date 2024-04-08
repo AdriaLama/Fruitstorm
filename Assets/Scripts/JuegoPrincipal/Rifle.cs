@@ -21,6 +21,5 @@ public class Rifle : MonoBehaviour
             GameObject temp = Instantiate(Bala, transform.position, transform.rotation);
             Destroy(temp, 1);
         }
-
     }
 }

@@ -30,6 +30,7 @@ public class UI : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip MusicaJuego;
     public AudioClip MusicaJuegoRapida;
+    public bool isTrue = false;
 
     private void Awake()
     {
@@ -115,8 +116,10 @@ public class UI : MonoBehaviour
             Pausa.Defeat();
             audioSource.Pause();
         }
-
-        if (areUReady.activeSelf) {
+        if (areUReady.activeInHierarchy) {
+            isTrue = true;
+            Rifle.SetActive(false);
+            Cesta.SetActive(true);
             StartCoroutine(QuitarMensaje(3f));
         }
     }
@@ -130,13 +133,11 @@ public class UI : MonoBehaviour
 
     public IEnumerator QuitarMensaje(float seconds)
     { 
-       
         yield return new WaitForSeconds(seconds);
         areUReady.SetActive(false);
         SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
         frenesi.spawnTime = 0.15f;
-        Rifle.SetActive(false);
-        Cesta.SetActive(true);
-        
+        SpawnBombas bomb = FindObjectOfType<SpawnBombas>();
+        bomb.spawnTime = 1f;
     }
 }

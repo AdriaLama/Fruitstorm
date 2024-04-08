@@ -30,17 +30,6 @@ public class Bullets : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            
-        }
-        if (collision.gameObject.tag == "Fruta")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.tag == "Bomba")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
         }
     }
 }

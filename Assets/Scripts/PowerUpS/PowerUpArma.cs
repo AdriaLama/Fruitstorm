@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class PowerUpArma : MonoBehaviour
 {
-    public GameObject Arma;
-    private GameObject spawnedArma;
+    public GameObject Rifle;
+    public GameObject Cesta;
+    public GameObject Alien;
     public float currTime;
     public float spawnTime;
+    public AudioClip Arma;
 
-    // Update is called once per frame
     void Update()
     {
         currTime += Time.deltaTime;
         if (currTime > spawnTime)
         {
             currTime = 0;
-            SpawnArma();
+            AudioSource.PlayClipAtPoint(Arma, transform.position);
+            SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
+            frenesi.spawnTime = 100f;
+            SpawnBombas bomb = FindObjectOfType<SpawnBombas>();
+            bomb.spawnTime = 100f;
+            Rifle.SetActive(true);
+            Cesta.SetActive(false);
+            Alien.SetActive(true);
         }
     }
-
-    public void SpawnArma()
-    {
-        Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
-        spawnedArma = Instantiate(Arma, spawnPosition, Quaternion.identity);
-    }
-
-
 }

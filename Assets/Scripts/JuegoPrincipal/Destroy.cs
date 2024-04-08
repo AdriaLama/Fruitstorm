@@ -9,9 +9,7 @@ public class Destroy : MonoBehaviour
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject ManchaDeTinta;
     public MovimientoPersonaje movInvertido;
-    public GameObject Rifle;
     public GameObject Cesta;
-    public GameObject Alien;
     public GameObject Aspiradora;
     public GameObject Invertido;
     public GameObject Multiplicador;
@@ -24,7 +22,6 @@ public class Destroy : MonoBehaviour
     public float newScaleY;
     public float pos = 10.5f;
     public float newPos;
-    public AudioClip Arma;
     public AudioClip agujeroNegro;
     public AudioClip QuitarVida;
 
@@ -91,16 +88,6 @@ public class Destroy : MonoBehaviour
             StartCoroutine(DesactivarInvertir(4f));
             StartCoroutine(QuitarEvento(2f));
         }
-
-        if (collision.gameObject.CompareTag("PowerUpArma"))
-        {
-            Cesta.SetActive(false);
-            AudioSource.PlayClipAtPoint(Arma, transform.position); 
-            Rifle.SetActive(true);
-            Destroy(collision.gameObject);
-            Alien.SetActive(true);
-
-        }
         if (collision.gameObject.CompareTag("PowerUpAspiradora"))
         {
             Aspiradora.SetActive(true);
@@ -119,7 +106,7 @@ public class Destroy : MonoBehaviour
             {
                 configuracionx2.gold *= 2;           
             }
-            StartCoroutine(DesactivarMultiplicador(5f));
+            StartCoroutine(DesactivarMultiplicador(6f));
         }
         if (collision.gameObject.CompareTag("PowerUpChrono"))
         {
