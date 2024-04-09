@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 78440422}
   - component: {fileID: 78440421}
   m_Layer: 5
-  m_Name: "Pi\xF1a"
+  m_Name: Fresa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7446,8 +7446,8 @@ RectTransform:
   - {fileID: 1745880363}
   - {fileID: 1150512983}
   - {fileID: 477849292}
-  - {fileID: 1152690326}
   - {fileID: 401045477}
+  - {fileID: 1152690326}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9450,6 +9450,7 @@ MonoBehaviour:
   life: 10
   lifes: {fileID: 802983120}
   timer: {fileID: 98685936}
+  currentTime: 121
   areUReady: {fileID: 1836850558}
   Rifle: {fileID: 1921445073}
   Cesta: {fileID: 1955962900}
@@ -9457,24 +9458,24 @@ MonoBehaviour:
   remainingLifesTMP: {fileID: 802983120}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1015143998}
+  - {fileID: 1370116296}
+  - {fileID: 643469730}
+  - {fileID: 1239190893}
+  - {fileID: 79944067}
+  - {fileID: 501751523}
+  - {fileID: 173153011}
+  - {fileID: 1420872054}
   collectedFrutasDefeat: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasDefeatText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 19061934}
+  - {fileID: 78440421}
+  - {fileID: 1666825396}
+  - {fileID: 2053848437}
+  - {fileID: 1334887071}
+  - {fileID: 1023737767}
+  - {fileID: 342039522}
+  - {fileID: 577123820}
   MusicaJuego: {fileID: 8300000, guid: 27bc8a4c1e0725d4bb7e0e0a1a3346a6, type: 3}
   MusicaJuegoRapida: {fileID: 0}
 --- !u!4 &1187907585
@@ -9757,6 +9758,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntuacion: {fileID: 1187907584}
   configuracionFrutas: []
+  animator: {fileID: 0}
+  AnimacionBomba: {fileID: 0}
+  Bomba: {fileID: 0}
 --- !u!61 &1226978754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9878,7 +9882,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233281371}
-  - component: {fileID: 1233281375}
   - component: {fileID: 1233281374}
   - component: {fileID: 1233281373}
   - component: {fileID: 1233281372}
@@ -9988,61 +9991,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d943fa4bb70ad24dba34dd7a0f01138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arma: {fileID: 1233281370}
+  Rifle: {fileID: 1921445073}
+  Cesta: {fileID: 1955962900}
+  Alien: {fileID: 49175529}
+  areUReady: {fileID: 1836850558}
   currTime: 0
   spawnTime: 90
---- !u!212 &1233281375
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233281370}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9f6c3f37ba5f33d4ebdd8fae5c51bbc8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  Arma: {fileID: 8300000, guid: 02093db2240e1a544ab93b298f68fea1, type: 3}
 --- !u!1 &1239190891
 GameObject:
   m_ObjectHideFlags: 0
@@ -10055,7 +10010,7 @@ GameObject:
   - component: {fileID: 1239190894}
   - component: {fileID: 1239190893}
   m_Layer: 5
-  m_Name: Uvas
+  m_Name: Mango
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11486,7 +11441,7 @@ GameObject:
   - component: {fileID: 1370116297}
   - component: {fileID: 1370116296}
   m_Layer: 5
-  m_Name: "Pi\xF1a"
+  m_Name: Fresa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15170,9 +15125,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
   ManchaDeTinta: {fileID: 1812976179}
   movInvertido: {fileID: 1011935694}
-  Rifle: {fileID: 1921445073}
   Cesta: {fileID: 1955962900}
-  Alien: {fileID: 49175529}
   Aspiradora: {fileID: 0}
   Invertido: {fileID: 2106799735}
   Multiplicador: {fileID: 493725959}
@@ -15185,7 +15138,6 @@ MonoBehaviour:
   newScaleY: 0
   pos: 0
   newPos: 0
-  Arma: {fileID: 8300000, guid: 02093db2240e1a544ab93b298f68fea1, type: 3}
   agujeroNegro: {fileID: 8300000, guid: 761cb20aaf45ebd4780e9dcbb0daa43f, type: 3}
   QuitarVida: {fileID: 8300000, guid: 3ba032e762d3c87408b8df2d3f9f4c49, type: 3}
 --- !u!61 &1955962904
@@ -16098,7 +16050,7 @@ GameObject:
   - component: {fileID: 2053848438}
   - component: {fileID: 2053848437}
   m_Layer: 5
-  m_Name: Uvas
+  m_Name: Mango
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
