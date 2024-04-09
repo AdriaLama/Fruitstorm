@@ -30,7 +30,6 @@ public class UI : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip MusicaJuego;
     public AudioClip MusicaJuegoRapida;
-    public bool isTrue = false;
 
     private void Awake()
     {
@@ -78,27 +77,9 @@ public class UI : MonoBehaviour
             audioSource.Pause();
             Time.timeScale = 0f;
         }
-
-        puntuacion.text = punt.ToString();
-        goldEarned.text = punt.ToString();
-        goldEarnedDefeat.text = punt.ToString();
-        finalGoldEarned.text = finalPunt.ToString();
-        remainingLifesTMP.text = remainingLifes.ToString();
-        lifes.text = life.ToString();
-
-        for (int i = 0; i < collectedFrutasText.Length; i++)
-        {
-            collectedFrutasText[i].text = collectedFrutas[i].ToString();
-        }
-
-        for (int i = 0; i < collectedFrutasDefeatText.Length; i++)
-        {
-            collectedFrutasDefeatText[i].text = collectedFrutasDefeat[i].ToString();
-        }
-
         if (punt >= 2000)
         {
-            
+
             punt = 2000;
             remainingLifes = life;
             finalPunt = punt * remainingLifes;
@@ -116,11 +97,22 @@ public class UI : MonoBehaviour
             Pausa.Defeat();
             audioSource.Pause();
         }
-        if (areUReady.activeInHierarchy) {
-            isTrue = true;
-            Rifle.SetActive(false);
-            Cesta.SetActive(true);
-            StartCoroutine(QuitarMensaje(3f));
+
+        puntuacion.text = punt.ToString();
+        goldEarned.text = punt.ToString();
+        goldEarnedDefeat.text = punt.ToString();
+        finalGoldEarned.text = finalPunt.ToString();
+        remainingLifesTMP.text = remainingLifes.ToString();
+        lifes.text = life.ToString();
+
+        for (int i = 0; i < collectedFrutasText.Length; i++)
+        {
+            collectedFrutasText[i].text = collectedFrutas[i].ToString();
+        }
+
+        for (int i = 0; i < collectedFrutasDefeatText.Length; i++)
+        {
+            collectedFrutasDefeatText[i].text = collectedFrutasDefeat[i].ToString();
         }
     }
     void DisplayTime(float timeToDisplay)
@@ -131,13 +123,5 @@ public class UI : MonoBehaviour
         timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    public IEnumerator QuitarMensaje(float seconds)
-    { 
-        yield return new WaitForSeconds(seconds);
-        areUReady.SetActive(false);
-        SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
-        frenesi.spawnTime = 0.15f;
-        SpawnBombas bomb = FindObjectOfType<SpawnBombas>();
-        bomb.spawnTime = 1f;
-    }
+   
 }
