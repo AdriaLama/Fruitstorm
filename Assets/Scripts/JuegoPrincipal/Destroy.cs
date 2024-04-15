@@ -77,7 +77,7 @@ public class Destroy : MonoBehaviour
         {
             Destroy(collision.gameObject);
             ManchaDeTinta.SetActive(true);
-            StartCoroutine(QuitarEvento(3f));
+            StartCoroutine(QuitarTinta(3f));
         }
 
         if (collision.gameObject.CompareTag("PowerUpInvertir"))
@@ -164,11 +164,17 @@ public class Destroy : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
 
-        ManchaDeTinta.SetActive(false);
         Invertido.SetActive(false);
         Multiplicador.SetActive(false);
         Chrono.SetActive(false);
         EscudoBarrera.SetActive(false);
+    }
+
+    public IEnumerator QuitarTinta(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        ManchaDeTinta.SetActive(false);
     }
     public IEnumerator QuitarBarrera(float seconds)
     {
