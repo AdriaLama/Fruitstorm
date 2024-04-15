@@ -6,9 +6,10 @@ public class Collision : MonoBehaviour
 {
     public UI puntuacion;
     public List<ConfiguracionFruta> configuracionFrutas;
-    public Animator animator;
-    public GameObject AnimacionBomba;
     public GameObject Bomba;
+    public GameObject Explosion;
+    public GameObject Explosion2;
+    private Animator anim;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,10 +26,28 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.CompareTag("Bomba"))
         {
 
-            Destroy(collision.gameObject);
+            if (!Explosion.activeSelf && !Explosion2.activeSelf)
+            {
+                Explosion.transform.position = collision.transform.position;
+                Destroy(collision.gameObject);
+                Explosion.SetActive(true);
+                StartCoroutine(QuitarExplosion(1f));
+            }
+            else if (Explosion.activeSelf && !Explosion2.activeSelf)
+            {
+                Explosion2.transform.position = collision.transform.position;
+                Destroy(collision.gameObject);
+                Explosion2.SetActive(true);
+                StartCoroutine(QuitarExplosion2(1f));
+            }
+            else if (!Explosion.activeSelf && Explosion2.activeSelf)
+            {
+                Explosion.transform.position = collision.transform.position;
+                Destroy(collision.gameObject);
+                Explosion.SetActive(true);
+                StartCoroutine(QuitarExplosion(1f));
+            }
 
-            animator.SetBool("Bomb", true);
-           
         }
         if (collision.gameObject.CompareTag("PowerUpInvertir"))
         {
@@ -68,5 +87,17 @@ public class Collision : MonoBehaviour
             return fruit.id;
         }
         return -1;
+    }
+    public IEnumerator QuitarExplosion(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        Explosion.SetActive(false);
+    }
+    public IEnumerator QuitarExplosion2(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        Explosion2.SetActive(false);
     }
 }
