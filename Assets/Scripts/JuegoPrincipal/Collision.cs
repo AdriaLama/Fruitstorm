@@ -10,8 +10,14 @@ public class Collision : MonoBehaviour
     public GameObject Explosion;
     public GameObject Explosion2;
     private Animator anim;
+    private AudioSource audioSource;
+    public AudioClip BombaAudio;
 
-
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Fruta"))
@@ -29,6 +35,7 @@ public class Collision : MonoBehaviour
             if (!Explosion.activeSelf && !Explosion2.activeSelf)
             {
                 Explosion.transform.position = collision.transform.position;
+                AudioSource.PlayClipAtPoint(BombaAudio, transform.position);
                 Destroy(collision.gameObject);
                 Explosion.SetActive(true);
                 StartCoroutine(QuitarExplosion(1f));
@@ -36,6 +43,7 @@ public class Collision : MonoBehaviour
             else if (Explosion.activeSelf && !Explosion2.activeSelf)
             {
                 Explosion2.transform.position = collision.transform.position;
+                AudioSource.PlayClipAtPoint(BombaAudio, transform.position);
                 Destroy(collision.gameObject);
                 Explosion2.SetActive(true);
                 StartCoroutine(QuitarExplosion2(1f));
@@ -43,6 +51,7 @@ public class Collision : MonoBehaviour
             else if (!Explosion.activeSelf && Explosion2.activeSelf)
             {
                 Explosion.transform.position = collision.transform.position;
+                AudioSource.PlayClipAtPoint(BombaAudio, transform.position);
                 Destroy(collision.gameObject);
                 Explosion.SetActive(true);
                 StartCoroutine(QuitarExplosion(1f));

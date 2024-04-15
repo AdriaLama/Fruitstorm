@@ -17112,6 +17112,7 @@ MonoBehaviour:
   Bomba: {fileID: 5117872838922108449, guid: 1ac36f9b244186c44b3a0924e2d40149, type: 3}
   Explosion: {fileID: 678022643}
   Explosion2: {fileID: 668329588}
+  BombaAudio: {fileID: 8300000, guid: 8e3664ca84d5d6846aa8c93a3adb514f, type: 3}
 --- !u!50 &2072537808
 Rigidbody2D:
   serializedVersion: 4
