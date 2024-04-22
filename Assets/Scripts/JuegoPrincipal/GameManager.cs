@@ -72,6 +72,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void Sky()
+    {
+        SceneManager.LoadScene("Cielo");
+        Time.timeScale = 1f;
+    }
+
     public void Victory()
     {
         victory.SetActive(true);
