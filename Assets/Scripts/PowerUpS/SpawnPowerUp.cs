@@ -8,17 +8,23 @@ public class SpawnPowerUp : MonoBehaviour
     private GameObject spawnedPowerUps;
     public float currTime = 0;
     public float spawnTime = 1f;
+    public int powerUpSelected;
+
+    void Start()
+    {
+        powerUpSelected = Random.Range(1, 6);
+    }
     void Update()
     {
         currTime += Time.deltaTime;
         if (currTime > spawnTime)
         {
             currTime = 0;
-            SpawnRaindrop();
+            SpawnPowerUps();
         }
     }
 
-    public void SpawnRaindrop()
+    public void SpawnPowerUps()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
         spawnedPowerUps= Instantiate(PowerUp, spawnPosition, Quaternion.identity);

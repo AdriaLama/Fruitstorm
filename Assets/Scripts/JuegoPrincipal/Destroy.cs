@@ -73,61 +73,63 @@ public class Destroy : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("PowerUpTinta"))
+        if (collision.gameObject.CompareTag("PowerUp"))
         {
-            Destroy(collision.gameObject);
-            ManchaDeTinta.SetActive(true);
-            StartCoroutine(QuitarTinta(3f));
-        }
-
-        if (collision.gameObject.CompareTag("PowerUpInvertir"))
-        {
-            Destroy(collision.gameObject);
-            movInvertido.Invertido();
-            Invertido.SetActive(true);
-            StartCoroutine(DesactivarInvertir(4f));
-            StartCoroutine(QuitarEvento(2f));
-        }
-        if (collision.gameObject.CompareTag("PowerUpAspiradora"))
-        {
-            Aspiradora.SetActive(true);
-            AudioSource.PlayClipAtPoint(agujeroNegro, transform.position);
-            Aspiradora aspirar = FindObjectOfType<Aspiradora>();
-            aspirar.Aspirar();
-            Destroy(collision.gameObject);
-            StartCoroutine(ActivarAspiradora(5f));
-        }
-        if (collision.gameObject.CompareTag("PowerUpMultiplicador"))
-        {
-            Destroy(collision.gameObject);
-            Multiplicador.SetActive(true);
-            StartCoroutine(QuitarEvento(2f));
-            foreach (ConfiguracionFruta configuracionx2 in configuracionFrutas)
+            SpawnPowerUp num = FindObjectOfType<SpawnPowerUp>();
+            if (num.powerUpSelected == 1)
             {
-                configuracionx2.gold *= 2;           
+                Destroy(collision.gameObject);
+                ManchaDeTinta.SetActive(true);
+                StartCoroutine(QuitarTinta(3f));
             }
-            StartCoroutine(DesactivarMultiplicador(6f));
-        }
-        if (collision.gameObject.CompareTag("PowerUpChrono"))
-        {
-            Destroy(collision.gameObject);
-            Chrono.SetActive(true);
-            StartCoroutine(QuitarEvento(2f));
-            foreach (ConfiguracionFruta configuracionSlow in configuracionFrutas)
+            else if (num.powerUpSelected == 2)
             {
-                configuracionSlow.velocidad /= 2;
+                Destroy(collision.gameObject);
+                movInvertido.Invertido();
+                Invertido.SetActive(true);
+                StartCoroutine(DesactivarInvertir(4f));
+                StartCoroutine(QuitarEvento(2f));
             }
-            StartCoroutine(DesactivarSlow(5f));
+            else if (num.powerUpSelected == 3)
+            {
+                Aspiradora.SetActive(true);
+                AudioSource.PlayClipAtPoint(agujeroNegro, transform.position);
+                Aspiradora aspirar = FindObjectOfType<Aspiradora>();
+                aspirar.Aspirar();
+                Destroy(collision.gameObject);
+                StartCoroutine(ActivarAspiradora(5f));
+            }
+            else if (num.powerUpSelected == 4)
+            {
+                Destroy(collision.gameObject);
+                Multiplicador.SetActive(true);
+                StartCoroutine(QuitarEvento(2f));
+                foreach (ConfiguracionFruta configuracionx2 in configuracionFrutas)
+                {
+                    configuracionx2.gold *= 2;
+                }
+                StartCoroutine(DesactivarMultiplicador(6f));
+            }
+            else if (num.powerUpSelected == 5)
+            {
+                Destroy(collision.gameObject);
+                Chrono.SetActive(true);
+                StartCoroutine(QuitarEvento(2f));
+                foreach (ConfiguracionFruta configuracionSlow in configuracionFrutas)
+                {
+                    configuracionSlow.velocidad /= 2;
+                }
+                StartCoroutine(DesactivarSlow(5f));
+            }
+            else if (num.powerUpSelected == 6)
+            {
+                Destroy(collision.gameObject);
+                Barrera.SetActive(true);
+                EscudoBarrera.SetActive(true);
+                StartCoroutine(QuitarBarrera(5f));
+                StartCoroutine(QuitarEvento(2f));
+            }
         }
-        if (collision.gameObject.CompareTag("PowerUpBarrera"))
-        {
-            Destroy(collision.gameObject);
-            Barrera.SetActive(true);
-            EscudoBarrera.SetActive(true);
-            StartCoroutine(QuitarBarrera(5f));
-            StartCoroutine(QuitarEvento(2f));
-        }
-
     }
     public IEnumerator DesactivarInvertir(float seconds)
     {
