@@ -15,8 +15,8 @@ public class UI : MonoBehaviour
     public int life;
     public TMP_Text lifes;
     public TMP_Text timer;
-    private float startingTime = 121f;
-    public float currentTime = 121f;
+    public float startingTime = 120f;
+    public float currentTime = 120f;
     public GameObject areUReady;
     public GameObject Rifle;
     public GameObject Cesta;
@@ -70,23 +70,13 @@ public class UI : MonoBehaviour
             timer.text = life.ToString();
             timer.text = "00:00";
             currentTime = 0;
-            finalPunt = punt;
-            PlayerPrefs.SetInt("gold", finalPunt);
-            PlayerPrefs.Save();
-            Pausa.Defeat();
-            audioSource.Pause();
-            Time.timeScale = 0f;
-        }
-        if (punt >= 2000)
-        {
-
-            punt = 2000;
             remainingLifes = life;
-            finalPunt = punt * remainingLifes;
+            finalPunt = punt;
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Victory();
             audioSource.Pause();
+            Time.timeScale = 0f;
         }
         if (life <= 0)
         {
