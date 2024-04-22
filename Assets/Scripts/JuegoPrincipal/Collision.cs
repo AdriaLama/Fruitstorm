@@ -58,31 +58,7 @@ public class Collision : MonoBehaviour
             }
 
         }
-        if (collision.gameObject.CompareTag("PowerUpInvertir"))
-        {
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("PowerUpTinta"))
-        {
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("PowerUpArma"))
-        {
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("PowerUpAspiradora"))
-        {
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("PowerUpMultiplicador"))
-        {
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("PowerUpChrono"))
-        {
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("PowerUpBarrera"))
+        if (collision.gameObject.CompareTag("PowerUp"))
         {
             Destroy(collision.gameObject);
         }

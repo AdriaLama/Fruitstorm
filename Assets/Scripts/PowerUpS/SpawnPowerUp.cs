@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpawnPowerUp : MonoBehaviour
 {
     public GameObject PowerUp;
-    private GameObject spawnedPowerUps;
     public float currTime = 0;
     public float spawnTime = 1f;
     public int powerUpSelected;
@@ -27,7 +26,6 @@ public class SpawnPowerUp : MonoBehaviour
     public void SpawnPowerUps()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 7f, 0f);
-        spawnedPowerUps= Instantiate(PowerUp, spawnPosition, Quaternion.identity);
-        spawnedPowerUps.GetComponent<PowerUpSprites>().SpawnPowerUps();
+        Instantiate(PowerUp, spawnPosition, Quaternion.identity);
     }
 }
