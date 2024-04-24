@@ -322,9 +322,12 @@ MonoBehaviour:
   Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
   costSpace: 1000
   costSpaceText: {fileID: 1402320467}
+  costHeaven: 1000
+  costHeavenText: {fileID: 0}
   costRevenge: 1000
   costRevengeText: {fileID: 0}
-  OuterSpace: {fileID: 1834878403}
+  OuterSpace: {fileID: 452083318}
+  Heaven: {fileID: 1834878403}
 --- !u!82 &65049687
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5692,7 +5695,7 @@ GameObject:
   - component: {fileID: 1671983353}
   - component: {fileID: 1671983352}
   m_Layer: 5
-  m_Name: Outer-Space
+  m_Name: Heaven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5738,7 +5741,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Outer-SPACE
+  m_text: Heaven
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
   m_sharedMaterial: {fileID: 7855675040902675768, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
@@ -5963,7 +5966,7 @@ GameObject:
   - component: {fileID: 1834878406}
   - component: {fileID: 1834878405}
   m_Layer: 5
-  m_Name: Outer-Space
+  m_Name: Heaven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6038,7 +6041,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 65049686}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: GoSpace
+        m_MethodName: GoHeaven
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

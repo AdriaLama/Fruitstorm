@@ -6583,9 +6583,12 @@ MonoBehaviour:
   Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
   costSpace: 1000
   costSpaceText: {fileID: 1604490445}
+  costHeaven: 1000
+  costHeavenText: {fileID: 0}
   costRevenge: 1000
   costRevengeText: {fileID: 0}
   OuterSpace: {fileID: 307698305}
+  Heaven: {fileID: 0}
 --- !u!82 &2127531726
 AudioSource:
   m_ObjectHideFlags: 0

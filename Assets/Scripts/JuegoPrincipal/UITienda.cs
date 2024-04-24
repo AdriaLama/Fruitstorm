@@ -25,9 +25,12 @@ public class UITienda : MonoBehaviour
     public AudioClip Mejoras;
     public int costSpace = 1000;
     public TMP_Text costSpaceText;
+    public int costHeaven = 1000;
+    public TMP_Text costHeavenText;
     public int costRevenge = 1000;
     public TMP_Text costRevengeText;
     public GameObject OuterSpace;
+    public GameObject Heaven;
     
 
     void Awake()
@@ -214,6 +217,23 @@ public class UITienda : MonoBehaviour
         }
 
     }
+    public void GoHeaven()
+    {
+        if (totalGold >= costHeaven)
+        {
+            totalGold -= costHeaven;
+            totalGoldSpent += costHeaven;
+            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
+            PlayerPrefs.Save();
+            gold = 0;
+            PlayerPrefs.SetInt("gold", gold);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("MenuCielo");
+        }
+
+    }
+
 
     public void Revenge()
     {
