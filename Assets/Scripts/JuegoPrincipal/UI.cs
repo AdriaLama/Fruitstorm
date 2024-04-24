@@ -14,7 +14,7 @@ public class UI : MonoBehaviour
     public TMP_Text finalGoldEarned;
     public int life;
     public TMP_Text lifes;
-    public TMP_Text timer;
+    //public TMP_Text timer;
     public float startingTime = 120f;
     public float currentTime = 120f;
     public GameObject areUReady;
@@ -63,12 +63,12 @@ public class UI : MonoBehaviour
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        DisplayTime(currentTime);
+        //DisplayTime(currentTime);
 
         if (currentTime <= 0)
         {
-            timer.text = life.ToString();
-            timer.text = "00:00";
+            //timer.text = life.ToString();
+            //timer.text = "00:00";
             currentTime = 0;
             remainingLifes = life;
             finalPunt = punt;
@@ -105,13 +105,13 @@ public class UI : MonoBehaviour
             collectedFrutasDefeatText[i].text = collectedFrutasDefeat[i].ToString();
         }
     }
-    void DisplayTime(float timeToDisplay)
+    /*void DisplayTime(float timeToDisplay)
     {
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-    }
+    }*/
 
    
 }
