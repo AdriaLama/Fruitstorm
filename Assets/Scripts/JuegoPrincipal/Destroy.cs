@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Destroy : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class Destroy : MonoBehaviour
     public GameObject Chrono;
     public GameObject Barrera;
     public GameObject EscudoBarrera;
+    public Image Sangre;
+    private float r;
+    private float g;
+    private float b;
+    private float a;
     public float scaleX = 0.8f;
     public float newScaleX;
     public float scaleY = 0.8f;
@@ -24,6 +30,15 @@ public class Destroy : MonoBehaviour
     public float newPos;
     public AudioClip agujeroNegro;
     public AudioClip QuitarVida;
+    public AudioClip Recolecta;
+
+    void Start()
+    {
+        r = Sangre.color.r;
+        g = Sangre.color.g;
+        b = Sangre.color.b;
+        a = Sangre.color.a;
+    }
 
     private void Awake()
     {
@@ -34,6 +49,12 @@ public class Destroy : MonoBehaviour
         PlayerPrefs.SetFloat("scaleY", scaleY);
         PlayerPrefs.SetFloat("pos", pos);
         UpdateBasket();
+    }
+    private void Update()
+    {
+        a -= 0.30f * Time.deltaTime;
+        a = Mathf.Clamp(a, 0f, 0.35f);
+        ChangeColor();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,7 +77,7 @@ public class Destroy : MonoBehaviour
             {
                 Debug.LogWarning("Índice de configuraciones fuera de rango. Asegúrate de tener configuraciones para todas las frutas.");
             }
-
+            AudioSource.PlayClipAtPoint(Recolecta, transform.position);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Bomba"))
@@ -66,11 +87,15 @@ public class Destroy : MonoBehaviour
                 Destroy(collision.gameObject);
                 AudioSource.PlayClipAtPoint(QuitarVida, transform.position);
                 puntuacion.life -= 1;
+                a += 0.35f;
+                a = Mathf.Clamp(a, 0f, 0.35f);
+                ChangeColor();
             }
             else
             {
                 Destroy(collision.gameObject);
             }
+
         }
 
         if (collision.gameObject.CompareTag("PowerUp"))
@@ -227,5 +252,11 @@ public class Destroy : MonoBehaviour
 
         Cesta.transform.localScale = new Vector3(scaleX, scaleY, 1f);
         Cesta.transform.localPosition = new Vector3(Cesta.transform.localPosition.x, pos, Cesta.transform.localPosition.z);
+    }
+
+    private void ChangeColor()
+    {
+        Color c = new Color(r, g, b, a);
+        Sangre.color = c;
     }
 }
