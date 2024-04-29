@@ -8,10 +8,8 @@ public class UI : MonoBehaviour
 {
     public int punt;
     public TMP_Text puntuacion;
-    public TMP_Text goldEarned;
+    public TMP_Text goldEarnedVictory;
     public TMP_Text goldEarnedDefeat;
-    public int finalPunt;
-    public TMP_Text finalGoldEarned;
     public int life;
     public TMP_Text lifes;
     //public TMP_Text timer;
@@ -21,8 +19,6 @@ public class UI : MonoBehaviour
     public GameObject Rifle;
     public GameObject Cesta;
     private GameManager Pausa;
-    public int remainingLifes;
-    public TMP_Text remainingLifesTMP;
     public List<int> collectedFrutas;
     public TMP_Text[] collectedFrutasText;
     public List<int> collectedFrutasDefeat;
@@ -31,11 +27,6 @@ public class UI : MonoBehaviour
     public AudioClip MusicaJuego;
     public AudioClip MusicaJuegoRapida;
     public GameObject Sangre;
-
-    private void Awake()
-    {
-        finalPunt = 0;
-    }
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -70,10 +61,7 @@ public class UI : MonoBehaviour
         {
             //timer.text = life.ToString();
             //timer.text = "00:00";
-            currentTime = 0;
-            remainingLifes = life;
-            finalPunt = punt;
-            PlayerPrefs.SetInt("gold", finalPunt);
+            PlayerPrefs.SetInt("gold", punt);
             PlayerPrefs.Save();
             Pausa.Victory();
             Sangre.SetActive(false);
@@ -83,8 +71,7 @@ public class UI : MonoBehaviour
         if (life <= 0)
         {
             life = 0;
-            finalPunt = punt;
-            PlayerPrefs.SetInt("gold", finalPunt);
+            PlayerPrefs.SetInt("gold", punt);
             PlayerPrefs.Save();
             Pausa.Defeat();
             Sangre.SetActive(false);
@@ -92,10 +79,8 @@ public class UI : MonoBehaviour
         }
 
         puntuacion.text = punt.ToString();
-        goldEarned.text = punt.ToString();
+        goldEarnedVictory.text = punt.ToString();
         goldEarnedDefeat.text = punt.ToString();
-        finalGoldEarned.text = finalPunt.ToString();
-        remainingLifesTMP.text = remainingLifes.ToString();
         lifes.text = life.ToString();
 
         for (int i = 0; i < collectedFrutasText.Length; i++)
