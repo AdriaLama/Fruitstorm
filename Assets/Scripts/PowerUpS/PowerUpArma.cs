@@ -11,6 +11,12 @@ public class PowerUpArma : MonoBehaviour
     public float currTime;
     public float spawnTime;
     public AudioClip Arma;
+    public AudioSource myAudioSource;
+
+    private void Start()
+    {
+        myAudioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -18,7 +24,7 @@ public class PowerUpArma : MonoBehaviour
         if (currTime > spawnTime)
         {
             currTime = 0;
-            AudioSource.PlayClipAtPoint(Arma, transform.position);
+            myAudioSource.PlayOneShot(Arma);
             SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
             frenesi.spawnTime = 100f;
             SpawnBombas bomb = FindObjectOfType<SpawnBombas>();

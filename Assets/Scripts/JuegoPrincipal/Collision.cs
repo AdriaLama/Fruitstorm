@@ -35,7 +35,7 @@ public class Collision : MonoBehaviour
             if (!Explosion.activeSelf && !Explosion2.activeSelf)
             {
                 Explosion.transform.position = collision.transform.position;
-                AudioSource.PlayClipAtPoint(BombaAudio, transform.position);
+                audioSource.PlayOneShot(BombaAudio);
                 Destroy(collision.gameObject);
                 Explosion.SetActive(true);
                 StartCoroutine(QuitarExplosion(1f));
@@ -43,7 +43,7 @@ public class Collision : MonoBehaviour
             else if (Explosion.activeSelf && !Explosion2.activeSelf)
             {
                 Explosion2.transform.position = collision.transform.position;
-                AudioSource.PlayClipAtPoint(BombaAudio, transform.position);
+                audioSource.PlayOneShot(BombaAudio);
                 Destroy(collision.gameObject);
                 Explosion2.SetActive(true);
                 StartCoroutine(QuitarExplosion2(1f));
@@ -51,7 +51,7 @@ public class Collision : MonoBehaviour
             else if (!Explosion.activeSelf && Explosion2.activeSelf)
             {
                 Explosion.transform.position = collision.transform.position;
-                AudioSource.PlayClipAtPoint(BombaAudio, transform.position);
+                audioSource.PlayOneShot(BombaAudio);
                 Destroy(collision.gameObject);
                 Explosion.SetActive(true);
                 StartCoroutine(QuitarExplosion(1f));

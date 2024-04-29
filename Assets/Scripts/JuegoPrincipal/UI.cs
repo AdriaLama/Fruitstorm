@@ -30,6 +30,7 @@ public class UI : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip MusicaJuego;
     public AudioClip MusicaJuegoRapida;
+    public GameObject Sangre;
 
     private void Awake()
     {
@@ -75,6 +76,7 @@ public class UI : MonoBehaviour
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Victory();
+            Sangre.SetActive(false);
             audioSource.Pause();
             Time.timeScale = 0f;
         }
@@ -85,6 +87,7 @@ public class UI : MonoBehaviour
             PlayerPrefs.SetInt("gold", finalPunt);
             PlayerPrefs.Save();
             Pausa.Defeat();
+            Sangre.SetActive(false);
             audioSource.Pause();
         }
 

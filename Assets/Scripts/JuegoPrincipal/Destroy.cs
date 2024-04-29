@@ -31,6 +31,7 @@ public class Destroy : MonoBehaviour
     public AudioClip agujeroNegro;
     public AudioClip QuitarVida;
     public AudioClip Recolecta;
+    
 
     void Start()
     {
@@ -38,6 +39,8 @@ public class Destroy : MonoBehaviour
         g = Sangre.color.g;
         b = Sangre.color.b;
         a = Sangre.color.a;
+         
+
     }
 
     private void Awake()
@@ -55,11 +58,12 @@ public class Destroy : MonoBehaviour
         a -= 0.30f * Time.deltaTime;
         a = Mathf.Clamp(a, 0f, 0.35f);
         ChangeColor();
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        AudioSource myAudioSource = GetComponent<AudioSource>();
         if (collision.gameObject.CompareTag("Fruta"))
         {
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
@@ -77,7 +81,8 @@ public class Destroy : MonoBehaviour
             {
                 Debug.LogWarning("Índice de configuraciones fuera de rango. Asegúrate de tener configuraciones para todas las frutas.");
             }
-            AudioSource.PlayClipAtPoint(Recolecta, transform.position);
+            
+            myAudioSource.PlayOneShot(Recolecta);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Bomba"))
@@ -85,7 +90,7 @@ public class Destroy : MonoBehaviour
             if (!Barrera.activeSelf)
             {
                 Destroy(collision.gameObject);
-                AudioSource.PlayClipAtPoint(QuitarVida, transform.position);
+                myAudioSource.PlayOneShot(QuitarVida);
                 puntuacion.life -= 1;
                 a += 0.35f;
                 a = Mathf.Clamp(a, 0f, 0.35f);
@@ -118,7 +123,7 @@ public class Destroy : MonoBehaviour
             else if (num.powerUpSelected == 3)
             {
                 Aspiradora.SetActive(true);
-                AudioSource.PlayClipAtPoint(agujeroNegro, transform.position);
+                myAudioSource.PlayOneShot(agujeroNegro);
                 Aspiradora aspirar = FindObjectOfType<Aspiradora>();
                 aspirar.Aspirar();
                 Destroy(collision.gameObject);
