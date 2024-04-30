@@ -8,10 +8,10 @@ public class Collision : MonoBehaviour
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject Bomba;
     public GameObject Explosion;
-    public GameObject Explosion2;
     private Animator anim;
     private AudioSource audioSource;
     public AudioClip BombaAudio;
+    public GameObject AnimBomba;
 
     private void Start()
     {
@@ -31,31 +31,12 @@ public class Collision : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bomba"))
         {
+            GameObject temp = Instantiate(AnimBomba, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.5f), collision.transform.rotation);
+           
+            Destroy(collision.gameObject);
+            Destroy(temp, 0.15f);
+            audioSource.PlayOneShot(BombaAudio);
 
-            if (!Explosion.activeSelf && !Explosion2.activeSelf)
-            {
-                Explosion.transform.position = collision.transform.position;
-                audioSource.PlayOneShot(BombaAudio);
-                Destroy(collision.gameObject);
-                Explosion.SetActive(true);
-                StartCoroutine(QuitarExplosion(1f));
-            }
-            else if (Explosion.activeSelf && !Explosion2.activeSelf)
-            {
-                Explosion2.transform.position = collision.transform.position;
-                audioSource.PlayOneShot(BombaAudio);
-                Destroy(collision.gameObject);
-                Explosion2.SetActive(true);
-                StartCoroutine(QuitarExplosion2(1f));
-            }
-            else if (!Explosion.activeSelf && Explosion2.activeSelf)
-            {
-                Explosion.transform.position = collision.transform.position;
-                audioSource.PlayOneShot(BombaAudio);
-                Destroy(collision.gameObject);
-                Explosion.SetActive(true);
-                StartCoroutine(QuitarExplosion(1f));
-            }
 
         }
         if (collision.gameObject.CompareTag("PowerUp"))
@@ -78,11 +59,5 @@ public class Collision : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         Explosion.SetActive(false);
-    }
-    public IEnumerator QuitarExplosion2(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-
-        Explosion2.SetActive(false);
     }
 }
