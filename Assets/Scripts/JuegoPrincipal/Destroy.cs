@@ -68,6 +68,7 @@ public class Destroy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         AudioSource myAudioSource = GetComponent<AudioSource>();
+        AudioSource recolecta = GetComponent<AudioSource>();
         if (collision.gameObject.CompareTag("Fruta"))
         {
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
@@ -86,6 +87,11 @@ public class Destroy : MonoBehaviour
                 {
                     comboText.gameObject.SetActive(true);
                     //comboText.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-0.5f, 5));
+                    if(recolecta.pitch < 2.5)
+                    {
+                        recolecta.pitch += 0.20f;
+                    }
+                    
                 }
                 comboText.text = "x" + comboCount;
                
@@ -96,7 +102,7 @@ public class Destroy : MonoBehaviour
                 Debug.LogWarning("Índice de configuraciones fuera de rango. Asegúrate de tener configuraciones para todas las frutas.");
             }
             
-            myAudioSource.PlayOneShot(Recolecta);
+            recolecta.PlayOneShot(Recolecta);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Bomba"))
@@ -112,6 +118,7 @@ public class Destroy : MonoBehaviour
                 comboCount = 0;
                 comboText.gameObject.SetActive(false);
                 comboText.text = "x" + 0;
+                recolecta.pitch = 1f;
             }
             else
             {
