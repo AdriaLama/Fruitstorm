@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Destroy : MonoBehaviour
 {
@@ -31,7 +33,9 @@ public class Destroy : MonoBehaviour
     public AudioClip agujeroNegro;
     public AudioClip QuitarVida;
     public AudioClip Recolecta;
-    
+    public TMP_Text comboText;
+    private int comboCount = 0;
+
 
     void Start()
     {
@@ -76,7 +80,17 @@ public class Destroy : MonoBehaviour
 
                 RecolectarFruta(configuracionFrutaID);
                 RecolectarFrutaDefeat(configuracionFrutaID);
-            }
+
+                comboCount++;
+                if (comboCount >= 2)
+                {
+                    comboText.gameObject.SetActive(true);
+                    //comboText.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-0.5f, 5));
+                }
+                comboText.text = "x" + comboCount;
+               
+            }   
+
             else
             {
                 Debug.LogWarning("Índice de configuraciones fuera de rango. Asegúrate de tener configuraciones para todas las frutas.");
@@ -95,6 +109,9 @@ public class Destroy : MonoBehaviour
                 a += 0.35f;
                 a = Mathf.Clamp(a, 0f, 0.35f);
                 ChangeColor();
+                comboCount = 0;
+                comboText.gameObject.SetActive(false);
+                comboText.text = "x" + 0;
             }
             else
             {

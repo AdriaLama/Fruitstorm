@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collision : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class Collision : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip BombaAudio;
     public GameObject AnimBomba;
+    public TMP_Text comboText;
+    private int comboCount = 0;
+
 
     private void Start()
     {
@@ -32,13 +37,12 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.CompareTag("Bomba"))
         {
             GameObject temp = Instantiate(AnimBomba, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.5f), collision.transform.rotation);
-           
             Destroy(collision.gameObject);
             Destroy(temp, 0.15f);
             audioSource.PlayOneShot(BombaAudio);
-
-
+        
         }
+
         if (collision.gameObject.CompareTag("PowerUp"))
         {
             Destroy(collision.gameObject);
