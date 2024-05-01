@@ -13,7 +13,7 @@ public class Collision : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip BombaAudio;
     public GameObject AnimBomba;
-
+   
 
     private void Start()
     {

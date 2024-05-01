@@ -12,14 +12,17 @@ public class PowerUpArma : MonoBehaviour
     public float spawnTime;
     public AudioClip Arma;
     public AudioSource myAudioSource;
+    public AudioClip MusicaJuego;
 
     private void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
+        
     }
 
     void Update()
     {
+        AudioSource musica = GetComponent<AudioSource>();
         currTime += Time.deltaTime;
         if (currTime > spawnTime)
         {
@@ -38,6 +41,8 @@ public class PowerUpArma : MonoBehaviour
             Rifle.SetActive(false);
             Cesta.SetActive(true);
             StartCoroutine(QuitarMensaje(3f));
+            musica.pitch += 0.1f;
+
         }
     }
     public IEnumerator QuitarMensaje(float seconds)
