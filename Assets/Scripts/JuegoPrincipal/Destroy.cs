@@ -37,10 +37,14 @@ public class Destroy : MonoBehaviour
     public int comboCount = 0;
     public int comboGold = 0;
     public int totalComboGold = 0;
-    
+    public float currentTime = 0;
+    public bool isReset = false;
+    private int previousComboCount;
+
 
     void Start()
     {
+        previousComboCount = 0;
         r = Sangre.color.r;
         g = Sangre.color.g;
         b = Sangre.color.b;
@@ -62,7 +66,15 @@ public class Destroy : MonoBehaviour
         a -= 0.30f * Time.deltaTime;
         a = Mathf.Clamp(a, 0f, 0.35f);
         ChangeColor();
+        ComboAnim();
         comboText.text = "x" + comboCount;
+
+        if (comboCount != previousComboCount)
+        {
+            currentTime = 0;
+            isReset = true;
+            previousComboCount = comboCount; 
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -88,8 +100,8 @@ public class Destroy : MonoBehaviour
                 if (comboCount >= 2)
                 {
                     comboText.gameObject.SetActive(true);
-                    //comboText.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-0.5f, 5));
-                    if(recolecta.pitch < 2.5)
+                    
+                    if (recolecta.pitch < 2.5)
                     {
                         recolecta.pitch += 0.20f;
                     }
@@ -289,5 +301,63 @@ public class Destroy : MonoBehaviour
     {
         Color c = new Color(r, g, b, a);
         Sangre.color = c;
+    }
+
+    public void ComboAnim()
+    {
+        if (comboCount >= 2)
+        {
+            ZoomCombo();
+        }
+        else
+        {
+            ResetComboAnimation();
+        }
+    }
+    private void ResetComboAnimation()
+    {
+        currentTime = 0;
+        isReset = true;
+    }
+
+    public void ZoomCombo()
+    {
+        if (!isReset)
+        {
+            ResetComboAnimation();
+        }
+        currentTime += 1 * Time.deltaTime;
+        if (currentTime >= 0.2f)
+        {
+            comboText.transform.localScale = new Vector3(3, 3, 0);
+        }
+        if (currentTime >= 0.3f)
+        {
+            comboText.transform.localScale = new Vector3(3.5f, 3.5f, 0);
+        }
+        if (currentTime >= 0.4f)
+        {
+            comboText.transform.localScale = new Vector3(4, 4, 0);
+        }
+        if (currentTime >= 0.5f)
+        {
+            comboText.transform.localScale = new Vector3(4.5f, 4.5f, 0);
+        }
+        if (currentTime >= 0.6f)
+        {
+            comboText.transform.localScale = new Vector3(5, 5, 0);
+        }
+        if (currentTime >= 0.7f)
+        {
+            comboText.transform.localScale = new Vector3(5.5f, 5.5f, 0);
+        }
+        if (currentTime >= 0.8f)
+        {
+            comboText.transform.localScale = new Vector3(6, 6, 0);
+        }
+        if (currentTime >= 0.9f)
+        {
+            comboText.transform.localScale = new Vector3(6.5f, 6.5f, 0);
+        }
     }
 }
