@@ -40,6 +40,8 @@ public class Destroy : MonoBehaviour
     public float currentTime = 0;
     public bool isReset = false;
     private int previousComboCount;
+    public ParticleSystem particulas;
+    public GameObject Star;
 
 
     void Start()
@@ -107,6 +109,11 @@ public class Destroy : MonoBehaviour
                     }
                     
                 }
+
+                particulas.Play();
+                GameObject temp = Instantiate(Star, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.5f), collision.transform.rotation);
+                Destroy(temp, 0.25f);
+
             }   
 
             else
