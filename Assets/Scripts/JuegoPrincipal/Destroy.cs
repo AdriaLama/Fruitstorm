@@ -34,8 +34,10 @@ public class Destroy : MonoBehaviour
     public AudioClip QuitarVida;
     public AudioClip Recolecta;
     public TMP_Text comboText;
-    private int comboCount = 0;
-
+    public int comboCount = 0;
+    public int comboGold = 0;
+    public int totalComboGold = 0;
+    
 
     void Start()
     {
@@ -43,8 +45,6 @@ public class Destroy : MonoBehaviour
         g = Sangre.color.g;
         b = Sangre.color.b;
         a = Sangre.color.a;
-         
-
     }
 
     private void Awake()
@@ -62,7 +62,7 @@ public class Destroy : MonoBehaviour
         a -= 0.30f * Time.deltaTime;
         a = Mathf.Clamp(a, 0f, 0.35f);
         ChangeColor();
-       
+        comboText.text = "x" + comboCount;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -79,6 +79,8 @@ public class Destroy : MonoBehaviour
 
                 puntuacion.punt += (int)configuracionFruta.gold;
 
+                comboGold += (int)configuracionFruta.gold;
+
                 RecolectarFruta(configuracionFrutaID);
                 RecolectarFrutaDefeat(configuracionFrutaID);
 
@@ -93,8 +95,6 @@ public class Destroy : MonoBehaviour
                     }
                     
                 }
-                comboText.text = "x" + comboCount;
-               
             }   
 
             else
@@ -115,9 +115,11 @@ public class Destroy : MonoBehaviour
                 a += 0.35f;
                 a = Mathf.Clamp(a, 0f, 0.35f);
                 ChangeColor();
+                totalComboGold += comboCount * comboGold;
+                puntuacion.punt = totalComboGold;
                 comboCount = 0;
+                comboGold = 0;
                 comboText.gameObject.SetActive(false);
-                comboText.text = "x" + 0;
                 recolecta.pitch = 1f;
             }
             else

@@ -9,28 +9,34 @@ public class Collision : MonoBehaviour
     public UI puntuacion;
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject Bomba;
-    public GameObject Explosion;
     private Animator anim;
     private AudioSource audioSource;
     public AudioClip BombaAudio;
     public GameObject AnimBomba;
-    public TMP_Text comboText;
-    private int comboCount = 0;
 
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Fruta"))
         {
+            AudioSource recolecta = GetComponent<AudioSource>();
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2 (0, 0);
 
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
+
+            Destroy comb = FindObjectOfType<Destroy>();
+            UI p = FindObjectOfType<UI>();
+            comb.totalComboGold += comb.comboCount * comb.comboGold;
+            p.punt = comb.totalComboGold;
+            comb.comboCount = 0;
+            comb.comboGold = 0;
+            comb.comboText.gameObject.SetActive(false);
+            recolecta.pitch = 1f;
 
             Destroy(collision.gameObject, 2);
         }
@@ -57,11 +63,5 @@ public class Collision : MonoBehaviour
             return fruit.id;
         }
         return -1;
-    }
-    public IEnumerator QuitarExplosion(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-
-        Explosion.SetActive(false);
     }
 }

@@ -194,14 +194,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntuacion: {fileID: 226721231}
   configuracionFrutas:
-  - {fileID: 11400000, guid: ef63bbbf26862cb4dae3353406d08359, type: 2}
-  - {fileID: 11400000, guid: 4a8bb7e4a91b9674d9f1eacb67419778, type: 2}
-  - {fileID: 11400000, guid: 49fd8d1bf35eb8b4cbc46a634e7a7548, type: 2}
-  - {fileID: 11400000, guid: 862736f76cc49a842bbebf38489d2ba9, type: 2}
   - {fileID: 11400000, guid: a579029666f8a064d88514472bdb5e51, type: 2}
-  - {fileID: 11400000, guid: ab9530a974b128040bdc311e2afb9963, type: 2}
-  - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
+  - {fileID: 11400000, guid: 862736f76cc49a842bbebf38489d2ba9, type: 2}
+  - {fileID: 11400000, guid: 4a8bb7e4a91b9674d9f1eacb67419778, type: 2}
   - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
+  - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
+  - {fileID: 11400000, guid: ef63bbbf26862cb4dae3353406d08359, type: 2}
+  - {fileID: 11400000, guid: 49fd8d1bf35eb8b4cbc46a634e7a7548, type: 2}
+  - {fileID: 11400000, guid: ab9530a974b128040bdc311e2afb9963, type: 2}
   ManchaDeTinta: {fileID: 396338204}
   movInvertido: {fileID: 344191806}
   Cesta: {fileID: 6448898}
@@ -222,6 +222,9 @@ MonoBehaviour:
   QuitarVida: {fileID: 8300000, guid: 3ba032e762d3c87408b8df2d3f9f4c49, type: 3}
   Recolecta: {fileID: 8300000, guid: d1983d5d7be9ba446b0f0a0788bc44f4, type: 3}
   comboText: {fileID: 2033666762}
+  comboCount: 0
+  comboGold: 0
+  totalComboGold: 0
 --- !u!61 &6448902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1686,24 +1689,24 @@ MonoBehaviour:
   Cesta: {fileID: 6448898}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasText:
-  - {fileID: 157766425}
-  - {fileID: 292117610}
-  - {fileID: 997490354}
-  - {fileID: 1826728130}
-  - {fileID: 2055615919}
   - {fileID: 704126664}
+  - {fileID: 997490354}
   - {fileID: 1660414830}
+  - {fileID: 292117610}
+  - {fileID: 157766425}
   - {fileID: 1010406823}
+  - {fileID: 2055615919}
+  - {fileID: 1826728130}
   collectedFrutasDefeat: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasDefeatText:
-  - {fileID: 832178325}
-  - {fileID: 1436222603}
-  - {fileID: 1828197224}
-  - {fileID: 574937804}
-  - {fileID: 200174073}
-  - {fileID: 1639528581}
-  - {fileID: 817004355}
-  - {fileID: 1150945764}
+  - {fileID: 704126664}
+  - {fileID: 997490354}
+  - {fileID: 1660414830}
+  - {fileID: 292117610}
+  - {fileID: 157766425}
+  - {fileID: 1010406823}
+  - {fileID: 2055615919}
+  - {fileID: 1826728130}
   MusicaJuego: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
   MusicaJuegoRapida: {fileID: 8300000, guid: 27bc8a4c1e0725d4bb7e0e0a1a3346a6, type: 3}
   Sangre: {fileID: 1103320289}
@@ -15884,12 +15887,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntuacion: {fileID: 226721231}
-  configuracionFrutas: []
+  configuracionFrutas:
+  - {fileID: 11400000, guid: a579029666f8a064d88514472bdb5e51, type: 2}
+  - {fileID: 11400000, guid: 862736f76cc49a842bbebf38489d2ba9, type: 2}
+  - {fileID: 11400000, guid: 4a8bb7e4a91b9674d9f1eacb67419778, type: 2}
+  - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
+  - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
+  - {fileID: 11400000, guid: ef63bbbf26862cb4dae3353406d08359, type: 2}
+  - {fileID: 11400000, guid: 49fd8d1bf35eb8b4cbc46a634e7a7548, type: 2}
+  - {fileID: 11400000, guid: ab9530a974b128040bdc311e2afb9963, type: 2}
   Bomba: {fileID: 5117872838922108449, guid: 1ac36f9b244186c44b3a0924e2d40149, type: 3}
-  Explosion: {fileID: 0}
   BombaAudio: {fileID: 8300000, guid: 8e3664ca84d5d6846aa8c93a3adb514f, type: 3}
   AnimBomba: {fileID: 18108578458451127, guid: 5a26f87253f78e24b85e7ee29c79121b, type: 3}
-  comboText: {fileID: 2033666762}
 --- !u!50 &2072537808
 Rigidbody2D:
   serializedVersion: 4
