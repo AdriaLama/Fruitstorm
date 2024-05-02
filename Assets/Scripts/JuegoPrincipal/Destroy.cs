@@ -129,6 +129,7 @@ public class Destroy : MonoBehaviour
                 comboGold = 0;
                 comboText.gameObject.SetActive(false);
                 recolecta.pitch = 1f;
+                particulas.Play();
             }
             else
             {
