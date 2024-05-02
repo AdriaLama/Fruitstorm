@@ -64,7 +64,7 @@ public class Destroy : MonoBehaviour
         a -= 0.30f * Time.deltaTime;
         a = Mathf.Clamp(a, 0f, 0.35f);
         ChangeColor();
-        Combo();
+        
         comboText.text = "x" + comboCount;
     }
 
@@ -91,7 +91,10 @@ public class Destroy : MonoBehaviour
                 if (comboCount >= 2)
                 {
                     comboText.gameObject.SetActive(true);
-                    
+                    comboText.transform.localPosition = new Vector2(Random.Range(-400f, 1000f), Random.Range(-33.92249f, 341.0775f));
+                    comboText.transform.localRotation = Quaternion.Euler(0, 30, 20);
+                    comboText.GetComponent<TextMeshProUGUI>().fontSize += 0.1f * Time.deltaTime;
+
                     if (recolecta.pitch < 2.5)
                     {
                         recolecta.pitch += 0.20f;
@@ -300,17 +303,5 @@ public class Destroy : MonoBehaviour
         Sangre.color = c;
     }
 
-    public void Combo()
-    {
-        if (comboCount % 2 == 0)
-        {
-            comboText.rectTransform.localPosition = new Vector3(-200, 150, 0);
-            comboText.transform.localRotation = Quaternion.Euler(0, 30, 20);
-        }
-        else
-        {
-            comboText.rectTransform.localPosition = new Vector3(400, 75, 0);
-            comboText.transform.localRotation = Quaternion.Euler(0, 30, -20);
-        }
-    }
+   
 }
