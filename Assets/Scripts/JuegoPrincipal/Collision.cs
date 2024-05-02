@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Collision : MonoBehaviour
 {
+    GameObject Cesta;
     public UI puntuacion;
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject Bomba;
@@ -23,10 +25,9 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Fruta"))
         {
-            AudioSource recolecta = GetComponent<AudioSource>();
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2 (0, 0);
-
+            
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
 
             Destroy comb = FindObjectOfType<Destroy>();
@@ -36,7 +37,6 @@ public class Collision : MonoBehaviour
             comb.comboCount = 0;
             comb.comboGold = 0;
             comb.comboText.gameObject.SetActive(false);
-            recolecta.pitch = 1f;
 
             Destroy(collision.gameObject, 2);
         }
