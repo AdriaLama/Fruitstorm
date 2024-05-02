@@ -224,6 +224,8 @@ MonoBehaviour:
   QuitarVida: {fileID: 8300000, guid: 3ba032e762d3c87408b8df2d3f9f4c49, type: 3}
   Recolecta: {fileID: 8300000, guid: d1983d5d7be9ba446b0f0a0788bc44f4, type: 3}
   comboText: {fileID: 2033666762}
+  comboTextObject: {fileID: 1152294809}
+  randomRot: 0
   comboCount: 0
   comboGold: 0
   totalComboGold: 0
@@ -7835,7 +7837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -73}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 427.2987, y: 635.2578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051553489
@@ -13049,7 +13051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.32000002, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.65000004}
-  m_AnchoredPosition: {x: 172.74, y: -88}
+  m_AnchoredPosition: {x: 172.74, y: 0}
   m_SizeDelta: {x: 125.85425, y: 17.722046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1086100464
@@ -13801,6 +13803,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150945762}
   m_CullTransparentMesh: 1
+--- !u!1 &1152294809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1152294810}
+  m_Layer: 0
+  m_Name: ComboTextGameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1152294810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152294809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 415, y: -83, z: -8.640673}
+  m_LocalScale: {x: 2.9721365, y: 2.9721365, z: 2.9721365}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2033666761}
+  m_Father: {fileID: 1954114587}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178500320
 GameObject:
   m_ObjectHideFlags: 0
@@ -19445,7 +19479,7 @@ RectTransform:
   - {fileID: 1203716512}
   - {fileID: 316490354}
   - {fileID: 1870051247}
-  - {fileID: 2033666761}
+  - {fileID: 1152294810}
   m_Father: {fileID: 2002922703}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20014,18 +20048,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033666760}
-  m_LocalRotation: {x: 0.04494346, y: 0.25488704, z: 0.16773126, w: 0.9512512}
-  m_LocalPosition: {x: 0, y: 0, z: 2071}
-  m_LocalScale: {x: 2.8742516, y: 2.8742516, z: 2.8742516}
+  m_LocalRotation: {x: -0, y: 0.2588191, z: -0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 0, z: -673}
+  m_LocalScale: {x: 0.9670657, y: 0.96706575, z: 0.9670657}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1954114587}
+  m_Father: {fileID: 1152294810}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 20}
+  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -516, y: 23}
-  m_SizeDelta: {x: -1795.381, y: -1009.155}
+  m_AnchoredPosition: {x: -102, y: 108.7227}
+  m_SizeDelta: {x: 125.61902, y: 69.53052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033666762
 MonoBehaviour:
@@ -20049,8 +20083,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: x0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
-  m_sharedMaterial: {fileID: 7855675040902675768, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d949f351935757f46b726b0aee2dba7f, type: 2}
+  m_sharedMaterial: {fileID: -1414773019106486799, guid: d949f351935757f46b726b0aee2dba7f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20110,7 +20144,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 2.4390182, w: -1.2704983}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

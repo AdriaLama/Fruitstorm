@@ -34,6 +34,7 @@ public class Destroy : MonoBehaviour
     public AudioClip QuitarVida;
     public AudioClip Recolecta;
     public TMP_Text comboText;
+    public GameObject comboTextObject;
     public int comboCount = 0;
     public int comboGold = 0;
     public int totalComboGold = 0;
@@ -91,8 +92,8 @@ public class Destroy : MonoBehaviour
                 if (comboCount >= 2)
                 {
                     comboText.gameObject.SetActive(true);
-                    comboText.transform.localPosition = new Vector2(Random.Range(-400f, 1000f), Random.Range(-33.92249f, 341.0775f));
-                    comboText.transform.localRotation = Quaternion.Euler(0, 30, 20);
+                    comboTextObject.transform.localPosition = new Vector2(Random.Range(-100, 900), Random.Range(-415, -83));
+                    comboText.transform.localRotation = Quaternion.Euler(new Vector3(0, 30, Random.Range(-45, 45)));
                     comboText.GetComponent<TextMeshProUGUI>().fontSize += 0.1f * Time.deltaTime;
 
                     if (recolecta.pitch < 2.5)
@@ -302,6 +303,7 @@ public class Destroy : MonoBehaviour
         Color c = new Color(r, g, b, a);
         Sangre.color = c;
     }
+
 
    
 }
