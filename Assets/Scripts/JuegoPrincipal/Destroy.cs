@@ -92,8 +92,8 @@ public class Destroy : MonoBehaviour
                 if (comboCount >= 2)
                 {
                     comboText.gameObject.SetActive(true);
-                    comboTextObject.transform.localPosition = new Vector2(Random.Range(-100, 900), Random.Range(-415, -83));
-                    comboText.transform.localRotation = Quaternion.Euler(new Vector3(0, 30, Random.Range(-45, 45)));
+                    comboTextObject.transform.localPosition = new Vector2(Random.Range(0, 800), Random.Range(-300, 0));
+                    comboText.transform.localRotation = Quaternion.Euler(new Vector3(0, 30, Random.Range(-30, 30)));
                     comboText.GetComponent<TextMeshProUGUI>().fontSize += 0.1f * Time.deltaTime;
 
                     if (recolecta.pitch < 2.5)
