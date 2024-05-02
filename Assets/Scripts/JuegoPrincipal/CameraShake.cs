@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public float tiempoPrueba;
-    public float fuerzaPrueba;
 
     private float tiempoRestante, fuerzaShake, tiempo, rotacion;
     public float cantidadRotacion;

@@ -4167,7 +4167,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: x0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d949f351935757f46b726b0aee2dba7f, type: 2}
   m_sharedMaterial: {fileID: 7855675040902675768, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4231,7 +4231,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &469231963
@@ -4868,10 +4868,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d388171dfa993c43aeaa6fd09e92f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoPrueba: 30
-  fuerzaPrueba: 0.2
   cantidadRotacion: 0
-  cantidadFuerza: 0.4
+  cantidadFuerza: 0.45
 --- !u!1 &537061985
 GameObject:
   m_ObjectHideFlags: 0

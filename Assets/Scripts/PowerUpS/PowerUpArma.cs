@@ -41,7 +41,7 @@ public class PowerUpArma : MonoBehaviour
             Rifle.SetActive(false);
             Cesta.SetActive(true);
             StartCoroutine(QuitarMensaje(3f));
-            CameraShake.instance.StartShake(30f, 0.2f);
+            CameraShake.instance.StartShake(30f, 0.10f);
             musica.pitch += 0.1f;
 
         }
