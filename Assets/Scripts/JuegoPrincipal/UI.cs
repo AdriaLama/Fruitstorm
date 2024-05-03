@@ -23,13 +23,18 @@ public class UI : MonoBehaviour
     public TMP_Text[] collectedFrutasText;
     public List<int> collectedFrutasDefeat;
     public TMP_Text[] collectedFrutasDefeatText;
-    private AudioSource audioSource;
+    public AudioSource musica;
     public AudioClip MusicaJuego;
     public AudioClip MusicaJuegoRapida;
     public GameObject Sangre;
+    public AudioClip Victory;
+    public AudioClip Derrota;
+    public AudioSource victoriaDerrota;
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        
+        musica = GetComponent<AudioSource> ();
+        victoriaDerrota = GetComponent<AudioSource> ();
         areUReady.SetActive(false);
         currentTime = startingTime;
         Pausa = FindObjectOfType<GameManager>();
@@ -64,8 +69,9 @@ public class UI : MonoBehaviour
             PlayerPrefs.SetInt("gold", punt);
             PlayerPrefs.Save();
             Pausa.Victory();
+            victoriaDerrota.PlayOneShot(Victory);
             Sangre.SetActive(false);
-            audioSource.Pause();
+            musica.Pause();
             Time.timeScale = 0f;
         }
         if (life <= 0)
@@ -74,8 +80,9 @@ public class UI : MonoBehaviour
             PlayerPrefs.SetInt("gold", punt);
             PlayerPrefs.Save();
             Pausa.Defeat();
+            victoriaDerrota.PlayOneShot(Derrota);
             Sangre.SetActive(false);
-            audioSource.Pause();
+            musica.Pause();
         }
 
         puntuacion.text = punt.ToString();

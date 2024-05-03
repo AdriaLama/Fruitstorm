@@ -42,6 +42,7 @@ public class Destroy : MonoBehaviour
     public int totalComboGold = 0;
     public ParticleSystem particulas;
     public GameObject Star;
+    public AudioSource recolecta;
 
 
     void Start()
@@ -50,6 +51,7 @@ public class Destroy : MonoBehaviour
         g = Sangre.color.g;
         b = Sangre.color.b;
         a = Sangre.color.a;
+        
     }
 
     private void Awake()
@@ -74,7 +76,7 @@ public class Destroy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         AudioSource myAudioSource = GetComponent<AudioSource>();
-        AudioSource recolecta = GetComponent<AudioSource>();
+       
         if (collision.gameObject.CompareTag("Fruta"))
         {
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
