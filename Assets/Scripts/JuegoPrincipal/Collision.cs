@@ -40,19 +40,7 @@ public class Collision : MonoBehaviour
             comb.comboCount = 0;
             comb.comboGold = 0;
             comb.comboText.gameObject.SetActive(false);
-            randomDirection = Random.Range(1, 2);
-            if (randomDirection == 1)
-            {
-                rb.AddForce(transform.right * speedDirection);
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 30, Random.Range(-30, 30)))
-
-            }
-            else if (randomDirection == 2)
-            {
-                rb.AddForce(transform.forward * speedDirection * Time.deltaTime);
-                transform.localRotation = Quaternion.Euler(new Vector3(0, 30, Random.Range(-30, 30)))
-
-            }
+        
             Destroy(collision.gameObject, 2);
         }
         if (collision.gameObject.CompareTag("Bomba"))
