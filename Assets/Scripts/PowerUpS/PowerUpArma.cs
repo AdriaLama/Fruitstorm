@@ -44,7 +44,7 @@ public class PowerUpArma : MonoBehaviour
             Cesta.SetActive(true);
             StartCoroutine(QuitarMensaje(3f));
             CameraShake Camera = MainCamera.GetComponent<CameraShake>();
-            StartCoroutine(Camera.Shake(15, 0.1f));
+            StartCoroutine(Camera.Shake(20, 0.1f));
 
             musica.pitch += 0.1f;
 
