@@ -1235,7 +1235,7 @@ MonoBehaviour:
   Sangre: {fileID: 1103320289}
   Victory: {fileID: 8300000, guid: 773779f9e1d11e74c92dad4c9b3b5a93, type: 3}
   Derrota: {fileID: 8300000, guid: 36069a5ea87051349a52de4f72f73924, type: 3}
-  victoriaDerrota: {fileID: 0}
+  victoriaDerrota: {fileID: 1309724862}
 --- !u!4 &226721232
 Transform:
   m_ObjectHideFlags: 0
@@ -14863,7 +14863,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -85263771560159438, guid: 0491309575640a147bcc3d93fd94fece, type: 2}
   m_audioClip: {fileID: 8300000, guid: 36069a5ea87051349a52de4f72f73924, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.202
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14959,7 +14959,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -85263771560159438, guid: 0491309575640a147bcc3d93fd94fece, type: 2}
   m_audioClip: {fileID: 8300000, guid: 773779f9e1d11e74c92dad4c9b3b5a93, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.202
   m_Pitch: 1
   Loop: 0
   Mute: 0

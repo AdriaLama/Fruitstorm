@@ -33,8 +33,7 @@ public class UI : MonoBehaviour
     private void Start()
     {
         
-        musica = GetComponent<AudioSource> ();
-        victoriaDerrota = GetComponent<AudioSource> ();
+        
         areUReady.SetActive(false);
         currentTime = startingTime;
         Pausa = FindObjectOfType<GameManager>();
