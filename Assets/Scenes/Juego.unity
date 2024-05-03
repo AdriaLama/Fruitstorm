@@ -214,6 +214,7 @@ MonoBehaviour:
   Barrera: {fileID: 970776230}
   EscudoBarrera: {fileID: 1557764061}
   BombasSpeed: {fileID: 1381894203}
+  MainCamera: {fileID: 519420028}
   Sangre: {fileID: 755878311}
   scaleX: 0.8
   newScaleX: 0
@@ -3299,7 +3300,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.7131094, y: -1.4618888}
@@ -19446,7 +19447,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0

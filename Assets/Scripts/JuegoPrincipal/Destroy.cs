@@ -20,6 +20,7 @@ public class Destroy : MonoBehaviour
     public GameObject Barrera;
     public GameObject EscudoBarrera;
     public GameObject BombasSpeed;
+    public GameObject MainCamera;
     public Image Sangre;
     private float r;
     private float g;
@@ -208,6 +209,13 @@ public class Destroy : MonoBehaviour
                 StartCoroutine(DesactivarBomba(5f));
                 StartCoroutine(QuitarEvento(2f));
             }
+            else if (num.powerUpSelected == 8)
+            {
+                Destroy(collision.gameObject);
+                MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+                movInvertido.Invertido();
+                StartCoroutine(DesactivarCamara(5f));
+            }
         }
     }
     public IEnumerator DesactivarInvertir(float seconds)
@@ -215,6 +223,13 @@ public class Destroy : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         movInvertido.Invertido();
+    }
+    public IEnumerator DesactivarCamara(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        movInvertido.Invertido();
+
     }
     public IEnumerator DesactivarBomba(float seconds)
     {
