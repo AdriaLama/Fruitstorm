@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Aspiradora : MonoBehaviour
 {
-    public float radioAtracción = 5f;
-    public float fuerzaAtracción = 10f;
+    public float radioAtracción = 6f;
+    public float fuerzaAtracción = 12.5f;
 
     private bool activado = false;
 
