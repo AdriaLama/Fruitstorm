@@ -18,10 +18,12 @@ public class Collision : MonoBehaviour
     public Rigidbody2D rb;
     public int randomDirection;
     public int speedDirection;
+    private Destroy comb;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        comb = FindObjectOfType<Destroy>();
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,7 +35,6 @@ public class Collision : MonoBehaviour
             
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
 
-            Destroy comb = FindObjectOfType<Destroy>();
             UI p = FindObjectOfType<UI>();
             comb.totalComboGold += comb.comboCount * comb.comboGold;
             p.punt = comb.totalComboGold;
