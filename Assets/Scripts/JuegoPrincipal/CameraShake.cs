@@ -4,51 +4,25 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-
-    private float tiempoRestante, fuerzaShake, tiempo, rotacion;
-    public float cantidadRotacion;
-    public float cantidadFuerza;
-
-    private Vector3 posIni;
-    private bool shake;
-
-    public static CameraShake instance;
-    void Start()
+    public IEnumerator Shake(float duration, float magnitude)
     {
-        instance = this;
-        shake = false;
-    }
+        Vector3 originalPos = new Vector3(0, 1.2f, -10);
 
-    void LateUpdate()
-    {
-        if(shake)
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
         {
-            if(tiempoRestante > 0f)
-            {
-                tiempoRestante -= Time.deltaTime;
-                float cantidadX = posIni.x + Random.Range(-cantidadFuerza, cantidadFuerza) * fuerzaShake;
-                float cantidadY = posIni.y + Random.Range(-cantidadFuerza, cantidadFuerza) * fuerzaShake;
-                cantidadX = Mathf.MoveTowards(cantidadX, posIni.x, tiempo * Time.deltaTime);
-                cantidadY = Mathf.MoveTowards(cantidadY, posIni.x, tiempo * Time.deltaTime);
-                transform.position = new Vector3(cantidadX, cantidadY, posIni.z);
+            float xOffset = Random.Range(-0.5f, 0.5f) * magnitude;
+            float yOffset = Random.Range(-0.5f, 0.5f) * magnitude;
 
-                rotacion = Mathf.MoveTowards(rotacion, 0f, tiempo * cantidadRotacion * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(0f, 0f, rotacion * Random.Range(-1f, 1f));
-            } else
-            {
-                transform.position = posIni;
-                shake = false;
-            }
+            transform.position = new Vector3(xOffset, yOffset + 1.2f, originalPos.z);
+
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
         }
-    }
 
-    public void StartShake(float duration, float fuerza)
-    {
-        posIni = transform.position;
-        shake = true;
-        tiempoRestante = duration;
-        fuerzaShake = fuerza;
-        tiempo = fuerza / duration;
-        rotacion = fuerza * cantidadRotacion;
+        transform.localPosition = originalPos;
     }
+    
 }

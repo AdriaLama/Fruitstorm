@@ -4742,7 +4742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507997787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 2.84, z: 0}
+  m_LocalPosition: {x: -0, y: 2.84, z: 0}
   m_LocalScale: {x: 0.7367174, y: 0.9156346, z: 1.0524534}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4762,6 +4762,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4845,7 +4846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.11}
+  m_AnchoredPosition: {x: 0, y: 1.2}
   m_SizeDelta: {x: 22, y: 11.5861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &519420033
@@ -4868,8 +4869,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d388171dfa993c43aeaa6fd09e92f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadRotacion: 0
-  cantidadFuerza: 0.45
+--- !u!95 &519420035
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1ac2064c91c3864e9cc0e741c8c3b4d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &537061985
 GameObject:
   m_ObjectHideFlags: 0
@@ -19275,6 +19295,8 @@ MonoBehaviour:
   Arma: {fileID: 8300000, guid: 02093db2240e1a544ab93b298f68fea1, type: 3}
   myAudioSource: {fileID: 0}
   MusicaJuego: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
+  Camera: {fileID: 519420034}
+  MainCamera: {fileID: 519420028}
 --- !u!50 &1951543504
 Rigidbody2D:
   serializedVersion: 4

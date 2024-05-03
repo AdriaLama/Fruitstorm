@@ -13,11 +13,13 @@ public class PowerUpArma : MonoBehaviour
     public AudioClip Arma;
     public AudioSource myAudioSource;
     public AudioClip MusicaJuego;
+    public CameraShake Camera;
+    public GameObject MainCamera;
 
     private void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
-        
+        Camera = GetComponent<CameraShake>();
     }
 
     void Update()
@@ -41,7 +43,9 @@ public class PowerUpArma : MonoBehaviour
             Rifle.SetActive(false);
             Cesta.SetActive(true);
             StartCoroutine(QuitarMensaje(3f));
-            CameraShake.instance.StartShake(30f, 0.10f);
+            CameraShake Camera = MainCamera.GetComponent<CameraShake>();
+            StartCoroutine(Camera.Shake(15, 0.1f));
+
             musica.pitch += 0.1f;
 
         }
