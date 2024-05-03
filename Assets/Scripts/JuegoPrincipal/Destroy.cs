@@ -19,6 +19,7 @@ public class Destroy : MonoBehaviour
     public GameObject Chrono;
     public GameObject Barrera;
     public GameObject EscudoBarrera;
+    public GameObject BombasSpeed;
     public Image Sangre;
     private float r;
     private float g;
@@ -198,6 +199,15 @@ public class Destroy : MonoBehaviour
                 StartCoroutine(QuitarBarrera(5f));
                 StartCoroutine(QuitarEvento(2f));
             }
+            else if (num.powerUpSelected == 7)
+            {
+                Destroy(collision.gameObject);
+                BombasSpeed.SetActive(true);
+                SpawnBombas s = FindObjectOfType<SpawnBombas>();
+                s.spawnTime = 0.25f;
+                StartCoroutine(DesactivarBomba(5f));
+                StartCoroutine(QuitarEvento(2f));
+            }
         }
     }
     public IEnumerator DesactivarInvertir(float seconds)
@@ -205,6 +215,12 @@ public class Destroy : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         movInvertido.Invertido();
+    }
+    public IEnumerator DesactivarBomba(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SpawnBombas s = FindObjectOfType<SpawnBombas>();
+        s.spawnTime = 1f;
     }
     public IEnumerator ActivarAspiradora(float seconds)
     {
@@ -239,6 +255,7 @@ public class Destroy : MonoBehaviour
         Multiplicador.SetActive(false);
         Chrono.SetActive(false);
         EscudoBarrera.SetActive(false);
+        BombasSpeed.SetActive(false);
     }
 
     public IEnumerator QuitarTinta(float seconds)
