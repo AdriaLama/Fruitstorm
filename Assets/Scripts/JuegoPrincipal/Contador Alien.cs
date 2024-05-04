@@ -9,6 +9,8 @@ public class ContadorAlien : MonoBehaviour
     public GameObject AlienRecolect;
     public float time;
     public float disappearTime;
+    public int contadorAlien;
+    
     void Start()
     {
         
@@ -18,9 +20,11 @@ public class ContadorAlien : MonoBehaviour
     void Update()
     {
         currTime += Time.deltaTime;
-        if (currTime > spawnTime)
+
+        if (currTime > spawnTime && contadorAlien <= 4)
         {
             currTime = 0;
+            contadorAlien++;
             AlienRecolect.SetActive(true);
         }
 
@@ -32,8 +36,10 @@ public class ContadorAlien : MonoBehaviour
             {
                 time = 0;
                 AlienRecolect.SetActive(false);
-                AlienRecolect.transform.position.x = -17;
+                
+                
             }
         }
+        
     }
 }
