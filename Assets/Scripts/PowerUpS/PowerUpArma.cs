@@ -11,17 +11,17 @@ public class PowerUpArma : MonoBehaviour
     public float currTime;
     public float spawnTime;
     public AudioClip Arma;
-    public AudioSource myAudioSource;
+    public AudioSource armaSource;
     public AudioClip MusicaJuego;
     public CameraShake Camera;
     public GameObject MainCamera;
     public AudioSource musica;
-
+    public AudioSource alienSound;
     
 
     private void Start()
     {
-        myAudioSource = GetComponent<AudioSource>();
+        
         Camera = GetComponent<CameraShake>();
     }
 
@@ -32,7 +32,7 @@ public class PowerUpArma : MonoBehaviour
         if (currTime > spawnTime)
         {
             currTime = 0;
-            myAudioSource.PlayOneShot(Arma);
+            armaSource.PlayOneShot(Arma);
             QuitarPowerUps();
             Rifle.SetActive(true);
             Cesta.SetActive(false);
@@ -43,6 +43,7 @@ public class PowerUpArma : MonoBehaviour
             Rifle.SetActive(false);
             Cesta.SetActive(true);
             musica.pitch = 1.3f;
+            alienSound.Pause();
             StartCoroutine(QuitarMensaje(3f));
             CameraShake Camera = MainCamera.GetComponent<CameraShake>();
             StartCoroutine(Camera.Shake(20, 0.1f));

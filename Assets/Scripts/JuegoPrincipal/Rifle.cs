@@ -7,7 +7,8 @@ public class Rifle : MonoBehaviour
     public GameObject Bala;
     Collider2D coll;
     public GameObject RiflePersonaje;
-    
+    public AudioSource Arma;
+    public AudioClip Disparo;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class Rifle : MonoBehaviour
         {
             GameObject temp = Instantiate(Bala, transform.position, transform.rotation);
             Destroy(temp, 1);
+            Arma.PlayOneShot(Disparo);
         }
     }
 }

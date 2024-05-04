@@ -20,6 +20,8 @@ public class Collision : MonoBehaviour
     public int speedDirection;
     private Destroy comb;
     public AudioSource recolecta;
+    public AudioSource PierdeCombo;
+    public AudioClip ErrorCombo;
 
     private void Start()
     {
@@ -44,6 +46,7 @@ public class Collision : MonoBehaviour
             comb.comboText.gameObject.SetActive(false);
             recolecta.pitch = 1f;
             Destroy(collision.gameObject, 2);
+            
         }
         if (collision.gameObject.CompareTag("Bomba"))
         {

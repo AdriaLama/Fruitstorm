@@ -10,6 +10,8 @@ public class Alien : MonoBehaviour
     public float LimiteAlienPos;
     public float LimiteAlienNeg;
     public float alienLifes;
+    public AudioSource alienSound;
+    public AudioClip Alienn;
 
     void Start()
     {
@@ -40,6 +42,10 @@ public class Alien : MonoBehaviour
         }
 
         transform.position = posicion;
+
+        alienSound.Play();
+
+        
     }
 
 
