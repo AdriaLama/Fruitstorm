@@ -68,7 +68,7 @@ public class UI : MonoBehaviour
             PlayerPrefs.SetInt("gold", punt);
             PlayerPrefs.Save();
             Pausa.Victory();
-            victoriaDerrota.PlayOneShot(Victory);
+            AudioSource.PlayClipAtPoint(Victory, transform.position);
             Sangre.SetActive(false);
             musica.Pause();
             Time.timeScale = 0f;
@@ -79,7 +79,7 @@ public class UI : MonoBehaviour
             PlayerPrefs.SetInt("gold", punt);
             PlayerPrefs.Save();
             Pausa.Defeat();
-            victoriaDerrota.PlayOneShot(Derrota);
+            AudioSource.PlayClipAtPoint(Derrota, transform.position);
             Sangre.SetActive(false);
             musica.Pause();
         }
