@@ -27,8 +27,8 @@ public class PowerUpArma : MonoBehaviour
 
     void Update()
     {
-        
-        currTime += Time.deltaTime;
+
+        currTime += 1 * Time.deltaTime;
         if (currTime > spawnTime)
         {
             currTime = 0;
