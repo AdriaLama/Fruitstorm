@@ -23,15 +23,15 @@ public class UITienda : MonoBehaviour
     public float pos;
     private AudioSource audioSource;
     public AudioClip Mejoras;
-    public int costSpace = 1000;
+    public int costSpace = 5000;
     public TMP_Text costSpaceText;
-    public int costHeaven = 1000;
+    public int costHeaven = 5000;
     public TMP_Text costHeavenText;
-    public int costRevenge = 1000;
+    public int costRevenge = 5000;
     public TMP_Text costRevengeText;
-    public GameObject OuterSpace;
-    public GameObject Heaven;
-    
+    public bool hasCrucifix = false;
+    public bool hasSpaceSuit = false;
+    public bool hasSpacecraft = false;
 
     void Awake()
     {
@@ -39,6 +39,9 @@ public class UITienda : MonoBehaviour
         gold = PlayerPrefs.GetInt("gold");
         totalGold = PlayerPrefs.GetInt("totalGold");
         totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
+        hasCrucifix = PlayerPrefs.GetInt("crucifix") == 1 ? true : false;
+        hasSpaceSuit = PlayerPrefs.GetInt("spaceSuit") == 1 ? true : false;
+        hasSpacecraft = PlayerPrefs.GetInt("spacecraft") == 1 ? true : false;
         ActualizarOro();
         ActualizarTienda();
     }
@@ -202,7 +205,24 @@ public class UITienda : MonoBehaviour
         }
     }
 
-    public void GoSpace()
+    public void BuyCrucifix()
+    {
+        if (totalGold >= costHeaven && !hasCrucifix)
+        {
+            totalGold -= costHeaven;
+            totalGoldSpent += costHeaven;
+            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
+            PlayerPrefs.Save();
+            gold = 0;
+            PlayerPrefs.SetInt("gold", gold);
+            PlayerPrefs.Save();
+            hasCrucifix = true;
+            PlayerPrefs.SetInt("crucifix", hasCrucifix ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void BuySpaceSuit()
     {
         if (totalGold >= costSpace) { 
             totalGold -= costSpace;
@@ -212,30 +232,13 @@ public class UITienda : MonoBehaviour
             gold = 0;
             PlayerPrefs.SetInt("gold", gold);
             PlayerPrefs.Save();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("MenuEspacio");
-        }
-
-    }
-    public void GoHeaven()
-    {
-        if (totalGold >= costHeaven)
-        {
-            totalGold -= costHeaven;
-            totalGoldSpent += costHeaven;
-            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
+            hasSpaceSuit = true;
+            PlayerPrefs.SetInt("spaceSuit", hasSpaceSuit ? 1 : 0);
             PlayerPrefs.Save();
-            gold = 0;
-            PlayerPrefs.SetInt("gold", gold);
-            PlayerPrefs.Save();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("MenuCielo");
         }
-
     }
-
-
-    public void Revenge()
+    
+    public void BuySpacecraft()
     {
         if (totalGold >= costRevenge)
         {
@@ -246,8 +249,9 @@ public class UITienda : MonoBehaviour
             gold = 0;
             PlayerPrefs.SetInt("gold", gold);
             PlayerPrefs.Save();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("SpaceInvaders");
+            hasSpacecraft = true;
+            PlayerPrefs.SetInt("spacecraft", hasSpacecraft ? 1 : 0);
+            PlayerPrefs.Save();
         }
     }
 }

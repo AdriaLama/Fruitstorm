@@ -109,6 +109,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MenuCielo");
     }
 
+    public void Revenge()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("SpaceInvaders");
+    }
+
     public void Victory()
     {
         victory.SetActive(true);
