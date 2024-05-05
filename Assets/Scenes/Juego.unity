@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.75
-  tileableZone: 21.3
+  tileableZone: 22
   startingZone: 0
 --- !u!212 &51161623
 SpriteRenderer:
@@ -15595,8 +15595,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315659373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0041, y: -0.0001, z: 10}
-  m_LocalScale: {x: 1.1104164, y: 1.1116868, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1.1533496, y: 1.1423436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1750579615}
@@ -17234,8 +17234,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520551160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0049, y: 0.0041, z: 0}
-  m_LocalScale: {x: 0.9985905, y: 0.9999195, z: 1}
+  m_LocalPosition: {x: -0.0049, y: 0.0819, z: 0}
+  m_LocalScale: {x: 0.9985905, y: 0.9855206, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1315659374}
@@ -19479,7 +19479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  tileableZone: 21.3
+  tileableZone: 22
   startingZone: 0
 --- !u!212 &1750579617
 SpriteRenderer:
