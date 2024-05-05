@@ -34,6 +34,18 @@ public class GameManager : MonoBehaviour
                     Continue();
                 }
             }
+            else if (SceneManager.GetActiveScene().name == "Cielo" && !(optionsMenuUI.activeInHierarchy))
+            {
+                isPaused = !isPaused;
+                if (isPaused)
+                {
+                    Paused();
+                }
+                else if (!isPaused)
+                {
+                    Continue();
+                }
+            }
             else if (SceneManager.GetActiveScene().name == "Espacio" && !(optionsMenuUI.activeInHierarchy))
             {
                 isPaused = !isPaused;

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuEspacio.unity
     guid: 33597e99df7eae44f8494c20e47d247c
   - enabled: 1
+    path: Assets/Scenes/Cielo.unity
+    guid: 14312af688e21de49b872bfaeb5723ab
+  - enabled: 1
     path: Assets/Scenes/Espacio.unity
     guid: bb446ab98dc02cc4da83f901ff3f1f56
   - enabled: 1
