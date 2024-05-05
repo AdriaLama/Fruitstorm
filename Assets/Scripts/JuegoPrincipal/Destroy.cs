@@ -47,7 +47,8 @@ public class Destroy : MonoBehaviour
     public ParticleSystem particulas;
     public GameObject Star;
     public AudioSource recolecta;
-
+    public GameObject DineroGanado;
+    public TMP_Text TextoDineroGanado;
 
     void Start()
     {
@@ -75,6 +76,7 @@ public class Destroy : MonoBehaviour
         ChangeColor();
         
         comboText.text = "x" + comboCount;
+        TextoDineroGanado.text = "+" + totalComboGold;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -138,6 +140,9 @@ public class Destroy : MonoBehaviour
                 if (comboCount >= 2)
                 {
                     Dinero.PlayOneShot(MoneyGain);
+                    TextoDineroGanado.gameObject.SetActive(true);
+                    DineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
+                    StartCoroutine(QuitarDinero(2f));
                 }
                 totalComboGold += comboCount * comboGold;
                 puntuacion.punt = totalComboGold;
@@ -312,6 +317,13 @@ public class Destroy : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         Barrera.SetActive(false);
+    }
+
+    public IEnumerator QuitarDinero(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        TextoDineroGanado.gameObject.SetActive(false);
+
     }
     public int GetConfiguracionFruta(GameObject fruta)
     {

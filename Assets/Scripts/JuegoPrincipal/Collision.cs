@@ -24,6 +24,7 @@ public class Collision : MonoBehaviour
     public AudioClip MoneyGain;
     public AudioClip ErrorCombo;
 
+
     private void Start()
     {
         
@@ -41,6 +42,9 @@ public class Collision : MonoBehaviour
             if (comb.comboCount >= 2)
             {
                 Dinero.PlayOneShot(MoneyGain);
+                comb.TextoDineroGanado.gameObject.SetActive(true);
+                comb.DineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
+                StartCoroutine(QuitarDinero(2f));
             }
             UI p = FindObjectOfType<UI>();
             comb.totalComboGold += comb.comboCount * comb.comboGold;
@@ -65,6 +69,13 @@ public class Collision : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+    }
+
+    public IEnumerator QuitarDinero(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        comb.TextoDineroGanado.gameObject.SetActive(false);
+
     }
 
     public int GetConfiguracionFruta(GameObject fruta)

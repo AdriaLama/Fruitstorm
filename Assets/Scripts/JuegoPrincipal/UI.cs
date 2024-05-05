@@ -30,6 +30,7 @@ public class UI : MonoBehaviour
     public AudioClip Victory;
     public AudioClip Derrota;
     public AudioSource victoriaDerrota;
+   
     private void Start()
     {
         
