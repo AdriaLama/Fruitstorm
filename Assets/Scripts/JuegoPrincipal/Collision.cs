@@ -21,6 +21,8 @@ public class Collision : MonoBehaviour
     private Destroy comb;
     public AudioSource recolecta;
     public AudioSource PierdeCombo;
+    public AudioSource Dinero;
+    public AudioClip MoneyGain;
     public AudioClip ErrorCombo;
 
     private void Start()
@@ -37,7 +39,10 @@ public class Collision : MonoBehaviour
             rb.velocity = new Vector2 (0, 0);
             
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
-
+            if (comb.comboCount >= 2)
+            {
+                Dinero.PlayOneShot(MoneyGain);
+            }
             UI p = FindObjectOfType<UI>();
             comb.totalComboGold += comb.comboCount * comb.comboGold;
             p.punt = comb.totalComboGold;

@@ -36,7 +36,9 @@ public class Destroy : MonoBehaviour
     public AudioClip agujeroNegro;
     public AudioClip QuitarVida;
     public AudioClip Recolecta;
+    public AudioClip MoneyGain;
     public AudioSource quitarVida;
+    public AudioSource Dinero;
     public TMP_Text comboText;
     public GameObject comboTextObject;
     public int comboCount = 0;
@@ -133,6 +135,10 @@ public class Destroy : MonoBehaviour
                 a += 0.35f;
                 a = Mathf.Clamp(a, 0f, 0.35f);
                 ChangeColor();
+                if (comboCount >= 2)
+                {
+                    Dinero.PlayOneShot(MoneyGain);
+                }
                 totalComboGold += comboCount * comboGold;
                 puntuacion.punt = totalComboGold;
                 comboCount = 0;
@@ -140,6 +146,7 @@ public class Destroy : MonoBehaviour
                 comboText.gameObject.SetActive(false);
                 recolecta.pitch = 1f;
                 particulas.Play();
+                
             }
             else
             {
