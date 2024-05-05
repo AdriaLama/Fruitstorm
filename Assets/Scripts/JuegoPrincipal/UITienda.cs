@@ -53,6 +53,9 @@ public class UITienda : MonoBehaviour
         costBasketTMP.text = costBasket.ToString();
         levelBasketTMP.text = levelBasket.ToString();
         goldTMP.text = totalGold.ToString();
+        costHeavenText.text = costHeaven.ToString();
+        costSpaceText.text = costSpace.ToString();
+        costRevengeText.text = costRevenge.ToString();
     }
 
     public void ActualizarOro()

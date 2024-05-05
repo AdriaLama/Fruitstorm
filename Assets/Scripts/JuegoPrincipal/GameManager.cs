@@ -14,7 +14,16 @@ public class GameManager : MonoBehaviour
     public GameObject defeat;
     public GameObject victory;
     public bool isPaused = false;
+    public bool hasCrucifix = false;
+    public bool hasSpaceSuit = false;
+    public bool hasSpacecraft = false;
 
+    private void Awake()
+    {
+        hasCrucifix = PlayerPrefs.GetInt("crucifix") == 1 ? true : false;
+        hasSpaceSuit = PlayerPrefs.GetInt("spaceSuit") == 1 ? true : false;
+        hasSpacecraft = PlayerPrefs.GetInt("spacecraft") == 1 ? true : false;
+    }
     private void Start()
     {
         Time.timeScale = 1f;
@@ -93,8 +102,11 @@ public class GameManager : MonoBehaviour
 
     public void GoSpace()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("MenuEspacio");
+        if (hasSpaceSuit)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("MenuEspacio");
+        }
     }
 
     public void Sky()
@@ -105,14 +117,20 @@ public class GameManager : MonoBehaviour
 
     public void GoHeaven()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("MenuCielo");
+        if (hasCrucifix)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("MenuCielo");
+        }
     }
 
     public void Revenge()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("SpaceInvaders");
+        if (hasSpacecraft)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("SpaceInvaders");
+        }
     }
 
     public void Victory()
