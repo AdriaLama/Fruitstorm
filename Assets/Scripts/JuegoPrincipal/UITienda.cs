@@ -222,6 +222,7 @@ public class UITienda : MonoBehaviour
             hasCrucifix = true;
             PlayerPrefs.SetInt("crucifix", hasCrucifix ? 1 : 0);
             PlayerPrefs.Save();
+            hasCrucifix = PlayerPrefs.GetInt("crucifix") == 1 ? true : false;
         }
     }
 
@@ -238,6 +239,7 @@ public class UITienda : MonoBehaviour
             hasSpaceSuit = true;
             PlayerPrefs.SetInt("spaceSuit", hasSpaceSuit ? 1 : 0);
             PlayerPrefs.Save();
+            hasSpaceSuit = PlayerPrefs.GetInt("spaceSuit") == 1 ? true : false;
         }
     }
     
@@ -255,6 +257,7 @@ public class UITienda : MonoBehaviour
             hasSpacecraft = true;
             PlayerPrefs.SetInt("spacecraft", hasSpacecraft ? 1 : 0);
             PlayerPrefs.Save();
+            hasSpacecraft = PlayerPrefs.GetInt("spacecraft") == 1 ? true : false;
         }
     }
 }

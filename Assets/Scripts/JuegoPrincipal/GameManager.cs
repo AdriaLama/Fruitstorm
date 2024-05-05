@@ -102,6 +102,7 @@ public class GameManager : MonoBehaviour
 
     public void GoSpace()
     {
+        hasSpaceSuit = PlayerPrefs.GetInt("spaceSuit") == 1 ? true : false;
         if (hasSpaceSuit)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -117,6 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void GoHeaven()
     {
+        hasCrucifix = PlayerPrefs.GetInt("crucifix") == 1 ? true : false;
         if (hasCrucifix)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -126,6 +128,7 @@ public class GameManager : MonoBehaviour
 
     public void Revenge()
     {
+        hasSpacecraft = PlayerPrefs.GetInt("spacecraft") == 1 ? true : false;
         if (hasSpacecraft)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
