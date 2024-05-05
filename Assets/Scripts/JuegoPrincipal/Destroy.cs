@@ -35,6 +35,7 @@ public class Destroy : MonoBehaviour
     public AudioClip agujeroNegro;
     public AudioClip QuitarVida;
     public AudioClip Recolecta;
+    public AudioSource quitarVida;
     public TMP_Text comboText;
     public GameObject comboTextObject;
     public int comboCount = 0;
@@ -75,7 +76,7 @@ public class Destroy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        AudioSource myAudioSource = GetComponent<AudioSource>();
+       
        
         if (collision.gameObject.CompareTag("Fruta"))
         {
@@ -126,7 +127,7 @@ public class Destroy : MonoBehaviour
             if (!Barrera.activeSelf)
             {
                 Destroy(collision.gameObject);
-                myAudioSource.PlayOneShot(QuitarVida);
+                quitarVida.PlayOneShot(QuitarVida);
                 puntuacion.life -= 1;
                 a += 0.35f;
                 a = Mathf.Clamp(a, 0f, 0.35f);
@@ -166,7 +167,7 @@ public class Destroy : MonoBehaviour
             else if (num.powerUpSelected == 3)
             {
                 Aspiradora.SetActive(true);
-                myAudioSource.PlayOneShot(agujeroNegro);
+                quitarVida.PlayOneShot(agujeroNegro);
                 Aspiradora aspirar = FindObjectOfType<Aspiradora>();
                 aspirar.Aspirar();
                 Destroy(collision.gameObject);

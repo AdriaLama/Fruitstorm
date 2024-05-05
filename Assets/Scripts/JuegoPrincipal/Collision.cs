@@ -12,7 +12,7 @@ public class Collision : MonoBehaviour
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject Bomba;
     private Animator anim;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip BombaAudio;
     public GameObject AnimBomba;
     public Rigidbody2D rb;
@@ -25,7 +25,7 @@ public class Collision : MonoBehaviour
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        
         comb = FindObjectOfType<Destroy>();
 
     }
