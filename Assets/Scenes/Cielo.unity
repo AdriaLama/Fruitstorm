@@ -4102,6 +4102,9 @@ MonoBehaviour:
   defeat: {fileID: 170429531}
   victory: {fileID: 419057149}
   isPaused: 0
+  hasCrucifix: 0
+  hasSpaceSuit: 0
+  hasSpacecraft: 0
 --- !u!4 &437661260
 Transform:
   m_ObjectHideFlags: 0
@@ -5787,6 +5790,9 @@ MonoBehaviour:
   defeat: {fileID: 170429531}
   victory: {fileID: 419057149}
   isPaused: 0
+  hasCrucifix: 0
+  hasSpaceSuit: 0
+  hasSpacecraft: 0
 --- !u!114 &716451358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6319,7 +6325,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 437661259}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: QuitSky
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12254,7 +12260,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 437661259}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: QuitSky
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

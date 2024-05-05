@@ -5952,10 +5952,10 @@ RectTransform:
   m_Father: {fileID: 107009409}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.19784959, y: 0.5}
-  m_AnchorMax: {x: 0.35516995, y: 0.957}
-  m_AnchoredPosition: {x: 103.344826, y: 0}
-  m_SizeDelta: {x: 95.1386, y: -20.442}
+  m_AnchorMin: {x: 0.312, y: 0}
+  m_AnchorMax: {x: 0.6768817, y: 0.3334608}
+  m_AnchoredPosition: {x: -3.5, y: -3.236}
+  m_SizeDelta: {x: -11.861397, y: -6.4420013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &657133017
 MonoBehaviour:
@@ -14512,6 +14512,9 @@ MonoBehaviour:
   defeat: {fileID: 1992415327}
   victory: {fileID: 303104213}
   isPaused: 0
+  hasCrucifix: 0
+  hasSpaceSuit: 0
+  hasSpacecraft: 0
 --- !u!4 &1178500322
 Transform:
   m_ObjectHideFlags: 0
@@ -22463,6 +22466,9 @@ MonoBehaviour:
   defeat: {fileID: 0}
   victory: {fileID: 303104213}
   isPaused: 0
+  hasCrucifix: 0
+  hasSpaceSuit: 0
+  hasSpacecraft: 0
 --- !u!1 &2028428859
 GameObject:
   m_ObjectHideFlags: 0
@@ -22576,7 +22582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.11919341}
   m_AnchorMax: {x: 1, y: 0.28241938}
-  m_AnchoredPosition: {x: -253.08002, y: 3.4998703}
+  m_AnchoredPosition: {x: -253.08002, y: 3.4998856}
   m_SizeDelta: {x: -528.2469, y: -44.884888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032103311
