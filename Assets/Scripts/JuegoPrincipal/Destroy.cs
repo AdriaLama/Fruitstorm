@@ -219,6 +219,13 @@ public class Destroy : MonoBehaviour
                 movInvertido.Invertido();
                 StartCoroutine(DesactivarCamara(5f));
             }
+            else if (num.powerUpSelected == 9)
+            {
+                Destroy(collision.gameObject);
+                MovimientoPersonaje mp = FindObjectOfType<MovimientoPersonaje>();
+                mp.speed += 5;
+                StartCoroutine(DesactivarSpeed(5f));
+            }
         }
     }
     public IEnumerator DesactivarInvertir(float seconds)
@@ -232,6 +239,13 @@ public class Destroy : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         movInvertido.Invertido();
+
+    }
+
+    public IEnumerator DesactivarSpeed(float seconds) {
+        yield return new WaitForSeconds(seconds);
+        MovimientoPersonaje mp = FindObjectOfType<MovimientoPersonaje>();
+        mp.speed -= 5;
 
     }
     public IEnumerator DesactivarBomba(float seconds)

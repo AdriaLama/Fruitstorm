@@ -11,7 +11,7 @@ public class SpawnPowerUp : MonoBehaviour
 
     void Start()
     {
-        powerUpSelected = Random.Range(1, 9);
+        powerUpSelected = Random.Range(1, 10);
     }
     void Update()
     {
