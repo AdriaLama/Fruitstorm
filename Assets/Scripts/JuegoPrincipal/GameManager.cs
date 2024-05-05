@@ -79,16 +79,34 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Juego");
         Time.timeScale = 1f;
     }
+
+    public void GoEarth()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MenuPrincipal");
+    }
     public void Space()
     {
         SceneManager.LoadScene("Espacio");
         Time.timeScale = 1f;
     }
 
+    public void GoSpace()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MenuEspacio");
+    }
+
     public void Sky()
     {
         SceneManager.LoadScene("Cielo");
         Time.timeScale = 1f;
+    }
+
+    public void GoHeaven()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MenuCielo");
     }
 
     public void Victory()
