@@ -10001,10 +10001,10 @@ Animator:
   m_GameObject: {fileID: 1269658195}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8e1d7396b74e5f14d893d63259de82db, type: 2}
+  m_Controller: {fileID: 9100000, guid: 23b0e650ad8513b418eca8824b491339, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -13212,7 +13212,6 @@ MonoBehaviour:
   audioSource: {fileID: 891553364}
   BombaAudio: {fileID: 8300000, guid: 8e3664ca84d5d6846aa8c93a3adb514f, type: 3}
   AnimBomba: {fileID: 18108578458451127, guid: 5a26f87253f78e24b85e7ee29c79121b, type: 3}
-  rb: {fileID: 0}
   randomDirection: 0
   speedDirection: 0
   recolecta: {fileID: 1649451660}
