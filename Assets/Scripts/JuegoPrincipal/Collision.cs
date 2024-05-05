@@ -15,7 +15,7 @@ public class Collision : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip BombaAudio;
     public GameObject AnimBomba;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public int randomDirection;
     public int speedDirection;
     private Destroy comb;
