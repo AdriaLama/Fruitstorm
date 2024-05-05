@@ -66,9 +66,11 @@ public class Enemies : MonoBehaviour
 
     void LookAtPlayer()
     {
+        if (player != null) { 
         Vector3 direction = (player.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        }
     }
     void Disparar()
     {
