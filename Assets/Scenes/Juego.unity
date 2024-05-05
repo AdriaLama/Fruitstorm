@@ -893,8 +893,8 @@ MonoBehaviour:
   startingTime: 120
   currentTime: 0
   areUReady: {fileID: 1964487217}
-  Rifle: {fileID: 0}
-  Cesta: {fileID: 0}
+  Rifle: {fileID: 288286604}
+  Cesta: {fileID: 1241668212}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
   collectedFrutasText:
   - {fileID: 704126664}
@@ -918,7 +918,7 @@ MonoBehaviour:
   musica: {fileID: 1820973446}
   MusicaJuego: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
   MusicaJuegoRapida: {fileID: 8300000, guid: 27bc8a4c1e0725d4bb7e0e0a1a3346a6, type: 3}
-  Sangre: {fileID: 0}
+  Sangre: {fileID: 1541912044}
   Victory: {fileID: 8300000, guid: 773779f9e1d11e74c92dad4c9b3b5a93, type: 3}
   Derrota: {fileID: 8300000, guid: 36069a5ea87051349a52de4f72f73924, type: 3}
   victoriaDerrota: {fileID: 0}
@@ -19960,8 +19960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d943fa4bb70ad24dba34dd7a0f01138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rifle: {fileID: 0}
-  Cesta: {fileID: 0}
+  Rifle: {fileID: 288286604}
+  Cesta: {fileID: 1241668212}
   Alien: {fileID: 754128808}
   areUReady: {fileID: 1964487217}
   currTime: 0
