@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject shopMenuUI;
+    public GameObject Worlds;
     public GameObject defeat;
     public GameObject victory;
     public bool isPaused = false;
@@ -111,11 +112,17 @@ public class GameManager : MonoBehaviour
     {
         optionsMenuUI.SetActive(false);
         shopMenuUI.SetActive(false);
+        Worlds.SetActive(false);
     }
 
     public void Shop()
     {
         shopMenuUI.SetActive(true);
+    }
+
+    public void WorldMenu()
+    {
+        Worlds.SetActive(true);
     }
 
     public void Pause()
