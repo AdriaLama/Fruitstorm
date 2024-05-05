@@ -46,7 +46,7 @@ public class Collision : MonoBehaviour
                 comb.goldGained = comb.comboGold;
                 comb.TextoDineroGanado.gameObject.SetActive(true);
                 comb.TextoDineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
-                StartCoroutine(QuitarDinero(0.75f));
+                StartCoroutine(QuitarDinero(1f));
             }
             UI p = FindObjectOfType<UI>();
             comb.totalComboGold += comb.comboCount * comb.comboGold;

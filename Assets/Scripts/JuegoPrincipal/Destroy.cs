@@ -144,7 +144,7 @@ public class Destroy : MonoBehaviour
                     goldGained = comboGold;
                     TextoDineroGanado.gameObject.SetActive(true);
                     TextoDineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
-                    StartCoroutine(QuitarDinero(0.75f));
+                    StartCoroutine(QuitarDinero(1f));
                 }
                 totalComboGold += comboCount * comboGold;
                 puntuacion.punt = totalComboGold;
