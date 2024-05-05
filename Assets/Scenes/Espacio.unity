@@ -1061,7 +1061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82560172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.75, y: -4.15, z: 15}
+  m_LocalPosition: {x: 2.94, y: -3.38, z: 15}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5280,6 +5280,7 @@ Transform:
   - {fileID: 82560173}
   - {fileID: 1589241489}
   - {fileID: 1388788770}
+  - {fileID: 717354361}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5854,6 +5855,90 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &717354360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717354361}
+  - component: {fileID: 717354362}
+  m_Layer: 0
+  m_Name: PjSpeed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &717354361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717354360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9, y: -3.24, z: 14.2}
+  m_LocalScale: {x: 1.3639, y: 1.3639, z: 1.3639}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 659094240}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &717354362
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717354360}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4698bd62967ee6448bcb3a459ca351f6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7648,7 +7733,6 @@ MonoBehaviour:
   newSpeed: 0
   Player: {fileID: 1011935690}
   anim: {fileID: 1847520472}
-  RiflePersonaje: {fileID: 0}
 --- !u!114 &1011935695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9256,7 +9340,7 @@ MonoBehaviour:
   lifes: {fileID: 825884699}
   startingTime: 120
   currentTime: 121
-  areUReady: {fileID: 0}
+  areUReady: {fileID: 440859368}
   Rifle: {fileID: 1921445073}
   Cesta: {fileID: 1955962900}
   collectedFrutas: 0000000000000000000000000000000000000000000000000000000000000000
@@ -9477,7 +9561,6 @@ MonoBehaviour:
   audioSource: {fileID: 188596993}
   BombaAudio: {fileID: 8300000, guid: 8e3664ca84d5d6846aa8c93a3adb514f, type: 3}
   AnimBomba: {fileID: 18108578458451127, guid: 5a26f87253f78e24b85e7ee29c79121b, type: 3}
-  rb: {fileID: 0}
   randomDirection: 0
   speedDirection: 5
   recolecta: {fileID: 1348139005}
@@ -9716,7 +9799,7 @@ MonoBehaviour:
   Rifle: {fileID: 1921445073}
   Cesta: {fileID: 1955962900}
   Alien: {fileID: 49175529}
-  areUReady: {fileID: 0}
+  areUReady: {fileID: 440859368}
   currTime: 0
   spawnTime: 90
   Arma: {fileID: 8300000, guid: 02093db2240e1a544ab93b298f68fea1, type: 3}
@@ -11445,8 +11528,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388788767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.93, y: -3.42, z: 18.246359}
-  m_LocalScale: {x: 1.0839, y: 1.0839, z: 1.0839}
+  m_LocalPosition: {x: 2.94, y: -3.4226, z: 18.246359}
+  m_LocalScale: {x: 0.93673044, y: 1.0825578, z: 0.9651045}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 659094240}
@@ -18144,7 +18227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589241488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.85, y: -4.37, z: 15}
+  m_LocalPosition: {x: 2.91, y: -3.34, z: 15}
   m_LocalScale: {x: 0.7173, y: 0.6804, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20309,6 +20392,7 @@ MonoBehaviour:
   Barrera: {fileID: 1147621832}
   EscudoBarrera: {fileID: 1589241488}
   BombasSpeed: {fileID: 1388788767}
+  PjSpeed: {fileID: 717354360}
   MainCamera: {fileID: 1331728984}
   Sangre: {fileID: 343766374}
   scaleX: 0.8

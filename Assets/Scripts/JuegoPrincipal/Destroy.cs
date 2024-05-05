@@ -20,6 +20,7 @@ public class Destroy : MonoBehaviour
     public GameObject Barrera;
     public GameObject EscudoBarrera;
     public GameObject BombasSpeed;
+    public GameObject PjSpeed;
     public GameObject MainCamera;
     public Image Sangre;
     private float r;
@@ -222,9 +223,11 @@ public class Destroy : MonoBehaviour
             else if (num.powerUpSelected == 9)
             {
                 Destroy(collision.gameObject);
+                PjSpeed.SetActive(true);
                 MovimientoPersonaje mp = FindObjectOfType<MovimientoPersonaje>();
                 mp.speed += 5;
                 StartCoroutine(DesactivarSpeed(5f));
+                StartCoroutine(QuitarEvento(2f));
             }
         }
     }
@@ -288,6 +291,7 @@ public class Destroy : MonoBehaviour
         Chrono.SetActive(false);
         EscudoBarrera.SetActive(false);
         BombasSpeed.SetActive(false);
+        PjSpeed.SetActive(false);
     }
 
     public IEnumerator QuitarTinta(float seconds)
