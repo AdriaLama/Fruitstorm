@@ -25,6 +25,7 @@ public class ParallaxAsteroides : MonoBehaviour
         posicion.x += speed * Time.deltaTime;
         posicion.y -= speed * Time.deltaTime;
         transform.position = posicion;
+        transform.Rotate(new Vector3(0, 0, -90f * Time.deltaTime), Space.Self);
     }
 }
 
