@@ -20,7 +20,6 @@ public class Collision : MonoBehaviour
     public int speedDirection;
     private Destroy comb;
     public AudioSource recolecta;
-    public AudioSource PierdeCombo;
     public AudioSource Dinero;
     public AudioClip MoneyGain;
     public AudioClip ErrorCombo;
