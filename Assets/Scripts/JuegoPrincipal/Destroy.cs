@@ -41,6 +41,7 @@ public class Destroy : MonoBehaviour
     public AudioSource Dinero;
     public TMP_Text comboText;
     public GameObject comboTextObject;
+    public float goldGained;
     public int comboCount = 0;
     public int comboGold = 0;
     public int totalComboGold = 0;
@@ -76,7 +77,7 @@ public class Destroy : MonoBehaviour
         ChangeColor();
         
         comboText.text = "x" + comboCount;
-        TextoDineroGanado.text = "+" + totalComboGold;
+        TextoDineroGanado.text = "+" + goldGained;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -137,12 +138,13 @@ public class Destroy : MonoBehaviour
                 a += 0.35f;
                 a = Mathf.Clamp(a, 0f, 0.35f);
                 ChangeColor();
-                if (comboCount >= 2)
+                if (comboCount >= 2 )
                 {
                     Dinero.PlayOneShot(MoneyGain);
+                    goldGained = comboGold;
                     TextoDineroGanado.gameObject.SetActive(true);
-                    DineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
-                    StartCoroutine(QuitarDinero(2f));
+                    TextoDineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
+                    StartCoroutine(QuitarDinero(0.75f));
                 }
                 totalComboGold += comboCount * comboGold;
                 puntuacion.punt = totalComboGold;

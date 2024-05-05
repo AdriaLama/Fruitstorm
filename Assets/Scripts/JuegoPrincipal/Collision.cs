@@ -25,6 +25,7 @@ public class Collision : MonoBehaviour
     public AudioClip ErrorCombo;
 
 
+
     private void Start()
     {
         
@@ -39,12 +40,13 @@ public class Collision : MonoBehaviour
             rb.velocity = new Vector2 (0, 0);
             
             int configuracionFrutaID = GetConfiguracionFruta(collision.gameObject);
-            if (comb.comboCount >= 2)
+            if (comb.comboCount >= 2 )
             {
                 Dinero.PlayOneShot(MoneyGain);
+                comb.goldGained = comb.comboGold;
                 comb.TextoDineroGanado.gameObject.SetActive(true);
-                comb.DineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
-                StartCoroutine(QuitarDinero(2f));
+                comb.TextoDineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
+                StartCoroutine(QuitarDinero(0.75f));
             }
             UI p = FindObjectOfType<UI>();
             comb.totalComboGold += comb.comboCount * comb.comboGold;
