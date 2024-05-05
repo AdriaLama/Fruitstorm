@@ -169,6 +169,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MenuPrincipal");
     }
 
+    public void QuitSky()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MenuCielo");
+    }
+
     public void QuitSpace()
     { 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
