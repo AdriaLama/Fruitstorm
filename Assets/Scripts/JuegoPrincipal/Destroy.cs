@@ -141,7 +141,7 @@ public class Destroy : MonoBehaviour
                 if (comboCount >= 2 )
                 {
                     Dinero.PlayOneShot(MoneyGain);
-                    goldGained = comboGold;
+                    goldGained = comboGold * comboCount;
                     TextoDineroGanado.gameObject.SetActive(true);
                     TextoDineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
                     StartCoroutine(QuitarDinero(1f));

@@ -55,9 +55,9 @@ public class PowerUpArma : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         areUReady.SetActive(false);
         SpawnFrutas frenesi = FindObjectOfType<SpawnFrutas>();
-        frenesi.spawnTime = 0.15f;
+        frenesi.spawnTime = 0.10f;
         SpawnBombas bomb = FindObjectOfType<SpawnBombas>();
-        bomb.spawnTime = 1f;
+        bomb.spawnTime = 30f;
         SpawnPowerUp sp = FindObjectOfType<SpawnPowerUp>();
         sp.spawnTime = 7.5f;
 

@@ -43,7 +43,7 @@ public class Collision : MonoBehaviour
             if (comb.comboCount >= 2 )
             {
                 Dinero.PlayOneShot(MoneyGain);
-                comb.goldGained = comb.comboGold;
+                comb.goldGained = comb.comboGold * comb.comboCount;
                 comb.TextoDineroGanado.gameObject.SetActive(true);
                 comb.TextoDineroGanado.transform.localPosition = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
                 StartCoroutine(QuitarDinero(1f));
