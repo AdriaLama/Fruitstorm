@@ -7858,7 +7858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9628,7 +9628,7 @@ MonoBehaviour:
   life: 10
   lifes: {fileID: 825884699}
   startingTime: 120
-  currentTime: 121
+  currentTime: 120
   areUReady: {fileID: 440859368}
   Rifle: {fileID: 1921445073}
   Cesta: {fileID: 1955962900}
@@ -20197,8 +20197,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.0000172, y: 89.74}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchoredPosition: {x: 2.7, y: 89.5}
+  m_SizeDelta: {x: 312.5, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787606897
 MonoBehaviour:
@@ -20213,14 +20213,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 85debcfdfbe6aa7428efac22d5b550f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98c30d48065537a408f773a5326f9f39, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
