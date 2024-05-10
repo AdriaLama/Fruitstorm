@@ -23,6 +23,7 @@ public class Collision : MonoBehaviour
     public AudioSource Dinero;
     public AudioClip MoneyGain;
     public AudioClip ErrorCombo;
+    public AudioClip[] Bombas;
 
 
 
@@ -63,8 +64,8 @@ public class Collision : MonoBehaviour
             GameObject temp = Instantiate(AnimBomba, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.5f), collision.transform.rotation);
             Destroy(collision.gameObject);
             Destroy(temp, 0.15f);
-            audioSource.PlayOneShot(BombaAudio);
-        
+            audioSource.PlayOneShot(Bombas[Random.Range(0, Bombas.Length)]);
+
         }
 
         if (collision.gameObject.CompareTag("PowerUp"))
