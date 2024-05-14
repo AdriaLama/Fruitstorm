@@ -27,12 +27,6 @@ public class Destroy : MonoBehaviour
     private float g;
     private float b;
     private float a;
-    public float scaleX = 0.8f;
-    public float newScaleX;
-    public float scaleY = 0.8f;
-    public float newScaleY;
-    public float pos = 10.5f;
-    public float newPos;
     public AudioClip agujeroNegro;
     public AudioClip QuitarVida;
     public AudioClip Recolecta;
@@ -57,18 +51,6 @@ public class Destroy : MonoBehaviour
         g = Sangre.color.g;
         b = Sangre.color.b;
         a = Sangre.color.a;
-        
-    }
-
-    private void Awake()
-    {
-        //scaleX = 0.8f;
-        //scaleY = 0.8f;
-        //pos = 10.5f;
-        PlayerPrefs.SetFloat("scaleX", scaleX);
-        PlayerPrefs.SetFloat("scaleY", scaleY);
-        PlayerPrefs.SetFloat("pos", pos);
-        UpdateBasket();
     }
     private void Update()
     {
@@ -352,26 +334,6 @@ public class Destroy : MonoBehaviour
             puntuacion.collectedFrutasDefeat[idFruta]++;
         }
     }
-
-    public void UpdateBasket()
-    {
-        newScaleX = PlayerPrefs.GetFloat("newScaleX");
-        newScaleY = PlayerPrefs.GetFloat("newScaleY");
-        newPos = PlayerPrefs.GetFloat("newPos");
-        //newScaleX = 0.8f;
-        //newScaleY = 0.8f;
-        //newPos = 10.5f;
-        scaleX = newScaleX;
-        scaleY = newScaleY;
-        pos = newPos;
-        PlayerPrefs.SetFloat("scaleX", scaleX);
-        PlayerPrefs.SetFloat("scaleY", scaleY);
-        PlayerPrefs.SetFloat("pos", pos);
-
-        Cesta.transform.localScale = new Vector3(scaleX, scaleY, 1f);
-        Cesta.transform.localPosition = new Vector3(Cesta.transform.localPosition.x, pos, Cesta.transform.localPosition.z);
-    }
-
     private void ChangeColor()
     {
         Color c = new Color(r, g, b, a);

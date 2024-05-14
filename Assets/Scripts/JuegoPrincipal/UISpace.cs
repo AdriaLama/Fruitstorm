@@ -7,16 +7,10 @@ public class UISpace : MonoBehaviour
 {
     public int life;
     public TMP_Text lifes;
-    private GameManager Pausa;
-
     void Update()
     {
-        Pausa = FindObjectOfType<GameManager>();
-        if (Pausa == null)
-        {
-            Debug.LogError("GameManager instance not found!");
-        }
         Oleadas waves = FindObjectOfType<Oleadas>();
+        MenusGame menu = FindObjectOfType<MenusGame>();
 
         lifes.text = life.ToString();
 
@@ -24,13 +18,13 @@ public class UISpace : MonoBehaviour
         if (life <= 0)
         {
             life = 0;
-            Pausa.Defeat();
+            menu.Defeat();
         }
 
         if (!waves.PrimeraOleada.activeSelf && !waves.SegundaOleada.activeSelf && !waves.UltimaOleada.activeSelf)
         {
 
-            Pausa.Victory();
+            menu.Victory();
         }
     }
 

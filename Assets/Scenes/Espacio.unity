@@ -2692,8 +2692,8 @@ Transform:
   m_LocalScale: {x: 2.2068965, y: 2.2068965, z: 2.2068965}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1787606896}
   - {fileID: 990722011}
+  - {fileID: 1787606896}
   m_Father: {fileID: 916174267}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7443,7 +7443,6 @@ GameObject:
   - component: {fileID: 916174271}
   - component: {fileID: 916174270}
   - component: {fileID: 916174269}
-  - component: {fileID: 916174268}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -7479,28 +7478,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &916174268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916174266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d761eefcc24311f468c293b6bd5e9ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1745880362}
-  optionsMenuUI: {fileID: 477849291}
-  shopMenuUI: {fileID: 0}
-  Worlds: {fileID: 0}
-  defeat: {fileID: 1152690325}
-  victory: {fileID: 401045476}
-  isPaused: 0
-  hasCrucifix: 0
-  hasSpaceSuit: 0
-  hasSpacecraft: 0
 --- !u!114 &916174269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7843,7 +7820,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.0000172, y: 89.74}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 300, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990722012
 MonoBehaviour:
@@ -7858,14 +7835,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 85debcfdfbe6aa7428efac22d5b550f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 738f9a36b9491d94698b7e511664ac9a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8019,7 +7996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  newSpeed: 0
   Player: {fileID: 1011935690}
   anim: {fileID: 1847520472}
 --- !u!114 &1011935695
@@ -9856,6 +9832,7 @@ MonoBehaviour:
   Dinero: {fileID: 1968253502}
   MoneyGain: {fileID: 8300000, guid: 1447e020df86c4746a70acbe484073fa, type: 3}
   ErrorCombo: {fileID: 0}
+  Bombas: []
 --- !u!61 &1226978754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20198,7 +20175,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.7, y: 89.5}
-  m_SizeDelta: {x: 312.5, y: 175}
+  m_SizeDelta: {x: 300, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787606897
 MonoBehaviour:
@@ -20220,7 +20197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 98c30d48065537a408f773a5326f9f39, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2cf0b63dbb13da48a904bc99643f725, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21026,12 +21003,6 @@ MonoBehaviour:
   PjSpeed: {fileID: 717354360}
   MainCamera: {fileID: 1331728984}
   Sangre: {fileID: 343766374}
-  scaleX: 0.8
-  newScaleX: 0
-  scaleY: 0.8
-  newScaleY: 0
-  pos: 0
-  newPos: 0
   agujeroNegro: {fileID: 8300000, guid: 761cb20aaf45ebd4780e9dcbb0daa43f, type: 3}
   QuitarVida: {fileID: 8300000, guid: 3ba032e762d3c87408b8df2d3f9f4c49, type: 3}
   Recolecta: {fileID: 8300000, guid: d1983d5d7be9ba446b0f0a0788bc44f4, type: 3}

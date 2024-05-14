@@ -7,18 +7,14 @@ public class MovimientoPersonaje : MonoBehaviour
 {
 
     public float speed = 10f;
-    public float newSpeed;
     private bool invertido = false;
     public GameObject Player;
     public Animator anim;
     private SpriteRenderer spriteRenderer;
     private void Awake()
     {
-        //speed = 10f;
-        PlayerPrefs.SetFloat("speed", speed);
         anim =GetComponentInChildren<Animator>();
         spriteRenderer = Player.GetComponent<SpriteRenderer>();
-        UpdateSpeed();
     }
 
     void Update()
@@ -80,14 +76,6 @@ public class MovimientoPersonaje : MonoBehaviour
             }
         }
         
-    }
-
-    public void UpdateSpeed()
-    {
-        newSpeed = PlayerPrefs.GetFloat("speedlvlup");
-        //newSpeed = 10f;
-        speed = newSpeed;
-        PlayerPrefs.SetFloat("speed", speed);
     }
 
     public void Invertido()

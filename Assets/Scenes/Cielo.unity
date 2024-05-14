@@ -1187,12 +1187,6 @@ MonoBehaviour:
   PjSpeed: {fileID: 1945898343}
   MainCamera: {fileID: 1600065283}
   Sangre: {fileID: 94364439}
-  scaleX: 0.8
-  newScaleX: 0
-  scaleY: 0.8
-  newScaleY: 0
-  pos: 0
-  newPos: 0
   agujeroNegro: {fileID: 8300000, guid: 761cb20aaf45ebd4780e9dcbb0daa43f, type: 3}
   QuitarVida: {fileID: 8300000, guid: 3ba032e762d3c87408b8df2d3f9f4c49, type: 3}
   Recolecta: {fileID: 8300000, guid: d1983d5d7be9ba446b0f0a0788bc44f4, type: 3}
@@ -2141,7 +2135,7 @@ Transform:
   - {fileID: 891553363}
   - {fileID: 1920798190}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280336498
 GameObject:
@@ -2258,8 +2252,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
@@ -2501,7 +2495,7 @@ GameObject:
   - component: {fileID: 328927072}
   - component: {fileID: 328927071}
   m_Layer: 0
-  m_Name: "Puntuaci\xF3n"
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2746,7 +2740,7 @@ MonoBehaviour:
   MusicaJuego: {fileID: 8300000, guid: 331b4dc4e2a98714780f64ad1ed2a627, type: 3}
   MusicaJuegoRapida: {fileID: 8300000, guid: 27bc8a4c1e0725d4bb7e0e0a1a3346a6, type: 3}
   Sangre: {fileID: 1177899804}
-  Victory: {fileID: 8300000, guid: 773779f9e1d11e74c92dad4c9b3b5a93, type: 3}
+  Victoria: {fileID: 0}
   Derrota: {fileID: 8300000, guid: 36069a5ea87051349a52de4f72f73924, type: 3}
   victoriaDerrota: {fileID: 0}
 --- !u!4 &328927074
@@ -3190,8 +3184,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -4066,60 +4060,6 @@ RectTransform:
   m_AnchoredPosition: {x: -6.2400055, y: -1.3560028}
   m_SizeDelta: {x: 5.854248, y: -7.277954}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &437661258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 437661260}
-  - component: {fileID: 437661259}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &437661259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437661258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d761eefcc24311f468c293b6bd5e9ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1693566057}
-  optionsMenuUI: {fileID: 1482678345}
-  shopMenuUI: {fileID: 0}
-  Worlds: {fileID: 0}
-  defeat: {fileID: 170429531}
-  victory: {fileID: 419057149}
-  isPaused: 0
-  hasCrucifix: 0
-  hasSpaceSuit: 0
-  hasSpacecraft: 0
---- !u!4 &437661260
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437661258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 428.04868, y: 196.67957, z: 1.6713684}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &466110721
 GameObject:
   m_ObjectHideFlags: 0
@@ -5735,9 +5675,9 @@ GameObject:
   - component: {fileID: 716451360}
   - component: {fileID: 716451359}
   - component: {fileID: 716451358}
-  - component: {fileID: 716451357}
+  - component: {fileID: 716451361}
   m_Layer: 5
-  m_Name: UI
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5771,28 +5711,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &716451357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716451355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d761eefcc24311f468c293b6bd5e9ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1693566057}
-  optionsMenuUI: {fileID: 1482678345}
-  shopMenuUI: {fileID: 0}
-  Worlds: {fileID: 0}
-  defeat: {fileID: 170429531}
-  victory: {fileID: 419057149}
-  isPaused: 0
-  hasCrucifix: 0
-  hasSpaceSuit: 0
-  hasSpacecraft: 0
 --- !u!114 &716451358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5856,6 +5774,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &716451361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716451355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2974408fe504b54b8b35c002b2bf6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseMenuUI: {fileID: 1693566057}
+  optionsMenuUI: {fileID: 1482678345}
+  shopMenuUI: {fileID: 0}
+  defeat: {fileID: 170429531}
+  victory: {fileID: 419057149}
 --- !u!1 &719209175
 GameObject:
   m_ObjectHideFlags: 0
@@ -6055,8 +5991,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: QuitSky
         m_Mode: 1
         m_Arguments:
@@ -6118,7 +6054,7 @@ GameObject:
   - component: {fileID: 799191952}
   - component: {fileID: 799191951}
   m_Layer: 5
-  m_Name: Opciones
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6189,8 +6125,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: BackToPause
         m_Mode: 1
         m_Arguments:
@@ -6323,8 +6259,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: QuitSky
         m_Mode: 1
         m_Arguments:
@@ -10477,7 +10413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  newSpeed: 0
   Player: {fileID: 1269658195}
   anim: {fileID: 0}
 --- !u!114 &1269658200
@@ -10741,8 +10676,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
@@ -11174,7 +11109,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375294901
 GameObject:
@@ -11988,9 +11923,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OptionsMenu
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
+        m_MethodName: Options
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12258,8 +12193,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: QuitSky
         m_Mode: 1
         m_Arguments:
@@ -15303,8 +15238,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 437661259}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 716451361}
+        m_TargetAssemblyTypeName: MenusGame, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:

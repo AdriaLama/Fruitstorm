@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class UI : MonoBehaviour
 {
@@ -18,7 +21,6 @@ public class UI : MonoBehaviour
     public GameObject areUReady;
     public GameObject Rifle;
     public GameObject Cesta;
-    private GameManager Pausa;
     public List<int> collectedFrutas;
     public TMP_Text[] collectedFrutasText;
     public List<int> collectedFrutasDefeat;
@@ -27,21 +29,14 @@ public class UI : MonoBehaviour
     public AudioClip MusicaJuego;
     public AudioClip MusicaJuegoRapida;
     public GameObject Sangre;
-    public AudioClip Victory;
+    public AudioClip Victoria;
     public AudioClip Derrota;
     public AudioSource victoriaDerrota;
-   
+
     private void Start()
     {
-        
-        
         areUReady.SetActive(false);
         currentTime = startingTime;
-        Pausa = FindObjectOfType<GameManager>();
-        if (Pausa == null)
-        {
-            Debug.LogError("GameManager instance not found!");
-        }
 
         collectedFrutas = new List<int>();
         for (int i = 0; i < 8; i++)
@@ -60,16 +55,12 @@ public class UI : MonoBehaviour
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        //DisplayTime(currentTime);
+        MenusGame menu = FindObjectOfType<MenusGame>();
 
         if (currentTime <= 0)
         {
-            //timer.text = life.ToString();
-            //timer.text = "00:00";
-            PlayerPrefs.SetInt("gold", punt);
-            PlayerPrefs.Save();
-            Pausa.Victory();
-            AudioSource.PlayClipAtPoint(Victory, transform.position);
+            menu.Victory();
+            AudioSource.PlayClipAtPoint(Victoria, transform.position);
             Sangre.SetActive(false);
             musica.Pause();
             Time.timeScale = 0f;
@@ -77,9 +68,7 @@ public class UI : MonoBehaviour
         if (life <= 0)
         {
             life = 0;
-            PlayerPrefs.SetInt("gold", punt);
-            PlayerPrefs.Save();
-            Pausa.Defeat();
+            menu.Defeat();
             AudioSource.PlayClipAtPoint(Derrota, transform.position);
             Sangre.SetActive(false);
             musica.Pause();
@@ -100,13 +89,4 @@ public class UI : MonoBehaviour
             collectedFrutasDefeatText[i].text = collectedFrutasDefeat[i].ToString();
         }
     }
-    /*void DisplayTime(float timeToDisplay)
-    {
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-
-        timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-    }*/
-
-   
 }
