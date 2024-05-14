@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public bool hasCrucifix = false;
     public bool hasSpaceSuit = false;
     public bool hasSpacecraft = false;
-    public int gold;
+    public int gold = 0;
+    public int speed;
+    public int basketScale;
+    public int basketPosition;
 
     private void Awake()
     {
@@ -18,7 +21,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
         }
         else
         {

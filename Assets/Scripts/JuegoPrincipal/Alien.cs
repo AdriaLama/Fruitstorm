@@ -44,9 +44,5 @@ public class Alien : MonoBehaviour
         transform.position = posicion;
 
         alienSound.Play();
-
-        
     }
-
-
 }

@@ -225,60 +225,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &7994797
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7994799}
-  - component: {fileID: 7994798}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &7994798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d761eefcc24311f468c293b6bd5e9ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  optionsMenuUI: {fileID: 846331390}
-  shopMenuUI: {fileID: 912862114}
-  Worlds: {fileID: 808679396}
-  defeat: {fileID: 0}
-  victory: {fileID: 0}
-  isPaused: 0
-  hasCrucifix: 0
-  hasSpaceSuit: 0
-  hasSpacecraft: 0
---- !u!4 &7994799
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994797}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 270.51645, y: 225.51329, z: -0.39751914}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14485323
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,8 +385,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1801451668}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: Space
         m_Mode: 1
         m_Arguments:
@@ -573,7 +519,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -1506,7 +1452,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -2788,7 +2734,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728596311
 GameObject:
@@ -3557,8 +3503,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1801451668}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -3998,7 +3944,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Shop
         m_Mode: 1
@@ -4131,7 +4077,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994797}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
@@ -5374,7 +5320,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -5507,8 +5453,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1801451668}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: GoEarth
         m_Mode: 1
         m_Arguments:
@@ -7411,8 +7357,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1801451668}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: Revenge
         m_Mode: 1
         m_Arguments:
@@ -7897,16 +7843,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1801451662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d761eefcc24311f468c293b6bd5e9ca3, type: 3}
+  m_Script: {fileID: 11500000, guid: 20d697a2f6cffc346b6198224bc74566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  optionsMenuUI: {fileID: 846331390}
-  shopMenuUI: {fileID: 912862114}
   Worlds: {fileID: 808679396}
-  defeat: {fileID: 0}
-  victory: {fileID: 0}
-  isPaused: 0
+  optionsMenuUI: {fileID: 846331390}
   hasCrucifix: 0
   hasSpaceSuit: 0
   hasSpacecraft: 0
@@ -7994,8 +7935,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1801451668}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: Options
         m_Mode: 1
         m_Arguments:
@@ -8486,8 +8427,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1801451668}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: WorldMenu
         m_Mode: 1
         m_Arguments:
@@ -9168,8 +9109,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7994798}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1801451668}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: GoHeaven
         m_Mode: 1
         m_Arguments:

@@ -59,8 +59,7 @@ public class PowerUpArma : MonoBehaviour
         SpawnBombas bomb = FindObjectOfType<SpawnBombas>();
         bomb.spawnTime = 30f;
         SpawnPowerUp sp = FindObjectOfType<SpawnPowerUp>();
-        sp.spawnTime = 7.5f;
-
+        sp.spawnTime = 30f;
     }
 
     public void QuitarPowerUps()

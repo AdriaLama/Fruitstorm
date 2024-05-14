@@ -49,7 +49,6 @@ public class UI : MonoBehaviour
         {
             collectedFrutasDefeat.Add(0);
         }
-
     }
 
     void Update()
@@ -59,6 +58,7 @@ public class UI : MonoBehaviour
 
         if (currentTime <= 0)
         {
+            GameManager.Instance.gold += punt;
             menu.Victory();
             AudioSource.PlayClipAtPoint(Victoria, transform.position);
             Sangre.SetActive(false);
@@ -68,6 +68,7 @@ public class UI : MonoBehaviour
         if (life <= 0)
         {
             life = 0;
+            GameManager.Instance.gold += punt;
             menu.Defeat();
             AudioSource.PlayClipAtPoint(Derrota, transform.position);
             Sangre.SetActive(false);
