@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class UITienda : MonoBehaviour
 {
     public int gold;
-    public int totalGold = 0;
-    public int totalGoldSpent = 0;
     public TMP_Text goldTMP;
     public int costSpeed = 5000;
     public TMP_Text costSpeedTMP;
@@ -36,13 +34,10 @@ public class UITienda : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        gold = PlayerPrefs.GetInt("gold");
-        totalGold = PlayerPrefs.GetInt("totalGold");
-        totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
         hasCrucifix = PlayerPrefs.GetInt("crucifix") == 1 ? true : false;
         hasSpaceSuit = PlayerPrefs.GetInt("spaceSuit") == 1 ? true : false;
         hasSpacecraft = PlayerPrefs.GetInt("spacecraft") == 1 ? true : false;
-        ActualizarOro();
+      
         ActualizarTienda();
     }
 
@@ -52,26 +47,12 @@ public class UITienda : MonoBehaviour
         levelSpeedTMP.text = levelSpeed.ToString();
         costBasketTMP.text = costBasket.ToString();
         levelBasketTMP.text = levelBasket.ToString();
-        goldTMP.text = totalGold.ToString();
+        goldTMP.text = gold.ToString();
         costHeavenText.text = costHeaven.ToString();
         costSpaceText.text = costSpace.ToString();
         costRevengeText.text = costRevenge.ToString();
-    }
 
-    public void ActualizarOro()
-    {
-        totalGold += gold;
-
-        totalGoldSpent = PlayerPrefs.GetInt("totalGoldSpent");
-
-        totalGold -= totalGoldSpent;
-        totalGoldSpent = 0;
-        PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
-        PlayerPrefs.Save();
-
-        //totalGold = 0;
-        PlayerPrefs.SetInt("totalGold", totalGold);
-        PlayerPrefs.Save();
+        gold = GameManager.Instance.gold;
     }
 
     public void ActualizarTienda()
@@ -157,7 +138,7 @@ public class UITienda : MonoBehaviour
 
     public void LevelUpSpeed()
     {
-        if (totalGold >= costSpeed)
+        if (gold >= costSpeed)
         {
             audioSource.PlayOneShot(Mejoras);
             speed += 1f;
@@ -168,10 +149,7 @@ public class UITienda : MonoBehaviour
             levelSpeed++;
             PlayerPrefs.SetInt("levelSpeed", levelSpeed);
             PlayerPrefs.Save();
-            totalGold -= costSpeed;
-            totalGoldSpent += costSpeed;
-            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
-            PlayerPrefs.Save();
+            GameManager.Instance.gold -= costSpeed;
             costSpeed += 5000;
             PlayerPrefs.SetInt("costSpeed", costSpeed);
             PlayerPrefs.Save();
@@ -180,7 +158,7 @@ public class UITienda : MonoBehaviour
 
     public void LevelUpBasket()
     {
-        if (totalGold >= costBasket)
+        if (gold >= costBasket)
         {
             audioSource.PlayOneShot(Mejoras);
             scaleX += 0.1f;
@@ -198,10 +176,7 @@ public class UITienda : MonoBehaviour
             levelBasket++;
             PlayerPrefs.SetInt("levelBasket", levelBasket);
             PlayerPrefs.Save();
-            totalGold -= costBasket;
-            totalGoldSpent += costBasket;
-            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
-            PlayerPrefs.Save();
+            GameManager.Instance.gold -= costBasket;
             costBasket += 5000;
             PlayerPrefs.SetInt("costBasket", costBasket);
             PlayerPrefs.Save();
@@ -210,15 +185,9 @@ public class UITienda : MonoBehaviour
 
     public void BuyCrucifix()
     {
-        if (totalGold >= costHeaven && !hasCrucifix)
+        if (gold >= costHeaven && !hasCrucifix)
         {
-            totalGold -= costHeaven;
-            totalGoldSpent += costHeaven;
-            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
-            PlayerPrefs.Save();
-            gold = 0;
-            PlayerPrefs.SetInt("gold", gold);
-            PlayerPrefs.Save();
+            GameManager.Instance.gold -= costHeaven;
             hasCrucifix = true;
             PlayerPrefs.SetInt("crucifix", hasCrucifix ? 1 : 0);
             PlayerPrefs.Save();
@@ -228,14 +197,8 @@ public class UITienda : MonoBehaviour
 
     public void BuySpaceSuit()
     {
-        if (totalGold >= costSpace) { 
-            totalGold -= costSpace;
-            totalGoldSpent += costSpace;
-            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
-            PlayerPrefs.Save();
-            gold = 0;
-            PlayerPrefs.SetInt("gold", gold);
-            PlayerPrefs.Save();
+        if (gold >= costSpace && !hasSpaceSuit) {
+            GameManager.Instance.gold -= costSpace;
             hasSpaceSuit = true;
             PlayerPrefs.SetInt("spaceSuit", hasSpaceSuit ? 1 : 0);
             PlayerPrefs.Save();
@@ -245,15 +208,9 @@ public class UITienda : MonoBehaviour
     
     public void BuySpacecraft()
     {
-        if (totalGold >= costRevenge)
+        if (gold >= costRevenge && !hasSpacecraft)
         {
-            totalGold -= costRevenge;
-            totalGoldSpent += costRevenge;
-            PlayerPrefs.SetInt("totalGoldSpent", totalGoldSpent);
-            PlayerPrefs.Save();
-            gold = 0;
-            PlayerPrefs.SetInt("gold", gold);
-            PlayerPrefs.Save();
+            GameManager.Instance.gold -= costRevenge;
             hasSpacecraft = true;
             PlayerPrefs.SetInt("spacecraft", hasSpacecraft ? 1 : 0);
             PlayerPrefs.Save();

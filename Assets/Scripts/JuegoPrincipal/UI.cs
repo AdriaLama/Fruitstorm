@@ -58,6 +58,7 @@ public class UI : MonoBehaviour
         if (currentTime <= 0)
         {
             GameManager.Instance.gold += punt;
+            punt = 0;
             menu.Victory();
             AudioSource.PlayClipAtPoint(Victoria, transform.position);
             Sangre.SetActive(false);
@@ -68,6 +69,7 @@ public class UI : MonoBehaviour
         {
             life = 0;
             GameManager.Instance.gold += punt;
+            punt = 0;
             menu.Defeat();
             AudioSource.PlayClipAtPoint(Derrota, transform.position);
             Sangre.SetActive(false);
