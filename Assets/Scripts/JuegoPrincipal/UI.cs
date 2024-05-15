@@ -10,7 +10,6 @@ using UnityEngine.UIElements;
 public class UI : MonoBehaviour
 {
     public int punt;
-    public TMP_Text puntuacion;
     public TMP_Text goldEarnedVictory;
     public TMP_Text goldEarnedDefeat;
     public int life;
@@ -75,7 +74,7 @@ public class UI : MonoBehaviour
             musica.Pause();
         }
 
-        puntuacion.text = punt.ToString();
+       
         goldEarnedVictory.text = punt.ToString();
         goldEarnedDefeat.text = punt.ToString();
         lifes.text = life.ToString();
