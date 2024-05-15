@@ -86,6 +86,8 @@ public class MenusGame : MonoBehaviour
     public void Shop()
     {
         shopMenuUI.SetActive(true);
+        victory.SetActive(false);
+        defeat.SetActive(false);
     }
 
     public void Pause()
