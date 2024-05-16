@@ -13,23 +13,27 @@ public class MenusMenu : MonoBehaviour
     public GameObject Lock3;
     public GameObject Worlds;
     public GameObject optionsMenuUI;
+    public GameObject shopMenuUI;
 
     private void Update()
     {
-        if (GameManager.Instance.hasCrucifix)
+        if (GameManager.Instance != null)
         {
-            Heaven.SetActive(true);
-            Lock1.SetActive(false);
-        }
-        if (GameManager.Instance.hasSpaceSuit)
-        {
-            OuterSpace.SetActive(true);
-            Lock2.SetActive(false);
-        }
-        if (GameManager.Instance.hasSpacecraft)
-        {
-            Vengeance.SetActive(true);
-            Lock3.SetActive(false);
+            if (GameManager.Instance.hasCrucifix)
+            {
+                Heaven.SetActive(true);
+                Lock1.SetActive(false);
+            }
+            if (GameManager.Instance.hasSpaceSuit)
+            {
+                OuterSpace.SetActive(true);
+                Lock2.SetActive(false);
+            }
+            if (GameManager.Instance.hasSpacecraft)
+            {
+                Vengeance.SetActive(true);
+                Lock3.SetActive(false);
+            }
         }
     }
     public void Game()
@@ -47,6 +51,10 @@ public class MenusMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Cielo");
         Time.timeScale = 1f;
+    }
+    public void Shop()
+    {
+        shopMenuUI.SetActive(true);
     }
     public void WorldMenu()
     {
@@ -71,27 +79,36 @@ public class MenusMenu : MonoBehaviour
     }
     public void GoSpace()
     {
-        if (GameManager.Instance.hasSpaceSuit)
+        if (GameManager.Instance != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("MenuEspacio");
+            if (GameManager.Instance.hasSpaceSuit)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("MenuEspacio");
+            }
         }
     }
     public void GoHeaven()
     {
-        if (GameManager.Instance.hasCrucifix)
+        if (GameManager.Instance != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("MenuCielo");
+            if (GameManager.Instance.hasCrucifix)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("MenuCielo");
+            }
         }
     }
 
     public void Revenge()
     {
-        if (GameManager.Instance.hasSpacecraft)
+        if (GameManager.Instance != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("SpaceInvaders");
+            if (GameManager.Instance.hasSpacecraft)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("SpaceInvaders");
+            }
         }
     }
     public void Credits()

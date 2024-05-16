@@ -47,18 +47,21 @@ public class UITienda : MonoBehaviour
         costSpaceText.text = costSpace.ToString();
         costRevengeText.text = costRevenge.ToString();
 
-        gold = GameManager.Instance.gold;
-        costSpeed = GameManager.Instance.costSpeed;
-        levelSpeed = GameManager.Instance.levelSpeed;
-        costBasket = GameManager.Instance.costBasket;
-        levelBasket = GameManager.Instance.levelBasket;
-        speed = GameManager.Instance.speed;
-        scaleX = GameManager.Instance.basketScaleX;
-        scaleY = GameManager.Instance.basketScaleY;
-        pos = GameManager.Instance.basketPosY;
-        hasCrucifix = GameManager.Instance.hasCrucifix;
-        hasSpaceSuit = GameManager.Instance.hasSpaceSuit;
-        hasSpacecraft = GameManager.Instance.hasSpacecraft;
+        if (GameManager.Instance != null)
+        {
+            gold = GameManager.Instance.gold;
+            costSpeed = GameManager.Instance.costSpeed;
+            levelSpeed = GameManager.Instance.levelSpeed;
+            costBasket = GameManager.Instance.costBasket;
+            levelBasket = GameManager.Instance.levelBasket;
+            speed = GameManager.Instance.speed;
+            scaleX = GameManager.Instance.basketScaleX;
+            scaleY = GameManager.Instance.basketScaleY;
+            pos = GameManager.Instance.basketPosY;
+            hasCrucifix = GameManager.Instance.hasCrucifix;
+            hasSpaceSuit = GameManager.Instance.hasSpaceSuit;
+            hasSpacecraft = GameManager.Instance.hasSpacecraft;
+        }
     }
 
     public void LevelUpSpeed()

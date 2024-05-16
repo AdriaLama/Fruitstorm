@@ -51,9 +51,12 @@ public class Destroy : MonoBehaviour
 
     void Start()
     {
-        scaleX = GameManager.Instance.basketScaleX;
-        scaleY = GameManager.Instance.basketScaleY;
-        posY = GameManager.Instance.basketPosY;
+        if (GameManager.Instance != null)
+        {
+            scaleX = GameManager.Instance.basketScaleX;
+            scaleY = GameManager.Instance.basketScaleY;
+            posY = GameManager.Instance.basketPosY;
+        }
         r = Sangre.color.r;
         g = Sangre.color.g;
         b = Sangre.color.b;
@@ -62,9 +65,12 @@ public class Destroy : MonoBehaviour
     }
     private void Update()
     {
-        scaleX = GameManager.Instance.basketScaleX;
-        scaleY = GameManager.Instance.basketScaleY;
-        posY = GameManager.Instance.basketPosY;
+        if (GameManager.Instance != null)
+        {
+            scaleX = GameManager.Instance.basketScaleX;
+            scaleY = GameManager.Instance.basketScaleY;
+            posY = GameManager.Instance.basketPosY;
+        }
         a -= 0.30f * Time.deltaTime;
         a = Mathf.Clamp(a, 0f, 0.35f);
         ChangeColor();

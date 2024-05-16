@@ -20,7 +20,10 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Update()
     {
-        speed = GameManager.Instance.speed;
+        if (GameManager.Instance != null)
+        {
+            speed = GameManager.Instance.speed;
+        } 
         float horizontal;
        
         if (invertido)
@@ -34,7 +37,6 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
-                particulasPj.Play();
 
             }
             
@@ -44,7 +46,6 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
-                particulasPj.Play();
             }
             else
             {
@@ -63,7 +64,6 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
-                particulasPj.Play();
 
             }
             else if (Input.GetKey(KeyCode.RightArrow) || horizontal > 0)
@@ -72,7 +72,6 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
-                particulasPj.Play();
             }
             else
             {
