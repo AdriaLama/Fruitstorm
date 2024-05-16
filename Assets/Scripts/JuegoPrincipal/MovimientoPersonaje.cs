@@ -11,6 +11,7 @@ public class MovimientoPersonaje : MonoBehaviour
     public GameObject Player;
     public Animator anim;
     private SpriteRenderer spriteRenderer;
+    public ParticleSystem particulasPj;
     private void Awake()
     {
         anim =GetComponentInChildren<Animator>();
@@ -33,6 +34,7 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
+                particulasPj.Play();
 
             }
             
@@ -42,6 +44,7 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
+                particulasPj.Play();
             }
             else
             {
@@ -60,6 +63,7 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = false;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
+                particulasPj.Play();
 
             }
             else if (Input.GetKey(KeyCode.RightArrow) || horizontal > 0)
@@ -68,6 +72,7 @@ public class MovimientoPersonaje : MonoBehaviour
                 anim.SetTrigger("Caminar");
                 spriteRenderer.flipX = true;
                 transform.position += new Vector3(horizontal, 0, 0) * speed * Time.deltaTime;
+                particulasPj.Play();
             }
             else
             {
