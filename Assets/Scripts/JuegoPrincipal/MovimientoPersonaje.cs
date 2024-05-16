@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class MovimientoPersonaje : MonoBehaviour
 {
 
-    public float speed = 10f;
+    public float speed;
     private bool invertido = false;
     public GameObject Player;
     public Animator anim;
@@ -19,6 +19,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Update()
     {
+        speed = GameManager.Instance.speed;
         float horizontal;
        
         if (invertido)

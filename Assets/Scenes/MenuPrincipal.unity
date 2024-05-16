@@ -8444,9 +8444,14 @@ MonoBehaviour:
   hasSpaceSuit: 0
   hasSpacecraft: 0
   gold: 0
-  speed: 0
-  basketScale: 0
-  basketPosition: 0
+  costSpeed: 5000
+  levelSpeed: 1
+  costBasket: 5000
+  levelBasket: 1
+  speed: 10
+  basketScaleX: 0
+  basketScaleY: 0
+  basketPosY: 0
 --- !u!4 &1470085086
 Transform:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 
 public class Destroy : MonoBehaviour
@@ -44,20 +45,30 @@ public class Destroy : MonoBehaviour
     public AudioSource recolecta;
     public GameObject DineroGanado;
     public TMP_Text TextoDineroGanado;
+    public float scaleX;
+    public float scaleY;
+    public float posY;
 
     void Start()
     {
+        scaleX = GameManager.Instance.basketScaleX;
+        scaleY = GameManager.Instance.basketScaleY;
+        posY = GameManager.Instance.basketPosY;
         r = Sangre.color.r;
         g = Sangre.color.g;
         b = Sangre.color.b;
         a = Sangre.color.a;
+        Cesta.transform.position = new Vector3(Cesta.transform.position.x, posY, Cesta.transform.position.z);
+        Cesta.transform.localScale = new Vector3(scaleX, scaleY, 10);
     }
     private void Update()
     {
+        scaleX = GameManager.Instance.basketScaleX;
+        scaleY = GameManager.Instance.basketScaleY;
+        posY = GameManager.Instance.basketPosY;
         a -= 0.30f * Time.deltaTime;
         a = Mathf.Clamp(a, 0f, 0.35f);
         ChangeColor();
-        
         comboText.text = "x" + comboCount;
         TextoDineroGanado.text = "+" + goldGained;
     }
@@ -339,7 +350,4 @@ public class Destroy : MonoBehaviour
         Color c = new Color(r, g, b, a);
         Sangre.color = c;
     }
-
-
-   
 }
