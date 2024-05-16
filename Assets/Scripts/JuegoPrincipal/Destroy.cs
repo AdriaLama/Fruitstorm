@@ -43,7 +43,7 @@ public class Destroy : MonoBehaviour
     public ParticleSystem particulas;
     public GameObject Star;
     public AudioSource recolecta;
-    public GameObject DineroGanado;
+    private GameObject DineroGanado;
     public TMP_Text TextoDineroGanado;
     public float scaleX;
     public float scaleY;
@@ -58,7 +58,6 @@ public class Destroy : MonoBehaviour
         g = Sangre.color.g;
         b = Sangre.color.b;
         a = Sangre.color.a;
-        Cesta.transform.position = new Vector3(Cesta.transform.position.x, posY, Cesta.transform.position.z);
         Cesta.transform.localScale = new Vector3(scaleX, scaleY, 10);
     }
     private void Update()

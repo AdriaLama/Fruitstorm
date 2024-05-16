@@ -8449,9 +8449,9 @@ MonoBehaviour:
   costBasket: 5000
   levelBasket: 1
   speed: 10
-  basketScaleX: 0
-  basketScaleY: 0
-  basketPosY: 0
+  basketScaleX: 0.25
+  basketScaleY: 0.2
+  basketPosY: 2.75
 --- !u!4 &1470085086
 Transform:
   m_ObjectHideFlags: 0
