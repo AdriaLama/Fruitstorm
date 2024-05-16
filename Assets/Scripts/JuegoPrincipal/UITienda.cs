@@ -34,11 +34,6 @@ public class UITienda : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        hasCrucifix = PlayerPrefs.GetInt("crucifix") == 1 ? true : false;
-        hasSpaceSuit = PlayerPrefs.GetInt("spaceSuit") == 1 ? true : false;
-        hasSpacecraft = PlayerPrefs.GetInt("spacecraft") == 1 ? true : false;
-      
-        ActualizarTienda();
     }
 
     void Update()
@@ -53,87 +48,17 @@ public class UITienda : MonoBehaviour
         costRevengeText.text = costRevenge.ToString();
 
         gold = GameManager.Instance.gold;
-    }
-
-    public void ActualizarTienda()
-    {
-        if (!PlayerPrefs.HasKey("levelSpeed"))
-        {
-            levelSpeed = 1;
-            PlayerPrefs.SetInt("levelSpeed", levelSpeed);
-        }
-        if (!PlayerPrefs.HasKey("costSpeed"))
-        {
-            costSpeed = 5000;
-            PlayerPrefs.SetInt("costSpeed", costSpeed);
-        }
-        if (!PlayerPrefs.HasKey("levelBasket"))
-        {
-            levelBasket = 1;
-            PlayerPrefs.SetInt("levelBasket", levelBasket);
-        }
-        if (!PlayerPrefs.HasKey("costBasket"))
-        {
-            costBasket = 5000;
-            PlayerPrefs.SetInt("costBasket", costBasket);
-        }
-     
-        if (!PlayerPrefs.HasKey("speedlvlup"))
-        {
-            speed = 10;
-            PlayerPrefs.SetFloat("speedlvlup", speed);
-        }
-        if (!PlayerPrefs.HasKey("newScaleX"))
-        {
-            scaleX = 0.8f;
-            PlayerPrefs.SetFloat("newScaleX", scaleX);
-        }
-        if (!PlayerPrefs.HasKey("newScaleY"))
-        {
-            scaleY = 0.8f;
-            PlayerPrefs.SetFloat("newScaleY", scaleY);
-        }
-        if (!PlayerPrefs.HasKey("newPos"))
-        {
-            pos = 10.5f;
-            PlayerPrefs.SetFloat("newPos", pos);
-        }
-        /*levelSpeed = 1;
-        PlayerPrefs.SetInt("levelSpeed", levelSpeed);
-        PlayerPrefs.Save();*/
-        levelSpeed = PlayerPrefs.GetInt("levelSpeed");
-        /*costSpeed = 5000;
-        PlayerPrefs.SetInt("costSpeed", costSpeed);
-        PlayerPrefs.Save();*/
-        costSpeed = PlayerPrefs.GetInt("costSpeed");
-        /*levelBasket = 1;
-        PlayerPrefs.SetInt("levelBasket", levelBasket);
-        PlayerPrefs.Save();*/
-        levelBasket = PlayerPrefs.GetInt("levelBasket");
-        /*costBasket = 5000;
-        PlayerPrefs.SetInt("costBasket", costBasket);
-        PlayerPrefs.Save();*/
-        costBasket = PlayerPrefs.GetInt("costBasket");
-        /*speed = 10f;
-        PlayerPrefs.SetFloat("speedlvlup", speed);
-        PlayerPrefs.Save();
-        speed = PlayerPrefs.GetFloat("speedlvlup");*/
-        speed = PlayerPrefs.GetFloat("speed");
-        /*scaleX = 0.8f;
-        PlayerPrefs.SetFloat("newScaleX", scaleX);
-        PlayerPrefs.Save();
-        scaleX = PlayerPrefs.GetFloat("newScaleX");*/
-        scaleX = PlayerPrefs.GetFloat("scaleX");
-        /*scaleY = 0.8f;
-        PlayerPrefs.SetFloat("newScaleY", scaleY);
-        PlayerPrefs.Save();
-        scaleY = PlayerPrefs.GetFloat("newScaleY");*/
-        scaleY = PlayerPrefs.GetFloat("scaleY");
-        /*pos = 10.5f;
-        PlayerPrefs.SetFloat("newPos", pos);
-        PlayerPrefs.Save();
-        pos = PlayerPrefs.GetFloat("newPos");*/
-        pos = PlayerPrefs.GetFloat("pos");
+        costSpeed = GameManager.Instance.costSpeed;
+        levelSpeed = GameManager.Instance.levelSpeed;
+        costBasket = GameManager.Instance.costBasket;
+        levelBasket = GameManager.Instance.levelBasket;
+        speed = GameManager.Instance.speed;
+        scaleX = GameManager.Instance.basketScaleX;
+        scaleY = GameManager.Instance.basketScaleY;
+        pos = GameManager.Instance.basketPosY;
+        hasCrucifix = GameManager.Instance.hasCrucifix;
+        hasSpaceSuit = GameManager.Instance.hasSpaceSuit;
+        hasSpacecraft = GameManager.Instance.hasSpacecraft;
     }
 
     public void LevelUpSpeed()
@@ -141,18 +66,10 @@ public class UITienda : MonoBehaviour
         if (gold >= costSpeed)
         {
             audioSource.PlayOneShot(Mejoras);
-            speed += 1f;
-            //speed = 10f;
-            PlayerPrefs.SetFloat("speedlvlup", speed);
-            PlayerPrefs.Save();
-           
-            levelSpeed++;
-            PlayerPrefs.SetInt("levelSpeed", levelSpeed);
-            PlayerPrefs.Save();
+            GameManager.Instance.speed += 1f;
+            GameManager.Instance.levelSpeed++;
             GameManager.Instance.gold -= costSpeed;
-            costSpeed += 5000;
-            PlayerPrefs.SetInt("costSpeed", costSpeed);
-            PlayerPrefs.Save();
+            GameManager.Instance.costBasket += 5000;
         }
     }
 
@@ -161,25 +78,12 @@ public class UITienda : MonoBehaviour
         if (gold >= costBasket)
         {
             audioSource.PlayOneShot(Mejoras);
-            scaleX += 0.1f;
-            scaleY += 0.1f;
-            pos += 0.25f;
-            //scaleX = 0.8f;
-            //scaleY = 0.8f;
-            //pos = 10.5f;
-            PlayerPrefs.SetFloat("newScaleX", scaleX);
-            PlayerPrefs.Save();
-            PlayerPrefs.SetFloat("newScaleY", scaleY);
-            PlayerPrefs.Save();
-            PlayerPrefs.SetFloat("newPos", pos);
-            PlayerPrefs.Save();
-            levelBasket++;
-            PlayerPrefs.SetInt("levelBasket", levelBasket);
-            PlayerPrefs.Save();
+            GameManager.Instance.basketScaleX += 0.1f;
+            GameManager.Instance.basketScaleY += 0.1f;
+            GameManager.Instance.basketPosY += 0.25f;
+            GameManager.Instance.levelBasket++;
             GameManager.Instance.gold -= costBasket;
-            costBasket += 5000;
-            PlayerPrefs.SetInt("costBasket", costBasket);
-            PlayerPrefs.Save();
+            GameManager.Instance.costBasket += 5000;
         }
     }
 
@@ -188,10 +92,7 @@ public class UITienda : MonoBehaviour
         if (gold >= costHeaven && !hasCrucifix)
         {
             GameManager.Instance.gold -= costHeaven;
-            hasCrucifix = true;
-            PlayerPrefs.SetInt("crucifix", hasCrucifix ? 1 : 0);
-            PlayerPrefs.Save();
-            hasCrucifix = PlayerPrefs.GetInt("crucifix") == 1 ? true : false;
+            GameManager.Instance.hasCrucifix = true;
         }
     }
 
@@ -199,10 +100,7 @@ public class UITienda : MonoBehaviour
     {
         if (gold >= costSpace && !hasSpaceSuit) {
             GameManager.Instance.gold -= costSpace;
-            hasSpaceSuit = true;
-            PlayerPrefs.SetInt("spaceSuit", hasSpaceSuit ? 1 : 0);
-            PlayerPrefs.Save();
-            hasSpaceSuit = PlayerPrefs.GetInt("spaceSuit") == 1 ? true : false;
+            GameManager.Instance.hasSpaceSuit = true;
         }
     }
     
@@ -211,10 +109,7 @@ public class UITienda : MonoBehaviour
         if (gold >= costRevenge && !hasSpacecraft)
         {
             GameManager.Instance.gold -= costRevenge;
-            hasSpacecraft = true;
-            PlayerPrefs.SetInt("spacecraft", hasSpacecraft ? 1 : 0);
-            PlayerPrefs.Save();
-            hasSpacecraft = PlayerPrefs.GetInt("spacecraft") == 1 ? true : false;
+            GameManager.Instance.hasSpacecraft = true;
         }
     }
 }

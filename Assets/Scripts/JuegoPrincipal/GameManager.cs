@@ -10,10 +10,15 @@ public class GameManager : MonoBehaviour
     public bool hasCrucifix = false;
     public bool hasSpaceSuit = false;
     public bool hasSpacecraft = false;
-    public int gold = 0;
-    public int speed;
-    public int basketScale;
-    public int basketPosition;
+    public int gold;
+    public int costSpeed;
+    public int levelSpeed;
+    public int costBasket;
+    public int levelBasket;
+    public float speed;
+    public float basketScaleX;
+    public float basketScaleY;
+    public float basketPosY;
 
     private void Awake()
     {

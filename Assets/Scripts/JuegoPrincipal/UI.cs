@@ -55,25 +55,22 @@ public class UI : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         MenusGame menu = FindObjectOfType<MenusGame>();
 
-        if (currentTime <= 0)
+        if (currentTime <= 0 && !menu.victory.activeSelf)
         {
             GameManager.Instance.gold += punt;
-            punt = 0;
-            menu.Victory();
             AudioSource.PlayClipAtPoint(Victoria, transform.position);
             Sangre.SetActive(false);
             musica.Pause();
-            Time.timeScale = 0f;
+            menu.Victory();
         }
-        if (life <= 0)
+        if (life <= 0 && !menu.defeat.activeSelf)
         {
             life = 0;
             GameManager.Instance.gold += punt;
-            punt = 0;
-            menu.Defeat();
             AudioSource.PlayClipAtPoint(Derrota, transform.position);
             Sangre.SetActive(false);
             musica.Pause();
+            menu.Defeat();
         }
 
        
