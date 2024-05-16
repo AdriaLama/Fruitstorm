@@ -2837,11 +2837,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d697a2f6cffc346b6198224bc74566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Heaven: {fileID: 470539134}
+  Lock1: {fileID: 1667543987}
+  OuterSpace: {fileID: 1539299714}
+  Lock2: {fileID: 1402301938}
+  Vengeance: {fileID: 423871835}
+  Lock3: {fileID: 279862234}
   Worlds: {fileID: 370720619}
   optionsMenuUI: {fileID: 1468879783}
-  hasCrucifix: 0
-  hasSpaceSuit: 0
-  hasSpacecraft: 0
 --- !u!1 &399129883
 GameObject:
   m_ObjectHideFlags: 0

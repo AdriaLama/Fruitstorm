@@ -5,12 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class MenusMenu : MonoBehaviour
 {
+    public GameObject Heaven;
+    public GameObject Lock1;
+    public GameObject OuterSpace;
+    public GameObject Lock2;
+    public GameObject Vengeance;
+    public GameObject Lock3;
     public GameObject Worlds;
     public GameObject optionsMenuUI;
-    public bool hasCrucifix = false;
-    public bool hasSpaceSuit = false;
-    public bool hasSpacecraft = false;
 
+    private void Update()
+    {
+        if (GameManager.Instance.hasCrucifix)
+        {
+            Heaven.SetActive(true);
+            Lock1.SetActive(false);
+        }
+        if (GameManager.Instance.hasSpaceSuit)
+        {
+            OuterSpace.SetActive(true);
+            Lock2.SetActive(false);
+        }
+        if (GameManager.Instance.hasSpacecraft)
+        {
+            Vengeance.SetActive(true);
+            Lock3.SetActive(false);
+        }
+    }
     public void Game()
     {
         SceneManager.LoadScene("Juego");
@@ -50,7 +71,7 @@ public class MenusMenu : MonoBehaviour
     }
     public void GoSpace()
     {
-        if (hasSpaceSuit)
+        if (GameManager.Instance.hasSpaceSuit)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("MenuEspacio");
@@ -58,7 +79,7 @@ public class MenusMenu : MonoBehaviour
     }
     public void GoHeaven()
     {
-        if (hasCrucifix)
+        if (GameManager.Instance.hasCrucifix)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("MenuCielo");
@@ -67,7 +88,7 @@ public class MenusMenu : MonoBehaviour
 
     public void Revenge()
     {
-        if (hasSpacecraft)
+        if (GameManager.Instance.hasSpacecraft)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("SpaceInvaders");
