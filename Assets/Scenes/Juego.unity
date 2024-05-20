@@ -2876,6 +2876,11 @@ MonoBehaviour:
   hasCrucifix: 0
   hasSpaceSuit: 0
   hasSpacecraft: 0
+  redButtonSpeed: {fileID: 1650490101}
+  redButtonBasket: {fileID: 1230101764}
+  redButtonCrucifix: {fileID: 52838052}
+  redButtonSpaceSuit: {fileID: 365134198}
+  redButtonSpacecraft: {fileID: 1744759358}
 --- !u!1 &250478173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3408,7 +3413,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 226721235}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: BuySpacecraft
         m_Mode: 1
@@ -3875,7 +3880,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 226721235}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: BuyCrucifix
         m_Mode: 1
@@ -7821,7 +7826,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 226721235}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: LevelUpBasket
         m_Mode: 1
@@ -14023,6 +14028,7 @@ RectTransform:
   m_Children:
   - {fileID: 20729638}
   - {fileID: 1618345282}
+  - {fileID: 1557063696}
   - {fileID: 1025534576}
   - {fileID: 1469172497}
   - {fileID: 1645182689}
@@ -22699,13 +22705,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1618345282}
+  m_Father: {fileID: 714690974}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8886191, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.899994, y: -0.0009613037}
-  m_SizeDelta: {x: 17.680298, y: -0.001953125}
+  m_AnchoredPosition: {x: -599.11993, y: 359.88196}
+  m_SizeDelta: {x: -56.696686, y: -758.6568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1557063697
 MonoBehaviour:
@@ -23147,7 +23153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 226721235}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: LevelUpSpeed
         m_Mode: 1
@@ -23950,15 +23956,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1557063696}
+  m_Children: []
   m_Father: {fileID: 714690974}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.018893506, y: 0.90381646}
-  m_AnchorMax: {x: 0.26722032, y: 0.9772781}
-  m_AnchoredPosition: {x: -1.439209, y: -3.9840088}
-  m_SizeDelta: {x: 8.478516, y: 6.612999}
+  m_AnchorMin: {x: 0.018893506, y: 0.89415705}
+  m_AnchorMax: {x: 0.2538885, y: 0.9772781}
+  m_AnchoredPosition: {x: -2.701294, y: 0.015991211}
+  m_SizeDelta: {x: 5.9545, y: -1.3870001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618345283
 MonoBehaviour:
@@ -24014,7 +24019,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -28021,7 +28026,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 226721235}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: BuySpaceSuit
         m_Mode: 1
@@ -28976,6 +28981,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1598983332}
   - {fileID: 1954114587}
   - {fileID: 1739316578}
   - {fileID: 1964487218}
@@ -28984,7 +28990,6 @@ RectTransform:
   - {fileID: 303104214}
   - {fileID: 1920605101}
   - {fileID: 1707687547}
-  - {fileID: 1598983332}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

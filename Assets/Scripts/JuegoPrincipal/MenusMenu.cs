@@ -70,6 +70,7 @@ public class MenusMenu : MonoBehaviour
     {
         Worlds.SetActive(false);
         optionsMenuUI.SetActive(false);
+        shopMenuUI.SetActive(false);
     }
 
     public void GoEarth()

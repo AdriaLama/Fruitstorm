@@ -31,6 +31,12 @@ public class UITienda : MonoBehaviour
     public bool hasSpaceSuit = false;
     public bool hasSpacecraft = false;
 
+    public GameObject redButtonSpeed;
+    public GameObject redButtonBasket;
+    public GameObject redButtonCrucifix;
+    public GameObject redButtonSpaceSuit;
+    public GameObject redButtonSpacecraft;
+
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -62,6 +68,47 @@ public class UITienda : MonoBehaviour
             hasSpaceSuit = GameManager.Instance.hasSpaceSuit;
             hasSpacecraft = GameManager.Instance.hasSpacecraft;
         }
+
+        if (gold >= costSpeed)
+        {
+            redButtonSpeed.SetActive(false);
+        }
+        else
+        {
+            redButtonSpeed.SetActive(true);
+        }
+        if (gold >= costBasket)
+        {
+            redButtonBasket.SetActive(false);
+        }
+        else
+        {
+            redButtonBasket.SetActive(true);
+        }
+        if (gold >= costHeaven)
+        {
+            redButtonCrucifix.SetActive(false);
+        }
+        else
+        {
+            redButtonCrucifix.SetActive(true);
+        }
+        if (gold >= costSpace)
+        {
+            redButtonSpaceSuit.SetActive(false);
+        }
+        else
+        {
+            redButtonSpaceSuit.SetActive(true);
+        }
+        if (gold >= costRevenge)
+        {
+            redButtonSpacecraft.SetActive(false);
+        }
+        else
+        {
+            redButtonSpacecraft.SetActive(true);
+        }
     }
 
     public void LevelUpSpeed()
@@ -72,7 +119,7 @@ public class UITienda : MonoBehaviour
             GameManager.Instance.speed += 1f;
             GameManager.Instance.levelSpeed++;
             GameManager.Instance.gold -= costSpeed;
-            GameManager.Instance.costBasket += 5000;
+            GameManager.Instance.costSpeed *= 5;
         }
     }
 
@@ -86,7 +133,7 @@ public class UITienda : MonoBehaviour
             GameManager.Instance.basketPosY += 0.25f;
             GameManager.Instance.levelBasket++;
             GameManager.Instance.gold -= costBasket;
-            GameManager.Instance.costBasket += 5000;
+            GameManager.Instance.costBasket *= 5;
         }
     }
 
