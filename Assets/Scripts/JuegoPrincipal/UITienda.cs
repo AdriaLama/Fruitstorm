@@ -7,13 +7,15 @@ public class UITienda : MonoBehaviour
 {
     public int gold;
     public TMP_Text goldTMP;
-    public int costSpeed = 5000;
+    public int costSpeed;
     public TMP_Text costSpeedTMP;
-    public int levelSpeed = 1;
+    public TMP_Text costSpeedRed;
+    public int levelSpeed;
     public TMP_Text levelSpeedTMP;
-    public int costBasket = 5000;
+    public int costBasket;
     public TMP_Text costBasketTMP;
-    public int levelBasket = 1;
+    public TMP_Text costBasketRed;
+    public int levelBasket;
     public TMP_Text levelBasketTMP;
     public float speed;
     public float scaleX;
@@ -21,12 +23,15 @@ public class UITienda : MonoBehaviour
     public float pos;
     private AudioSource audioSource;
     public AudioClip Mejoras;
-    public int costSpace = 5000;
-    public TMP_Text costSpaceText;
-    public int costHeaven = 5000;
+    public int costHeaven;
     public TMP_Text costHeavenText;
-    public int costRevenge = 5000;
+    public TMP_Text costHeavenRed;
+    public int costSpace;
+    public TMP_Text costSpaceText;
+    public TMP_Text costSpaceRed;
+    public int costRevenge;
     public TMP_Text costRevengeText;
+    public TMP_Text costRevengeRed;
     public bool hasCrucifix = false;
     public bool hasSpaceSuit = false;
     public bool hasSpacecraft = false;
@@ -45,13 +50,18 @@ public class UITienda : MonoBehaviour
     void Update()
     {
         costSpeedTMP.text = costSpeed.ToString();
+        costSpeedRed.text = costSpeed.ToString();
         levelSpeedTMP.text = levelSpeed.ToString();
         costBasketTMP.text = costBasket.ToString();
+        costBasketRed.text = costBasket.ToString();
         levelBasketTMP.text = levelBasket.ToString();
         goldTMP.text = gold.ToString();
         costHeavenText.text = costHeaven.ToString();
+        costHeavenRed.text = costHeaven.ToString();
         costSpaceText.text = costSpace.ToString();
+        costSpaceRed.text = costSpace.ToString();
         costRevengeText.text = costRevenge.ToString();
+        costRevengeRed.text = costRevenge.ToString();
 
         if (GameManager.Instance != null)
         {

@@ -2646,7 +2646,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &226721233
 AudioSource:
@@ -2856,23 +2856,28 @@ MonoBehaviour:
   goldTMP: {fileID: 1618345283}
   costSpeed: 5000
   costSpeedTMP: {fileID: 1406003536}
+  costSpeedRed: {fileID: 1331638940}
   levelSpeed: 1
   levelSpeedTMP: {fileID: 1755108336}
   costBasket: 5000
   costBasketTMP: {fileID: 483841670}
+  costBasketRed: {fileID: 1858628441}
   levelBasket: 1
   levelBasketTMP: {fileID: 453188513}
   speed: 0
   scaleX: 0
   scaleY: 0
   pos: 0
-  Mejoras: {fileID: 0}
-  costSpace: 5000
-  costSpaceText: {fileID: 816610959}
-  costHeaven: 5000
+  Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
+  costHeaven: 15000
   costHeavenText: {fileID: 781962637}
-  costRevenge: 5000
+  costHeavenRed: {fileID: 341208353}
+  costSpace: 30000
+  costSpaceText: {fileID: 816610959}
+  costSpaceRed: {fileID: 790040073}
+  costRevenge: 50000
   costRevengeText: {fileID: 54383679}
+  costRevengeRed: {fileID: 1410190441}
   hasCrucifix: 0
   hasSpaceSuit: 0
   hasSpacecraft: 0
@@ -4317,7 +4322,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &292480497
 SpriteRenderer:
@@ -19398,7 +19403,7 @@ Transform:
   - {fileID: 1652817730}
   - {fileID: 73666606}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1242899538
 MonoBehaviour:
@@ -22331,7 +22336,7 @@ Transform:
   - {fileID: 1381894204}
   - {fileID: 1422900338}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520551160
 GameObject:
@@ -24762,7 +24767,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1659828035
 MonoBehaviour:
@@ -28991,7 +28996,7 @@ RectTransform:
   - {fileID: 1920605101}
   - {fileID: 1707687547}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
