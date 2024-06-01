@@ -11,7 +11,7 @@ public class Alien : MonoBehaviour
     public float LimiteAlienNeg;
     public float alienLifes;
     public AudioSource alienSound;
-    public AudioClip Alienn;
+   
 
     void Start()
     {

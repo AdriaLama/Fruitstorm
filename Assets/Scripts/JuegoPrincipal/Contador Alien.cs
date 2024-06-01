@@ -11,7 +11,7 @@ public class ContadorAlien : MonoBehaviour
     public float disappearTime;
     public int contadorAlien;
     public AudioSource alienSound;
-    public AudioClip Alienn;
+    
     void Start()
     {
         
@@ -27,7 +27,7 @@ public class ContadorAlien : MonoBehaviour
             currTime = 0;
             contadorAlien++;
             AlienRecolect.SetActive(true);
-            alienSound.PlayOneShot(Alienn);
+            alienSound.Play();
         }
 
         if (AlienRecolect.activeSelf)

@@ -13,7 +13,6 @@ public class Collision : MonoBehaviour
     public GameObject Bomba;
     private Animator anim;
     public AudioSource audioSource;
-    public AudioClip BombaAudio;
     public GameObject AnimBomba;
     private Rigidbody2D rb;
     public int randomDirection;
@@ -64,7 +63,8 @@ public class Collision : MonoBehaviour
             GameObject temp = Instantiate(AnimBomba, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.5f), collision.transform.rotation);
             Destroy(collision.gameObject);
             Destroy(temp, 0.15f);
-            audioSource.PlayOneShot(Bombas[Random.Range(0, Bombas.Length)]);
+            audioSource.clip = Bombas[Random.Range(0, Bombas.Length)];
+            audioSource.Play();
 
         }
 
