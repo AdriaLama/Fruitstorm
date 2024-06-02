@@ -31,6 +31,9 @@ public class UI : MonoBehaviour
     public AudioClip Victoria;
     public AudioClip Derrota;
     public AudioSource victoriaDerrota;
+    public TMP_Text countdownText;
+    public AudioSource whistle;
+    public AudioSource contadorSound;
 
     private void Start()
     {
@@ -48,6 +51,8 @@ public class UI : MonoBehaviour
         {
             collectedFrutasDefeat.Add(0);
         }
+
+        StartCoroutine(StartCountdown());
     }
 
     void Update()
@@ -87,5 +92,29 @@ public class UI : MonoBehaviour
         {
             collectedFrutasDefeatText[i].text = collectedFrutasDefeat[i].ToString();
         }
+    }
+
+    public IEnumerator StartCountdown()
+    {
+        Time.timeScale = 0f;
+        int countdown = 3;
+        countdownText.gameObject.SetActive(true);
+        musica.Pause();
+        contadorSound.Play();
+
+        while (countdown > 0)
+        {
+            countdownText.text = countdown.ToString();
+            yield return new WaitForSecondsRealtime(1f);
+            countdown--;
+           
+        }
+        countdownText.text = "GO!"; 
+        whistle.Play();
+        yield return new WaitForSecondsRealtime(1f);
+        countdownText.gameObject.SetActive(false);
+        Time.timeScale = 1f;
+        musica.Play();
+       
     }
 }

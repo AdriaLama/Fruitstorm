@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenusGame : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MenusGame : MonoBehaviour
     public GameObject shopMenuUI;
     public GameObject defeat;
     public GameObject victory;
+    
 
     void Update()
     {
@@ -151,4 +153,6 @@ public class MenusGame : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MenuEspacio");
     }
+
+   
 }
