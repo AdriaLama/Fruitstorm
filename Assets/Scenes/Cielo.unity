@@ -1513,7 +1513,6 @@ MonoBehaviour:
   disappearTime: 5
   contadorAlien: 0
   alienSound: {fileID: 973963427}
-  Alienn: {fileID: 8300000, guid: c7d78f05626f20144ac0608e405dd98c, type: 3}
 --- !u!1 &145978241
 GameObject:
   m_ObjectHideFlags: 0
@@ -18361,7 +18360,6 @@ MonoBehaviour:
   configuracionFrutas: []
   Bomba: {fileID: 5117872838922108449, guid: 1ac36f9b244186c44b3a0924e2d40149, type: 3}
   audioSource: {fileID: 891553364}
-  BombaAudio: {fileID: 8300000, guid: 8e3664ca84d5d6846aa8c93a3adb514f, type: 3}
   AnimBomba: {fileID: 18108578458451127, guid: 5a26f87253f78e24b85e7ee29c79121b, type: 3}
   randomDirection: 0
   speedDirection: 0
@@ -29632,7 +29630,6 @@ MonoBehaviour:
   LimiteAlienNeg: -8.7
   alienLifes: 15
   alienSound: {fileID: 973963427}
-  Alienn: {fileID: 8300000, guid: c7d78f05626f20144ac0608e405dd98c, type: 3}
 --- !u!212 &2108642450
 SpriteRenderer:
   m_ObjectHideFlags: 0
