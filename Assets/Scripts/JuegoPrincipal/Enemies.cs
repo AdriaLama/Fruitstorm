@@ -18,6 +18,9 @@ public class Enemies : MonoBehaviour
     public float intervaloDisparo = 3f;
     Collider2D coll;
     private bool hasStartedShooting = false;
+    public GameObject[] powerUpPrefabs; // Lista de prefabs de power-ups
+    [Range(0, 1)]
+    public float powerUpDropChance = 0.2f; // Probabilidad de soltar un power-up (0.2 = 20%)
 
 
     void Start()
@@ -77,4 +80,19 @@ public class Enemies : MonoBehaviour
         GameObject temp = Instantiate(balaPrefab, transform.position, transform.rotation);
         Destroy(temp, 1);
     }
+
+    public void DropPowerUp()
+    {
+        float randomValue = Random.Range(0f, 1f);
+        if (randomValue <= powerUpDropChance)
+        {
+            // Seleccionar un power-up aleatorio de la lista
+            int randomIndex = Random.Range(0, powerUpPrefabs.Length);
+            GameObject selectedPowerUp = powerUpPrefabs[randomIndex];
+
+            // Instanciar el power-up en la posición de la nave
+            Instantiate(selectedPowerUp, transform.position, Quaternion.identity);
+        }
+    }
+
 }

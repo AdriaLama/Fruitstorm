@@ -25,7 +25,7 @@ public class Bala : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
-                waves.EnemyDestroyed(collision.gameObject.tag);
+                waves.EnemyDestroyed(collision.gameObject);
             }
             else if (enemy.enemiesLifes > 0)
             {
@@ -39,7 +39,7 @@ public class Bala : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
-                waves.EnemyDestroyed(collision.gameObject.tag);
+                waves.EnemyDestroyed(collision.gameObject);
             }
             else if (enemy.miniBossLifes > 0)
             {
@@ -54,7 +54,7 @@ public class Bala : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
-                waves.EnemyDestroyed(collision.gameObject.tag);
+                waves.EnemyDestroyed(collision.gameObject);
             }
             else if (enemy.bossLifes > 0)
             {

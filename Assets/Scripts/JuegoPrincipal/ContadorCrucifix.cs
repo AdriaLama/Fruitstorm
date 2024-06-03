@@ -6,19 +6,19 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using TMPro;
 
-public class ContadorVaca : MonoBehaviour
+public class ContadorCrucifix : MonoBehaviour
 {
     public float currTime = 0;
     public float spawnTime = 1f;
-    public GameObject vaca;
+    public GameObject crucifix;
     public float time;
     public float disappearTime;
-    public GameObject cooldownVaca;
-    public TMP_Text contVaca;
+    public GameObject cooldownCrucifix;
+    public TMP_Text contCrucifix;
 
     private void Start()
     {
-        StartCoroutine(countdownVaca());
+        StartCoroutine(countdownCrucifix());
     }
     void Update()
     {
@@ -27,22 +27,23 @@ public class ContadorVaca : MonoBehaviour
         if (currTime > spawnTime && Input.GetKey(KeyCode.E))
         {
             currTime = 0;
-            vaca.SetActive(true);
-            StartCoroutine(countdownVaca());
-            
+            crucifix.SetActive(true);
+            StartCoroutine(countdownCrucifix());
+            crucifix.transform.position = new Vector3(Random.Range(-6.4f, 11.5f), Random.Range(3.7f, 6f));
+
         }
 
-        if (vaca.activeSelf)
+        if (crucifix.activeSelf)
         {
             time += Time.deltaTime;
 
-            cooldownVaca.SetActive(false);
+            cooldownCrucifix.SetActive(false);
 
             if (time >= disappearTime)
             {
                 time = 0;
-                vaca.SetActive(false);
-               
+                crucifix.SetActive(false);
+
 
             }
         }
@@ -51,14 +52,14 @@ public class ContadorVaca : MonoBehaviour
 
     }
 
-    public IEnumerator countdownVaca()
+    public IEnumerator countdownCrucifix()
     {
-        int countdown = 25;
-        contVaca.gameObject.SetActive(true);
+        int countdown = 10;
+        contCrucifix.gameObject.SetActive(true);
 
         while (countdown > 0)
         {
-            contVaca.text = countdown.ToString();
+            contCrucifix.text = countdown.ToString();
             yield return new WaitForSeconds(1f);
             countdown--;
 
@@ -66,8 +67,8 @@ public class ContadorVaca : MonoBehaviour
 
         if (countdown >= 0)
         {
-            cooldownVaca.SetActive(true);
-            contVaca.gameObject.SetActive(false);
+            cooldownCrucifix.SetActive(true);
+            contCrucifix.gameObject.SetActive(false);
         }
     }
 }

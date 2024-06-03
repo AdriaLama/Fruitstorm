@@ -20,6 +20,7 @@ TagManager:
   - MiniBoss2
   - Boss
   - PowerUp
+  - PowerUpsSI
   layers:
   - Default
   - TransparentFX
