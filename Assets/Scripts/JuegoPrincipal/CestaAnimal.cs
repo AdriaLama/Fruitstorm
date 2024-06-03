@@ -17,26 +17,23 @@ public class CestaAnimal : MonoBehaviour
     public AudioSource Dinero;
     public TMP_Text comboText;
     public GameObject comboTextObject;
-    public float goldGained;
-    public int comboCount = 0;
-    public int comboGold = 0;
-    public int totalComboGold = 0;
     public ParticleSystem particulas;
     public GameObject Star;
     public AudioSource recolecta;
     private GameObject DineroGanado;
     public TMP_Text TextoDineroGanado;
- 
 
     private void Update()
     {
-        comboText.text = "x" + comboCount;
-        TextoDineroGanado.text = "+" + goldGained;
+        Destroy cesta = FindObjectOfType<Destroy>();
+
+        comboText.text = "x" + cesta.comboCount;
+        TextoDineroGanado.text = "+" + cesta.goldGained;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        Destroy cesta = FindObjectOfType<Destroy>();
 
         if (collision.gameObject.CompareTag("Fruta"))
         {
@@ -48,13 +45,13 @@ public class CestaAnimal : MonoBehaviour
 
                 puntuacion.punt += (int)configuracionFruta.gold;
 
-                comboGold += (int)configuracionFruta.gold;
+                cesta.comboGold += (int)configuracionFruta.gold;
 
                 RecolectarFruta(configuracionFrutaID);
                 RecolectarFrutaDefeat(configuracionFrutaID);
 
-                comboCount++;
-                if (comboCount >= 2)
+                cesta.comboCount++;
+                if (cesta.comboCount >= 2)
                 {
                     comboText.gameObject.SetActive(true);
                     comboTextObject.transform.localPosition = new Vector3(Random.Range(0, 800), Random.Range(-300, 0), 10);
