@@ -3187,12 +3187,12 @@ MonoBehaviour:
   goldTMP: {fileID: 709878318}
   costSpeed: 5000
   costSpeedTMP: {fileID: 1387644113}
-  costSpeedRed: {fileID: 0}
+  costSpeedRed: {fileID: 145978243}
   levelSpeed: 1
   levelSpeedTMP: {fileID: 1803829154}
   costBasket: 5000
   costBasketTMP: {fileID: 430283714}
-  costBasketRed: {fileID: 0}
+  costBasketRed: {fileID: 700601217}
   levelBasket: 1
   levelBasketTMP: {fileID: 574071208}
   speed: 0
@@ -3200,26 +3200,26 @@ MonoBehaviour:
   scaleY: 0
   pos: 0
   Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
-  Crucifix: {fileID: 0}
-  SpaceSuit: {fileID: 0}
-  Spaceship: {fileID: 0}
+  Crucifix: {fileID: 1816671328}
+  SpaceSuit: {fileID: 1349420672}
+  Spaceship: {fileID: 1737287078}
   costHeaven: 5000
   costHeavenText: {fileID: 1737608658}
-  costHeavenRed: {fileID: 0}
+  costHeavenRed: {fileID: 48034031}
   costSpace: 5000
   costSpaceText: {fileID: 616277310}
-  costSpaceRed: {fileID: 0}
+  costSpaceRed: {fileID: 836979364}
   costRevenge: 5000
   costRevengeText: {fileID: 1373668643}
-  costRevengeRed: {fileID: 0}
+  costRevengeRed: {fileID: 549349266}
   hasCrucifix: 0
   hasSpaceSuit: 0
   hasSpacecraft: 0
-  redButtonSpeed: {fileID: 0}
-  redButtonBasket: {fileID: 0}
-  redButtonCrucifix: {fileID: 0}
-  redButtonSpaceSuit: {fileID: 0}
-  redButtonSpacecraft: {fileID: 0}
+  redButtonSpeed: {fileID: 869367875}
+  redButtonBasket: {fileID: 1283233074}
+  redButtonCrucifix: {fileID: 1909565052}
+  redButtonSpaceSuit: {fileID: 1647454697}
+  redButtonSpacecraft: {fileID: 1410765593}
 --- !u!1 &335860341
 GameObject:
   m_ObjectHideFlags: 0
@@ -8740,7 +8740,7 @@ GameObject:
   - component: {fileID: 869367878}
   - component: {fileID: 869367877}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13296,7 +13296,7 @@ GameObject:
   - component: {fileID: 1283233077}
   - component: {fileID: 1283233076}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15577,7 +15577,7 @@ GameObject:
   - component: {fileID: 1410765596}
   - component: {fileID: 1410765595}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18110,7 +18110,7 @@ GameObject:
   - component: {fileID: 1647454700}
   - component: {fileID: 1647454699}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21661,7 +21661,7 @@ GameObject:
   - component: {fileID: 1909565055}
   - component: {fileID: 1909565054}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
