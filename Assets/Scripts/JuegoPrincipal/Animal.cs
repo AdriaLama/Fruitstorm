@@ -11,12 +11,14 @@ public class Animal : MonoBehaviour
     public float LimiteVacaNeg;
     private SpriteRenderer sprite;
     public GameObject vaca;
+    
 
 
     void Start()
     {
         vacaMovimiento = Random.Range(0.5f, 2f);
         sprite = vaca.GetComponent<SpriteRenderer>();
+       
     }
 
     void Update()
