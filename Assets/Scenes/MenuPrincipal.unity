@@ -703,7 +703,7 @@ MonoBehaviour:
   hasSpacecraft: 0
   redButtonSpeed: {fileID: 1595354607}
   redButtonBasket: {fileID: 1871523723}
-  redButtonCrucifix: {fileID: 1166062551}
+  redButtonCrucifix: {fileID: 1858551210}
   redButtonSpaceSuit: {fileID: 1166062551}
   redButtonSpacecraft: {fileID: 1249655415}
 --- !u!1 &92385168
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 65049688}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: LevelUpBasket
         m_Mode: 1
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5000
+  m_text: 15000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
   m_sharedMaterial: {fileID: 7855675040902675768, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
@@ -5619,7 +5619,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 65049688}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: LevelUpSpeed
         m_Mode: 1
@@ -13261,7 +13261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5000
+  m_text: 15000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
   m_sharedMaterial: {fileID: 7855675040902675768, guid: cb82154157625cd40b78e2afa769bf99, type: 2}
@@ -13972,7 +13972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 65049688}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: BuyCrucifix
         m_Mode: 1

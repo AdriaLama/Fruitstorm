@@ -162,8 +162,8 @@ public class UITienda : MonoBehaviour
         if (gold >= costBasket)
         {
             audioSource.PlayOneShot(Mejoras);
-            GameManager.Instance.basketScaleX += 0.1f;
-            GameManager.Instance.basketScaleY += 0.1f;
+            GameManager.Instance.basketScaleX += 0.05f;
+            GameManager.Instance.basketScaleY += 0.05f;
             GameManager.Instance.basketPosY += 0.25f;
             GameManager.Instance.levelBasket++;
             GameManager.Instance.gold -= costBasket;
