@@ -7561,7 +7561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e2f81b3859ae243bf4c89b297b1be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntuacion: {fileID: 0}
+  puntuacion: {fileID: 226721231}
   configuracionFrutas: []
   Cesta: {fileID: 511285402}
   Recolecta: {fileID: 8300000, guid: d1983d5d7be9ba446b0f0a0788bc44f4, type: 3}

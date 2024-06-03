@@ -22,6 +22,7 @@ public class CestaAnimal : MonoBehaviour
     public AudioSource recolecta;
     private GameObject DineroGanado;
     public TMP_Text TextoDineroGanado;
+  
 
     private void Update()
     {
