@@ -23,6 +23,9 @@ public class UITienda : MonoBehaviour
     public float pos;
     private AudioSource audioSource;
     public AudioClip Mejoras;
+    public GameObject Crucifix;
+    public GameObject SpaceSuit;
+    public GameObject Spaceship;
     public int costHeaven;
     public TMP_Text costHeavenText;
     public TMP_Text costHeavenRed;
@@ -47,6 +50,27 @@ public class UITienda : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "MenuPrincipal" || SceneManager.GetActiveScene().name == "Juego")
+        {
+            Crucifix.SetActive(true);
+            SpaceSuit.SetActive(false);
+            Spaceship.SetActive(false);
+        }
+        else if (SceneManager.GetActiveScene().name == "MenuCielo" || SceneManager.GetActiveScene().name == "Cielo")
+        {
+            Crucifix.SetActive(true);
+            SpaceSuit.SetActive(true);
+            Spaceship.SetActive(false);
+        }
+        else if (SceneManager.GetActiveScene().name == "MenuEspacio" || SceneManager.GetActiveScene().name == "Espacio")
+        {
+            Crucifix.SetActive(true);
+            SpaceSuit.SetActive(true);
+            Spaceship.SetActive(true);
+        }
+    }
     void Update()
     {
         costSpeedTMP.text = costSpeed.ToString();

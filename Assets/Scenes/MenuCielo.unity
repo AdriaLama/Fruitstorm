@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 5072018}
   - component: {fileID: 5072017}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5045,7 +5045,7 @@ GameObject:
   - component: {fileID: 813817611}
   - component: {fileID: 813817610}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9126,7 +9126,7 @@ GameObject:
   - component: {fileID: 1395614216}
   - component: {fileID: 1395614215}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10912,7 +10912,7 @@ GameObject:
   - component: {fileID: 1591591740}
   - component: {fileID: 1591591739}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11144,7 +11144,7 @@ GameObject:
   - component: {fileID: 1597009484}
   - component: {fileID: 1597009483}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14533,29 +14533,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 0
-  goldTMP: {fileID: 0}
+  goldTMP: {fileID: 1317804395}
   costSpeed: 5000
-  costSpeedTMP: {fileID: 0}
+  costSpeedTMP: {fileID: 788974287}
+  costSpeedRed: {fileID: 524290624}
   levelSpeed: 1
-  levelSpeedTMP: {fileID: 0}
+  levelSpeedTMP: {fileID: 610455832}
   costBasket: 5000
-  costBasketTMP: {fileID: 0}
+  costBasketTMP: {fileID: 1134890488}
+  costBasketRed: {fileID: 1164660520}
   levelBasket: 1
-  levelBasketTMP: {fileID: 0}
+  levelBasketTMP: {fileID: 339574026}
   speed: 0
   scaleX: 0
   scaleY: 0
   pos: 0
   Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
-  costSpace: 1000
-  costSpaceText: {fileID: 0}
+  Crucifix: {fileID: 1975028917}
+  SpaceSuit: {fileID: 1275848833}
+  Spaceship: {fileID: 1010633467}
   costHeaven: 1000
-  costHeavenText: {fileID: 0}
+  costHeavenText: {fileID: 1425980956}
+  costHeavenRed: {fileID: 1822631814}
+  costSpace: 1000
+  costSpaceText: {fileID: 1420045040}
+  costSpaceRed: {fileID: 1542228976}
   costRevenge: 1000
-  costRevengeText: {fileID: 0}
+  costRevengeText: {fileID: 243229432}
+  costRevengeRed: {fileID: 2121225966}
   hasCrucifix: 0
   hasSpaceSuit: 0
   hasSpacecraft: 0
+  redButtonSpeed: {fileID: 5072015}
+  redButtonBasket: {fileID: 813817608}
+  redButtonCrucifix: {fileID: 1395614213}
+  redButtonSpaceSuit: {fileID: 1597009481}
+  redButtonSpacecraft: {fileID: 1591591737}
 --- !u!82 &2127531726
 AudioSource:
   m_ObjectHideFlags: 0
