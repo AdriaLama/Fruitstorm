@@ -7112,9 +7112,9 @@ MonoBehaviour:
   scaleY: 0
   pos: 0
   Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
-  Crucifix: {fileID: 0}
-  SpaceSuit: {fileID: 0}
-  Spaceship: {fileID: 0}
+  Crucifix: {fileID: 1525949481}
+  SpaceSuit: {fileID: 1370381107}
+  Spaceship: {fileID: 1311353327}
   costHeaven: 5000
   costHeavenText: {fileID: 1960095463}
   costHeavenRed: {fileID: 0}
