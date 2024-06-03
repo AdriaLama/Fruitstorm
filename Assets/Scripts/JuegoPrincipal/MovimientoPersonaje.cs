@@ -12,6 +12,7 @@ public class MovimientoPersonaje : MonoBehaviour
     public Animator anim;
     private SpriteRenderer spriteRenderer;
     public ParticleSystem particulasPj;
+    public float horizontal;
     private void Awake()
     {
         anim =GetComponentInChildren<Animator>();
@@ -24,7 +25,7 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             speed = GameManager.Instance.speed;
         } 
-        float horizontal;
+       
        
         if (invertido)
         {

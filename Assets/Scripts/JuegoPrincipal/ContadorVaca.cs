@@ -1,6 +1,10 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using TMPro;
 
 public class ContadorVaca : MonoBehaviour
 {
@@ -9,14 +13,13 @@ public class ContadorVaca : MonoBehaviour
     public GameObject vaca;
     public float time;
     public float disappearTime;
-   
-   
+    public GameObject cooldownVaca;
+    public TMP_Text contVaca;
 
-    void Start()
+    private void Start()
     {
-
+        StartCoroutine(countdownVaca());
     }
-
     void Update()
     {
         currTime += Time.deltaTime;
@@ -25,19 +28,45 @@ public class ContadorVaca : MonoBehaviour
         {
             currTime = 0;
             vaca.SetActive(true);
+            StartCoroutine(countdownVaca());
         }
 
         if (vaca.activeSelf)
         {
             time += Time.deltaTime;
 
+            cooldownVaca.SetActive(false);
+
             if (time >= disappearTime)
             {
                 time = 0;
                 vaca.SetActive(false);
+               
 
             }
         }
 
+
+
+    }
+
+    public IEnumerator countdownVaca()
+    {
+        int countdown = 25;
+        contVaca.gameObject.SetActive(true);
+
+        while (countdown > 0)
+        {
+            contVaca.text = countdown.ToString();
+            yield return new WaitForSeconds(1f);
+            countdown--;
+
+        }
+
+        if (countdown >= 0)
+        {
+            cooldownVaca.SetActive(true);
+            contVaca.gameObject.SetActive(false);
+        }
     }
 }
