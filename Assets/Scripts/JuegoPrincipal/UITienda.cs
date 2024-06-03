@@ -44,6 +44,11 @@ public class UITienda : MonoBehaviour
     public GameObject redButtonCrucifix;
     public GameObject redButtonSpaceSuit;
     public GameObject redButtonSpacecraft;
+    public GameObject maxSpeed;
+    public GameObject maxBasket;
+    public GameObject ownedCrucifix;
+    public GameObject ownedSpaceSuit;
+    public GameObject ownedSpacecraft;
 
     void Awake()
     {
@@ -143,11 +148,27 @@ public class UITienda : MonoBehaviour
         {
             redButtonSpacecraft.SetActive(true);
         }
+        if (levelSpeed >= 5)
+        {
+            maxSpeed.SetActive(true);
+        }
+        else
+        {
+            maxSpeed.SetActive(false);
+        }
+        if (levelBasket >= 5)
+        {
+            maxBasket.SetActive(true);
+        }
+        else
+        {
+            maxBasket.SetActive(false);
+        }
     }
 
     public void LevelUpSpeed()
     {
-        if (gold >= costSpeed)
+        if (gold >= costSpeed && levelSpeed < 5)
         {
             audioSource.PlayOneShot(Mejoras);
             GameManager.Instance.speed += 1f;
@@ -159,7 +180,7 @@ public class UITienda : MonoBehaviour
 
     public void LevelUpBasket()
     {
-        if (gold >= costBasket)
+        if (gold >= costBasket && levelBasket < 5)
         {
             audioSource.PlayOneShot(Mejoras);
             GameManager.Instance.basketScaleX += 0.05f;
