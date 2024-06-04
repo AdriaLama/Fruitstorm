@@ -4786,13 +4786,13 @@ MonoBehaviour:
   Crucifix: {fileID: 1816671328}
   SpaceSuit: {fileID: 1349420672}
   Spaceship: {fileID: 1737287078}
-  costHeaven: 5000
+  costHeaven: 15000
   costHeavenText: {fileID: 1737608658}
   costHeavenRed: {fileID: 48034031}
-  costSpace: 5000
+  costSpace: 30000
   costSpaceText: {fileID: 616277310}
   costSpaceRed: {fileID: 836979364}
-  costRevenge: 5000
+  costRevenge: 50000
   costRevengeText: {fileID: 1373668643}
   costRevengeRed: {fileID: 549349266}
   hasCrucifix: 0
@@ -6829,7 +6829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0.040000003}
-  m_AnchoredPosition: {x: 23.700012, y: -11.59993}
+  m_AnchoredPosition: {x: 23.700012, y: -11.599915}
   m_SizeDelta: {x: 18.096008, y: -0.9510002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462754885
