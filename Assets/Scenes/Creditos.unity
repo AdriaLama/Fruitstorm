@@ -746,11 +746,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d697a2f6cffc346b6198224bc74566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Heaven: {fileID: 0}
+  Lock1: {fileID: 0}
+  OuterSpace: {fileID: 0}
+  Lock2: {fileID: 0}
+  Vengeance: {fileID: 0}
+  Lock3: {fileID: 0}
   Worlds: {fileID: 0}
   optionsMenuUI: {fileID: 0}
-  hasCrucifix: 0
-  hasSpaceSuit: 0
-  hasSpacecraft: 0
+  shopMenuUI: {fileID: 0}
 --- !u!1 &944180610
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Progarmmers:\n- Jose Jimenez\n- Marc Reyes\n- Adria Lama\n\t\nJMA Games\nThank
+  m_text: "Programmers:\n- Jose Jimenez\n- Marc Reyes\n- Adria Lama\n\t\nJMA Games\nThank
     You For Playing!!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb82154157625cd40b78e2afa769bf99, type: 2}

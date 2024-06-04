@@ -55,7 +55,7 @@ public class ContadorVaca : MonoBehaviour
 
     public IEnumerator countdownVaca()
     {
-        int countdown = 25;
+        int countdown = 20;
         contVaca.gameObject.SetActive(true);
 
         while (countdown > 0)
