@@ -12164,13 +12164,13 @@ MonoBehaviour:
   Crucifix: {fileID: 660390323}
   SpaceSuit: {fileID: 373550022}
   Spaceship: {fileID: 1366344243}
-  costHeaven: 5000
+  costHeaven: 15000
   costHeavenText: {fileID: 1340067372}
   costHeavenRed: {fileID: 277775272}
-  costSpace: 5000
+  costSpace: 30000
   costSpaceText: {fileID: 1403437610}
   costSpaceRed: {fileID: 2122279801}
-  costRevenge: 5000
+  costRevenge: 50000
   costRevengeText: {fileID: 544734076}
   costRevengeRed: {fileID: 1349642101}
   hasCrucifix: 0
