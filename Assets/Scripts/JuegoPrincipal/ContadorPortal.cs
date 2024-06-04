@@ -9,9 +9,8 @@ public class ContadorPortal : MonoBehaviour
     public float spawnTime = 1f;
     public GameObject portal;
     public GameObject player;
-    public float time;
-    public float disappearTime;
     public GameObject cooldownPortal;
+    public GameObject cooldownPortalActivo;
     public TMP_Text contPortal;
 
     private void Start()
@@ -24,32 +23,21 @@ public class ContadorPortal : MonoBehaviour
 
         if (currTime > spawnTime && Input.GetKey(KeyCode.E))
         {
-            currTime = 0;
-            Teletransport();
+            portal.transform.position = player.transform.position;
             portal.SetActive(true);
-            StartCoroutine(countdownPortal());
+            cooldownPortal.SetActive(false);
+            cooldownPortalActivo.SetActive(true);
             if (portal.activeSelf && Input.GetKey(KeyCode.E))
             {
                 player.transform.position = portal.transform.position;
-            }
-        }
-
-        if (portal.activeSelf)
-        {
-            time += Time.deltaTime;
-
-            cooldownPortal.SetActive(false);
-
-            if (time >= disappearTime)
-            {
-                time = 0;
+                cooldownPortalActivo.SetActive(false);
                 portal.SetActive(false);
+                currTime = 0;
+                StartCoroutine(countdownPortal());
 
 
             }
         }
-
-
 
     }
 
@@ -73,10 +61,5 @@ public class ContadorPortal : MonoBehaviour
         }
     }
 
-    void Teletransport()
-    {
-        portal.transform.position = player.transform.position;
-
-    }
 
 }
