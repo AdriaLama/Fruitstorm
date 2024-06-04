@@ -153,6 +153,9 @@ public class MenusGame : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MenuEspacio");
     }
-
-   
+    public void Credits()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Creditos");
+    }
 }

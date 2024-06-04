@@ -16,6 +16,6 @@ public class PowerUpSIFireRate : MonoBehaviour
     private void FireRate()
     {
         DisparoNave movnav = FindObjectOfType<DisparoNave>();
-        movnav.firerate -= 0.07f;
+        movnav.firerate -= 0.1f;
     }
 }

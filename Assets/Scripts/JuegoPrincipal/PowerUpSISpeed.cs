@@ -17,7 +17,7 @@ public class PowerUpSISpeed : MonoBehaviour
     private void SpeedNave()
     {
         MovimientoNave movnav = FindObjectOfType<MovimientoNave>();
-        movnav.speed += 0.5f;
+        movnav.speed += 1f;
     }
 
 }

@@ -18,22 +18,24 @@ public class MenusMenu : MonoBehaviour
    
     private void Update()
     {
-        if (GameManager.Instance != null)
-        {
-            if (GameManager.Instance.hasCrucifix)
+        if (SceneManager.GetActiveScene().name == "MenuPrincipal" || SceneManager.GetActiveScene().name == "MenuCielo" || SceneManager.GetActiveScene().name == "MenuEspacio") {
+            if (GameManager.Instance != null)
             {
-                Heaven.SetActive(true);
-                Lock1.SetActive(false);
-            }
-            if (GameManager.Instance.hasSpaceSuit)
-            {
-                OuterSpace.SetActive(true);
-                Lock2.SetActive(false);
-            }
-            if (GameManager.Instance.hasSpacecraft)
-            {
-                Vengeance.SetActive(true);
-                Lock3.SetActive(false);
+                if (GameManager.Instance.hasCrucifix)
+                {
+                    Heaven.SetActive(true);
+                    Lock1.SetActive(false);
+                }
+                if (GameManager.Instance.hasSpaceSuit)
+                {
+                    OuterSpace.SetActive(true);
+                    Lock2.SetActive(false);
+                }
+                if (GameManager.Instance.hasSpacecraft)
+                {
+                    Vengeance.SetActive(true);
+                    Lock3.SetActive(false);
+                }
             }
         }
     }

@@ -20,7 +20,7 @@ public class Enemies : MonoBehaviour
     private bool hasStartedShooting = false;
     public GameObject[] powerUpPrefabs; // Lista de prefabs de power-ups
     [Range(0, 1)]
-    public float powerUpDropChance = 0.2f; // Probabilidad de soltar un power-up (0.2 = 20%)
+    public float powerUpDropChance = 0.3f; // Probabilidad de soltar un power-up (0.2 = 20%)
 
 
     void Start()
