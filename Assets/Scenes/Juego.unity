@@ -8301,8 +8301,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e2f81b3859ae243bf4c89b297b1be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntuacion: {fileID: 226721231}
-  configuracionFrutas: []
+  ui: {fileID: 226721231}
+  configuracionFrutas:
+  - {fileID: 11400000, guid: ef63bbbf26862cb4dae3353406d08359, type: 2}
+  - {fileID: 11400000, guid: 4a8bb7e4a91b9674d9f1eacb67419778, type: 2}
+  - {fileID: 11400000, guid: 49fd8d1bf35eb8b4cbc46a634e7a7548, type: 2}
+  - {fileID: 11400000, guid: 862736f76cc49a842bbebf38489d2ba9, type: 2}
+  - {fileID: 11400000, guid: a579029666f8a064d88514472bdb5e51, type: 2}
+  - {fileID: 11400000, guid: ab9530a974b128040bdc311e2afb9963, type: 2}
+  - {fileID: 11400000, guid: b58b090969d2ad14d8439063906c461a, type: 2}
+  - {fileID: 11400000, guid: 7784e416e10b2f242813d6c7d59319eb, type: 2}
   Cesta: {fileID: 511285402}
   Recolecta: {fileID: 8300000, guid: d1983d5d7be9ba446b0f0a0788bc44f4, type: 3}
   MoneyGain: {fileID: 8300000, guid: 1447e020df86c4746a70acbe484073fa, type: 3}
@@ -16117,10 +16125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currTime: 0
-  spawnTime: 20
+  spawnTime: 15
   vaca: {fileID: 1351136654}
   time: 0
-  disappearTime: 7.5
+  disappearTime: 5
   cooldownVaca: {fileID: 1201428420}
   contVaca: {fileID: 741184618}
   VacaAudio: {fileID: 458808128}

@@ -9,7 +9,7 @@ using static UnityEditor.PlayerSettings;
 
 public class CestaAnimal : MonoBehaviour
 {
-    public UI puntuacion;
+    public UI ui;
     public List<ConfiguracionFruta> configuracionFrutas;
     public GameObject Cesta;
     public AudioClip Recolecta;
@@ -34,7 +34,7 @@ public class CestaAnimal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy cesta = FindObjectOfType<Destroy>();
+        Destroy c = FindObjectOfType<Destroy>();
 
         if (collision.gameObject.CompareTag("Fruta"))
         {
@@ -44,15 +44,15 @@ public class CestaAnimal : MonoBehaviour
             {
                 ConfiguracionFruta configuracionFruta = configuracionFrutas[configuracionFrutaID];
 
-                puntuacion.punt += (int)configuracionFruta.gold;
+                ui.punt += (int)configuracionFruta.gold;
 
-                cesta.comboGold += (int)configuracionFruta.gold;
+                c.comboGold += (int)configuracionFruta.gold;
 
                 RecolectarFruta(configuracionFrutaID);
                 RecolectarFrutaDefeat(configuracionFrutaID);
 
-                cesta.comboCount++;
-                if (cesta.comboCount >= 2)
+                c.comboCount++;
+                if (c.comboCount >= 2)
                 {
                     comboText.gameObject.SetActive(true);
                     comboTextObject.transform.localPosition = new Vector3(Random.Range(0, 800), Random.Range(-300, 0), 10);
@@ -80,7 +80,6 @@ public class CestaAnimal : MonoBehaviour
             recolecta.PlayOneShot(Recolecta);
             Destroy(collision.gameObject);
         }
-       
     }
     
     public int GetConfiguracionFruta(GameObject fruta)
@@ -95,17 +94,17 @@ public class CestaAnimal : MonoBehaviour
 
     public void RecolectarFruta(int idFruta)
     {
-        if (idFruta >= 0 && idFruta < puntuacion.collectedFrutas.Count)
+        if (idFruta >= 0 && idFruta < ui.collectedFrutas.Count)
         {
-            puntuacion.collectedFrutas[idFruta]++;
+            ui.collectedFrutas[idFruta]++;
         }
     }
 
     public void RecolectarFrutaDefeat(int idFruta)
     {
-        if (idFruta >= 0 && idFruta < puntuacion.collectedFrutasDefeat.Count)
+        if (idFruta >= 0 && idFruta < ui.collectedFrutasDefeat.Count)
         {
-            puntuacion.collectedFrutasDefeat[idFruta]++;
+            ui.collectedFrutasDefeat[idFruta]++;
         }
     }
     

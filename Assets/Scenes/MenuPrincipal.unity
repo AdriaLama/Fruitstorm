@@ -951,7 +951,7 @@ MonoBehaviour:
   costBasketRed: {fileID: 684545480}
   levelBasket: 1
   levelBasketTMP: {fileID: 365475816}
-  costHealth: 5000
+  costHealth: 1000
   costHealthTMP: {fileID: 1292097588}
   costHealthRed: {fileID: 1460759427}
   levelHealth: 1

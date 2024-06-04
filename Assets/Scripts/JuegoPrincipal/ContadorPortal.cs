@@ -65,9 +65,9 @@ public class ContadorPortal : MonoBehaviour
         Vector3 playerPosition = portal.transform.position;
         playerPosition.y += 1.0f;
         player.transform.position = playerPosition;
-        yield return new WaitForSeconds(0.5f);
         teleport.SetActive(false);
         portal2.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
         hasTP = true;
     }
 

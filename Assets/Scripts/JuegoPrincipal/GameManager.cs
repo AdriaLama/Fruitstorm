@@ -39,5 +39,11 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
-   
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            gold += 1000000;
+        }
+    }
 }
