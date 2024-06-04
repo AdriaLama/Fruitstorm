@@ -2433,7 +2433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currTime: 0
-  spawnTime: 20
+  spawnTime: 15
   crucifix: {fileID: 1627722188}
   time: 0
   disappearTime: 5
@@ -6829,7 +6829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0.040000003}
-  m_AnchoredPosition: {x: 23.700012, y: -11.599915}
+  m_AnchoredPosition: {x: 23.700012, y: -11.59993}
   m_SizeDelta: {x: 18.096008, y: -0.9510002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462754885

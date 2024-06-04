@@ -52,7 +52,7 @@ public class ContadorCrucifix : MonoBehaviour
 
     public IEnumerator countdownCrucifix()
     {
-        int countdown = 20;
+        int countdown = 15;
         contCrucifix.gameObject.SetActive(true);
 
         while (countdown > 0)
