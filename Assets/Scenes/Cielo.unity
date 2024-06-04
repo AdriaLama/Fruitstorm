@@ -3794,7 +3794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   tileableZone: 22
-  startingZone: 0
+  startingZone: -0.125
 --- !u!212 &264788470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7004,7 +7004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0.040000003}
-  m_AnchoredPosition: {x: 23.700012, y: -11.59993}
+  m_AnchoredPosition: {x: 23.700012, y: -11.599915}
   m_SizeDelta: {x: 18.096008, y: -0.9510002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462754885
@@ -7615,7 +7615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.75
   tileableZone: 22
-  startingZone: 0
+  startingZone: -0.125
 --- !u!212 &552644490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11773,7 +11773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   tileableZone: 22
-  startingZone: 0
+  startingZone: -0.125
 --- !u!212 &871719541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34171,7 +34171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   tileableZone: 22
-  startingZone: 0
+  startingZone: -0.125
 --- !u!212 &2074797143
 SpriteRenderer:
   m_ObjectHideFlags: 0

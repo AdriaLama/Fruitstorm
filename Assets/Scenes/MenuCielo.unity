@@ -2478,7 +2478,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531725}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: BuySpaceSuit
         m_Mode: 1
@@ -3357,7 +3357,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531725}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
         m_MethodName: BuySpacecraft
         m_Mode: 1
@@ -4764,9 +4764,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531724}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: BuyCrucifix
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8417,9 +8417,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531724}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: BuySpaceSuit
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9824,9 +9824,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531724}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: BuySpacecraft
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11480,9 +11480,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531724}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: BuyCrucifix
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13536,9 +13536,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531724}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: BuySpacecraft
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13768,9 +13768,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531724}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: BuySpaceSuit
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15044,9 +15044,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2127531724}
         m_TargetAssemblyTypeName: UITienda, Assembly-CSharp
-        m_MethodName: BuyCrucifix
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
