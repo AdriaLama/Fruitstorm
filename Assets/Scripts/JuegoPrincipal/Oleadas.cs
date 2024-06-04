@@ -79,10 +79,7 @@ public class Oleadas : MonoBehaviour
             Destroy(temp, 0.15f);
             remainingEnemiesInThirdWave--;
             DropPowerUp(enemy);
-            if (enemyTag == "Boss")
-            {
 
-            }
         }
     }
     private void DropPowerUp(GameObject enemy)
