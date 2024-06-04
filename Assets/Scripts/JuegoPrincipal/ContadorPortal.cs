@@ -7,7 +7,11 @@ public class ContadorPortal : MonoBehaviour
 {
     public float currTime = 0;
     public float spawnTime = 1f;
+    public bool setPortal = false;
+    public bool hasTP = false;
     public GameObject portal;
+    public GameObject portal2;
+    public GameObject teleport;
     public GameObject player;
     public GameObject cooldownPortal;
     public GameObject cooldownPortalActivo;
@@ -21,31 +25,55 @@ public class ContadorPortal : MonoBehaviour
     {
         currTime += Time.deltaTime;
 
-        if (currTime > spawnTime && Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            portal.transform.position = player.transform.position;
+            if (currTime > spawnTime && !setPortal)
+            {
+                setPortal = true;
+                Vector3 position = player.transform.position;
+                position.y -= 1.0f;
+                portal.transform.position = position;
+            }
+            else if (setPortal)
+            {
+                setPortal = false;
+                StartCoroutine(Teleport());
+            }
+        }
+
+        if (setPortal)
+        {
             portal.SetActive(true);
             cooldownPortal.SetActive(false);
             cooldownPortalActivo.SetActive(true);
-          
         }
-
-        if (portal.activeSelf && Input.GetKey(KeyCode.E))
+        if (hasTP)
         {
-            player.transform.position = portal.transform.position;
             cooldownPortalActivo.SetActive(false);
             portal.SetActive(false);
             currTime = 0;
             StartCoroutine(countdownPortal());
-
-
+            hasTP = false;
         }
+    }
 
+    public IEnumerator Teleport()
+    {
+        teleport.SetActive(true);
+        portal2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        Vector3 playerPosition = portal.transform.position;
+        playerPosition.y += 1.0f;
+        player.transform.position = playerPosition;
+        yield return new WaitForSeconds(0.5f);
+        teleport.SetActive(false);
+        portal2.SetActive(false);
+        hasTP = true;
     }
 
     public IEnumerator countdownPortal()
     {
-        int countdown = 25;
+        int countdown = 10;
         contPortal.gameObject.SetActive(true);
 
         while (countdown > 0)
@@ -62,6 +90,4 @@ public class ContadorPortal : MonoBehaviour
             contPortal.gameObject.SetActive(false);
         }
     }
-
-
 }
