@@ -9675,7 +9675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.22322533, y: 0.13822696}
   m_AnchorMax: {x: 0.47211266, y: 0.19858867}
-  m_AnchoredPosition: {x: -3.9999695, y: 31.999954}
+  m_AnchoredPosition: {x: -3.9999695, y: 31.999893}
   m_SizeDelta: {x: 0.8463993, y: 0.30001068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816596875
@@ -10158,7 +10158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.22322533, y: 0.13822696}
   m_AnchorMax: {x: 0.47211266, y: 0.19858867}
-  m_AnchoredPosition: {x: -3.9999695, y: 31.999954}
+  m_AnchoredPosition: {x: -3.9999695, y: 31.999893}
   m_SizeDelta: {x: 0.8463993, y: 0.30001068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839012013
@@ -18795,8 +18795,8 @@ MonoBehaviour:
   setPortal: 0
   hasTP: 0
   portal: {fileID: 1078242525}
-  portal2: {fileID: 0}
-  teleport: {fileID: 0}
+  portal2: {fileID: 1759754137}
+  teleport: {fileID: 775589404}
   player: {fileID: 1011935690}
   cooldownPortal: {fileID: 1725256703}
   cooldownPortalActivo: {fileID: 770538832}
