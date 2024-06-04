@@ -10,6 +10,7 @@ public class DisparoNave : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip BalaNave;
     private float seconds;
+    public float firerate = 0.25f;
     private bool isShooting;
     public Oleadas oleadas; // Referencia al script de Oleadas
 
@@ -32,7 +33,7 @@ public class DisparoNave : MonoBehaviour
         GameObject temp = Instantiate(bala, transform.position, transform.rotation);
         Destroy(temp, 1);
         AudioSource.PlayClipAtPoint(BalaNave, transform.position);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(firerate);
         isShooting = false;
     }
 
@@ -44,6 +45,7 @@ public class DisparoNave : MonoBehaviour
         {
             oleadas.EnemyDestroyed(collision.gameObject);
             Destroy(collision.gameObject);
+
         }
     }
 }

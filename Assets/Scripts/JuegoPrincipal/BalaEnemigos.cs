@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BalaEnemies : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class BalaEnemies : MonoBehaviour
     {
         rigidB = GetComponent<Rigidbody2D>();
         rigidB.AddForce(-transform.up * bulletSpeed);
+
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         UISpace punt = FindObjectOfType<UISpace>();
@@ -28,4 +31,6 @@ public class BalaEnemies : MonoBehaviour
             }
         }
     }
+
+
 }

@@ -9,6 +9,10 @@ public class Oleadas : MonoBehaviour
     public GameObject SegundaOleada;
     public GameObject UltimaOleada;
 
+    public GameObject AnimBomba;
+    public AudioSource destroy;
+
+
     private int remainingEnemiesInFirstWave;
     private int remainingEnemiesInSecondWave;
     private int remainingEnemiesInThirdWave;
@@ -52,21 +56,33 @@ public class Oleadas : MonoBehaviour
 
     public void EnemyDestroyed(GameObject enemy)
     {
+        GameObject temp = Instantiate(AnimBomba, new Vector2(enemy.transform.position.x, enemy.transform.position.y), enemy.transform.rotation);
+
         string enemyTag = enemy.tag;
         if (enemyTag == "Enemy" || enemyTag == "MiniBoss")
         {
+            destroy.Play();
+            Destroy(temp, 0.15f);
             remainingEnemiesInFirstWave--;
             DropPowerUp(enemy); 
         }
         else if (enemyTag == "Enemy2" || enemyTag == "MiniBoss2")
         {
+            destroy.Play();
+            Destroy(temp, 0.15f);
             remainingEnemiesInSecondWave--;
             DropPowerUp(enemy);
         }
         else if(enemyTag == "MiniBoss2" || enemyTag == "Boss")
         {
+            destroy.Play();
+            Destroy(temp, 0.15f);
             remainingEnemiesInThirdWave--;
             DropPowerUp(enemy);
+            if (enemyTag == "Boss")
+            {
+
+            }
         }
     }
     private void DropPowerUp(GameObject enemy)
