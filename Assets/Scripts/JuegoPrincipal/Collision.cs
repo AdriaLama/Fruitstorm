@@ -55,7 +55,7 @@ public class Collision : MonoBehaviour
             comb.comboGold = 0;
             comb.comboText.gameObject.SetActive(false);
             recolecta.pitch = 1f;
-            Destroy(collision.gameObject, 2);
+            
             
         }
         if (collision.gameObject.CompareTag("Bomba"))
@@ -74,6 +74,26 @@ public class Collision : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Fruta"))
+        {
+            
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+
+           
+            if (rb.velocity.magnitude == 0)
+            {
+                StartCoroutine(DestruirFruta(collision.gameObject));
+            }
+            else
+            {
+                
+                StopCoroutine(DestruirFruta(collision.gameObject));
+            }
+        }
+    }
+
     public IEnumerator QuitarDinero(float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -89,5 +109,17 @@ public class Collision : MonoBehaviour
             return fruit.id;
         }
         return -1;
+    }
+
+
+    public IEnumerator DestruirFruta(GameObject fruta)
+    {
+        yield return new WaitForSeconds(1f); 
+
+        if (fruta != null)
+        {
+            
+            Destroy(fruta);
+        }
     }
 }

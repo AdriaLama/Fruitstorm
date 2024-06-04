@@ -15,6 +15,7 @@ public class ContadorVaca : MonoBehaviour
     public float disappearTime;
     public GameObject cooldownVaca;
     public TMP_Text contVaca;
+    public AudioSource VacaAudio;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class ContadorVaca : MonoBehaviour
         {
             currTime = 0;
             vaca.SetActive(true);
+            VacaAudio.Play();
             StartCoroutine(countdownVaca());
             
         }

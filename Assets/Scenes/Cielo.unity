@@ -3349,6 +3349,11 @@ MonoBehaviour:
   redButtonCrucifix: {fileID: 1909565052}
   redButtonSpaceSuit: {fileID: 1647454697}
   redButtonSpacecraft: {fileID: 1410765593}
+  maxSpeed: {fileID: 0}
+  maxBasket: {fileID: 0}
+  ownedCrucifix: {fileID: 0}
+  ownedSpaceSuit: {fileID: 0}
+  ownedSpacecraft: {fileID: 0}
 --- !u!1 &335860341
 GameObject:
   m_ObjectHideFlags: 0
@@ -18485,8 +18490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e064ddc5d40ceda46b5e50fb9a19fb52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "radioAtracci\xF3n": 25
-  "fuerzaAtracci\xF3n": 10
+  "radioAtracci\xF3n": 40
+  "fuerzaAtracci\xF3n": 0
   velocidadMaxima: 10
   Crucifijo: {fileID: 1627722188}
 --- !u!212 &1627722191

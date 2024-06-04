@@ -8,13 +8,12 @@ public class Crucifix : MonoBehaviour
     public float fuerzaAtracción;
     public float velocidadMaxima;
     public GameObject Crucifijo;
+    private bool atrayendo = true;
 
-
-    void Update()
+    void FixedUpdate()
     {
         if (Crucifijo.activeSelf)
         {
-
             Collider2D[] Frutas = Physics2D.OverlapCircleAll(transform.position, radioAtracción);
             foreach (Collider2D objeto in Frutas)
             {
@@ -23,26 +22,42 @@ public class Crucifix : MonoBehaviour
                     Rigidbody2D rb = objeto.GetComponent<Rigidbody2D>();
                     if (rb != null)
                     {
-                        Vector2 dirección = transform.position - objeto.transform.position;
-                        float distancia = dirección.magnitude;
-
-                        float fuerzaModificada = fuerzaAtracción * Mathf.Clamp(distancia / radioAtracción, 0, 1);
-
-                      
-                        Vector2 fuerzaAplicada = dirección.normalized * fuerzaModificada;
-                        if (rb.velocity.magnitude < velocidadMaxima)
+                        if (atrayendo)
                         {
-                            rb.AddForce(fuerzaAplicada);
+                          
+                            Vector2 dirección = transform.position - objeto.transform.position;
+                            float distancia = dirección.magnitude;
+                            if (distancia <= radioAtracción)
+                            {
+                               
+                                Vector2 velocidadDeseada = dirección.normalized * velocidadMaxima;
+
+                              
+                                Vector2 fuerzaNecesaria = (velocidadDeseada - rb.velocity) * rb.mass / Time.fixedDeltaTime;
+
+                                
+                                rb.AddForce(fuerzaNecesaria);
+                            }
                         }
-
-                        if (distancia < 0.1f)
+                        else
                         {
-                            rb.velocity = Vector2.zero;
-                            rb.angularVelocity = 0f;
+
+                            rb.gravityScale = 1f;
                         }
                     }
                 }
             }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Fruta"))
+        {
+            atrayendo = false;
+        }
+    }
+
+   
 }
