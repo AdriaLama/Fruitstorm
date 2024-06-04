@@ -151,6 +151,7 @@ public class UITienda : MonoBehaviour
         if (levelSpeed >= 5)
         {
             maxSpeed.SetActive(true);
+            GameManager.Instance.costSpeed = 0;
         }
         else
         {
@@ -159,6 +160,7 @@ public class UITienda : MonoBehaviour
         if (levelBasket >= 5)
         {
             maxBasket.SetActive(true);
+            GameManager.Instance.costBasket = 0;
         }
         else
         {

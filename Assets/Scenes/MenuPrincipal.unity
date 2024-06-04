@@ -3676,7 +3676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -585199377, guid: 34446fc50af99b04db0793377e9e8f93, type: 3}
+  m_Sprite: {fileID: -668248982, guid: 34446fc50af99b04db0793377e9e8f93, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4120,10 +4120,10 @@ RectTransform:
   m_Father: {fileID: 1823024105}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.124861725, y: 0.48920155}
-  m_AnchorMax: {x: 0.8524582, y: 0.66800004}
-  m_AnchoredPosition: {x: 5.4420166, y: 0}
-  m_SizeDelta: {x: 5.604, y: -0.5439987}
+  m_AnchorMin: {x: 0.124861725, y: 0.46153757}
+  m_AnchorMax: {x: 0.8627154, y: 0.63681114}
+  m_AnchoredPosition: {x: 1.4420166, y: 0.14399719}
+  m_SizeDelta: {x: -2.396, y: 2.4560013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470539136
 MonoBehaviour:
@@ -8780,8 +8780,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470085085}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 391936400}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: Revenge
         m_Mode: 1
         m_Arguments:
@@ -11076,8 +11076,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470085085}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 391936400}
+        m_TargetAssemblyTypeName: MenusMenu, Assembly-CSharp
         m_MethodName: GoSpace
         m_Mode: 1
         m_Arguments:
@@ -11744,10 +11744,10 @@ RectTransform:
   m_Father: {fileID: 1823024105}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.124861725, y: 0.31042558}
-  m_AnchorMax: {x: 0.8524582, y: 0.48920155}
-  m_AnchoredPosition: {x: 2.092041, y: 0}
-  m_SizeDelta: {x: 5.604, y: -0.54499817}
+  m_AnchorMin: {x: 0.124861725, y: 0.25758052}
+  m_AnchorMax: {x: 0.8627154, y: 0.43739167}
+  m_AnchoredPosition: {x: -1.907959, y: -0.3020172}
+  m_SizeDelta: {x: -2.396, y: -1.5449982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539299716
 MonoBehaviour:

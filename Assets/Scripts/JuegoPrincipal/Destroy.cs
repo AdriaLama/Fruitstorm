@@ -236,8 +236,7 @@ public class Destroy : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 PjSpeed.SetActive(true);
-                MovimientoPersonaje mp = FindObjectOfType<MovimientoPersonaje>();
-                mp.speed += 5;
+                GameManager.Instance.speed += 5;
                 StartCoroutine(DesactivarSpeed(5f));
                 StartCoroutine(QuitarEvento(2f));
             }
@@ -259,9 +258,7 @@ public class Destroy : MonoBehaviour
 
     public IEnumerator DesactivarSpeed(float seconds) {
         yield return new WaitForSeconds(seconds);
-        MovimientoPersonaje mp = FindObjectOfType<MovimientoPersonaje>();
-        mp.speed -= 5;
-
+        GameManager.Instance.speed -= 5;
     }
     public IEnumerator DesactivarBomba(float seconds)
     {
