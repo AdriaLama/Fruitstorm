@@ -166,6 +166,30 @@ public class UITienda : MonoBehaviour
         {
             maxBasket.SetActive(false);
         }
+        if (hasCrucifix)
+        {
+            ownedCrucifix.SetActive(true);
+        }
+        else
+        {
+            ownedCrucifix.SetActive(false);
+        }
+        if (hasSpaceSuit)
+        {
+            ownedSpaceSuit.SetActive(true);
+        }
+        else
+        {
+            ownedSpaceSuit.SetActive(false);
+        }
+        if (hasSpacecraft)
+        {
+            ownedSpacecraft.SetActive(true);
+        }
+        else
+        {
+            ownedSpacecraft.SetActive(false);
+        }
     }
 
     public void LevelUpSpeed()
