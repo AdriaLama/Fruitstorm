@@ -17,10 +17,16 @@ public class UITienda : MonoBehaviour
     public TMP_Text costBasketRed;
     public int levelBasket;
     public TMP_Text levelBasketTMP;
+    public int costHealth;
+    public TMP_Text costHealthTMP;
+    public TMP_Text costHealthRed;
+    public int levelHealth;
+    public TMP_Text levelHealthTMP;
     public float speed;
     public float scaleX;
     public float scaleY;
     public float pos;
+    public int health;
     private AudioSource audioSource;
     public AudioClip Mejoras;
     public GameObject Crucifix;
@@ -41,11 +47,13 @@ public class UITienda : MonoBehaviour
 
     public GameObject redButtonSpeed;
     public GameObject redButtonBasket;
+    public GameObject redButtonHealth;
     public GameObject redButtonCrucifix;
     public GameObject redButtonSpaceSuit;
     public GameObject redButtonSpacecraft;
     public GameObject maxSpeed;
     public GameObject maxBasket;
+    public GameObject maxHealth;
     public GameObject ownedCrucifix;
     public GameObject ownedSpaceSuit;
     public GameObject ownedSpacecraft;
@@ -84,6 +92,9 @@ public class UITienda : MonoBehaviour
         costBasketTMP.text = costBasket.ToString();
         costBasketRed.text = costBasket.ToString();
         levelBasketTMP.text = levelBasket.ToString();
+        costHealthTMP.text = costHealth.ToString();
+        costHealthRed.text = costHealth.ToString();
+        levelHealthTMP.text = levelHealth.ToString();
         goldTMP.text = gold.ToString();
         costHeavenText.text = costHeaven.ToString();
         costHeavenRed.text = costHeaven.ToString();
@@ -99,10 +110,13 @@ public class UITienda : MonoBehaviour
             levelSpeed = GameManager.Instance.levelSpeed;
             costBasket = GameManager.Instance.costBasket;
             levelBasket = GameManager.Instance.levelBasket;
+            costHealth = GameManager.Instance.costHealth;
+            levelHealth = GameManager.Instance.levelHealth;
             speed = GameManager.Instance.speed;
             scaleX = GameManager.Instance.basketScaleX;
             scaleY = GameManager.Instance.basketScaleY;
             pos = GameManager.Instance.basketPosY;
+            health = GameManager.Instance.health;
             hasCrucifix = GameManager.Instance.hasCrucifix;
             hasSpaceSuit = GameManager.Instance.hasSpaceSuit;
             hasSpacecraft = GameManager.Instance.hasSpacecraft;
@@ -123,6 +137,14 @@ public class UITienda : MonoBehaviour
         else
         {
             redButtonBasket.SetActive(true);
+        }
+        if (gold >= costHealth)
+        {
+            redButtonHealth.SetActive(false);
+        }
+        else
+        {
+            redButtonHealth.SetActive(true);
         }
         if (gold >= costHeaven)
         {
@@ -165,6 +187,15 @@ public class UITienda : MonoBehaviour
         else
         {
             maxBasket.SetActive(false);
+        }
+        if (levelHealth >= 11)
+        {
+            maxHealth.SetActive(true);
+            GameManager.Instance.costHealth = 0;
+        }
+        else
+        {
+            maxHealth.SetActive(false);
         }
         if (hasCrucifix)
         {
@@ -215,6 +246,18 @@ public class UITienda : MonoBehaviour
             GameManager.Instance.levelBasket++;
             GameManager.Instance.gold -= costBasket;
             GameManager.Instance.costBasket *= 5;
+        }
+    }
+
+    public void LevelUpHealth()
+    {
+        if (gold >= costHealth && levelHealth < 11)
+        {
+            audioSource.PlayOneShot(Mejoras);
+            GameManager.Instance.health += 1;
+            GameManager.Instance.levelHealth++;
+            GameManager.Instance.gold -= costHealth;
+            GameManager.Instance.costHealth *= 2;
         }
     }
 

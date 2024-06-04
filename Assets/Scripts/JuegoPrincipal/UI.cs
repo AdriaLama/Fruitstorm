@@ -53,6 +53,11 @@ public class UI : MonoBehaviour
         }
 
         StartCoroutine(StartCountdown());
+
+        if (GameManager.Instance != null)
+        {
+            life = GameManager.Instance.health;
+        }
     }
 
     void Update()
@@ -60,6 +65,7 @@ public class UI : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         MenusGame menu = FindObjectOfType<MenusGame>();
 
+      
         if (currentTime <= 0 && !menu.victory.activeSelf)
         {
             GameManager.Instance.gold += punt;

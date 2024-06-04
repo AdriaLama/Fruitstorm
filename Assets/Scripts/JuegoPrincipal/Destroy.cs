@@ -48,6 +48,7 @@ public class Destroy : MonoBehaviour
     public float scaleX;
     public float scaleY;
     public float posY;
+    public int health;
 
     void Start()
     {
@@ -56,6 +57,7 @@ public class Destroy : MonoBehaviour
             scaleX = GameManager.Instance.basketScaleX;
             scaleY = GameManager.Instance.basketScaleY;
             posY = GameManager.Instance.basketPosY;
+            health = GameManager.Instance.health;
         }
         r = Sangre.color.r;
         g = Sangre.color.g;

@@ -14594,7 +14594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1901809639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15994,10 +15994,16 @@ MonoBehaviour:
   costBasketRed: {fileID: 1164660520}
   levelBasket: 1
   levelBasketTMP: {fileID: 339574026}
+  costHealth: 0
+  costHealthTMP: {fileID: 0}
+  costHealthRed: {fileID: 0}
+  levelHealth: 0
+  levelHealthTMP: {fileID: 0}
   speed: 0
   scaleX: 0
   scaleY: 0
   pos: 0
+  health: 0
   Mejoras: {fileID: 8300000, guid: baaf9cf05b838be4d804234ccf370d5e, type: 3}
   Crucifix: {fileID: 1975028917}
   SpaceSuit: {fileID: 1275848833}
@@ -16016,11 +16022,13 @@ MonoBehaviour:
   hasSpacecraft: 0
   redButtonSpeed: {fileID: 5072015}
   redButtonBasket: {fileID: 813817608}
+  redButtonHealth: {fileID: 0}
   redButtonCrucifix: {fileID: 1395614213}
   redButtonSpaceSuit: {fileID: 1597009481}
   redButtonSpacecraft: {fileID: 1591591737}
   maxSpeed: {fileID: 8799545}
   maxBasket: {fileID: 1627227722}
+  maxHealth: {fileID: 0}
   ownedCrucifix: {fileID: 642899679}
   ownedSpaceSuit: {fileID: 1132384846}
   ownedSpacecraft: {fileID: 1286060188}

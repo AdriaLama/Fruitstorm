@@ -15,11 +15,13 @@ public class GameManager : MonoBehaviour
     public int levelSpeed;
     public int costBasket;
     public int levelBasket;
+    public int costHealth;
+    public int levelHealth;
     public float speed;
     public float basketScaleX;
     public float basketScaleY;
     public float basketPosY;
-
+    public int health;
     private void Awake()
     {
         if (Instance == null)
