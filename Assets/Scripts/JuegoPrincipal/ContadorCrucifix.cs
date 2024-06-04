@@ -15,6 +15,7 @@ public class ContadorCrucifix : MonoBehaviour
     public float disappearTime;
     public GameObject cooldownCrucifix;
     public TMP_Text contCrucifix;
+    public AudioSource crucifixAudio;
 
     private void Start()
     {
@@ -28,8 +29,9 @@ public class ContadorCrucifix : MonoBehaviour
         {
             currTime = 0;
             crucifix.SetActive(true);
+            crucifix.transform.position = new Vector3(Random.Range(-5.75f, 9.75f), Random.Range(3.7f, 6f));
+            crucifixAudio.Play();
             StartCoroutine(countdownCrucifix());
-            crucifix.transform.position = new Vector3(Random.Range(-6.4f, 11.5f), Random.Range(3.7f, 6f));
 
         }
 
@@ -54,7 +56,7 @@ public class ContadorCrucifix : MonoBehaviour
 
     public IEnumerator countdownCrucifix()
     {
-        int countdown = 10;
+        int countdown = 20;
         contCrucifix.gameObject.SetActive(true);
 
         while (countdown > 0)

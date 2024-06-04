@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Crucifix : MonoBehaviour
@@ -9,6 +7,13 @@ public class Crucifix : MonoBehaviour
     public float velocidadMaxima;
     public GameObject Crucifijo;
     private bool atrayendo = true;
+    private Rigidbody2D[] frutasRBs;
+
+    void Start()
+    {
+        // Obtener los Rigidbody de todas las frutas
+        frutasRBs = GameObject.FindObjectsOfType<Rigidbody2D>();
+    }
 
     void FixedUpdate()
     {
@@ -22,27 +27,18 @@ public class Crucifix : MonoBehaviour
                     Rigidbody2D rb = objeto.GetComponent<Rigidbody2D>();
                     if (rb != null)
                     {
-                        if (atrayendo)
+                        Vector2 dirección = transform.position - objeto.transform.position;
+                        float distancia = dirección.magnitude;
+                        if (distancia <= radioAtracción)
                         {
-                          
-                            Vector2 dirección = transform.position - objeto.transform.position;
-                            float distancia = dirección.magnitude;
-                            if (distancia <= radioAtracción)
-                            {
-                               
-                                Vector2 velocidadDeseada = dirección.normalized * velocidadMaxima;
+                            // Calcula la velocidad deseada hacia el objeto
+                            Vector2 velocidadDeseada = dirección.normalized * velocidadMaxima;
 
-                              
-                                Vector2 fuerzaNecesaria = (velocidadDeseada - rb.velocity) * rb.mass / Time.fixedDeltaTime;
+                            // Calcula la fuerza necesaria para alcanzar la velocidad deseada
+                            Vector2 fuerzaNecesaria = (velocidadDeseada - rb.velocity) * rb.mass / Time.fixedDeltaTime;
 
-                                
-                                rb.AddForce(fuerzaNecesaria);
-                            }
-                        }
-                        else
-                        {
-
-                            rb.gravityScale = 1f;
+                            // Aplica la fuerza necesaria
+                            rb.AddForce(fuerzaNecesaria);
                         }
                     }
                 }
@@ -52,12 +48,20 @@ public class Crucifix : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Fruta"))
         {
-            atrayendo = false;
+            Collider2D[] Frutas = Physics2D.OverlapCircleAll(transform.position, radioAtracción);
+            foreach (Collider2D objeto in Frutas)
+            {
+                Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.gravityScale = 1f;
+                }
+              
+
+            }
         }
     }
 
-   
 }
