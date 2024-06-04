@@ -8623,8 +8623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bala: {fileID: 7630763377150100793, guid: 6d6ddac3ad93b7545bcb87c218be6f9b, type: 3}
   RiflePersonaje: {fileID: 657859792}
-  Arma: {fileID: 0}
-  Disparo: {fileID: 0}
+  Arma: {fileID: 1541089326}
+  Disparo: {fileID: 8300000, guid: c19588c1135a78f4b8472acbf33c2c92, type: 3}
 --- !u!50 &657859795
 Rigidbody2D:
   serializedVersion: 4

@@ -16,6 +16,8 @@ public class ContadorPortal : MonoBehaviour
     public GameObject cooldownPortal;
     public GameObject cooldownPortalActivo;
     public TMP_Text contPortal;
+    public AudioSource portalAudio;
+    public AudioSource tpAudio;
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public class ContadorPortal : MonoBehaviour
                 Vector3 position = player.transform.position;
                 position.y -= 1.0f;
                 portal.transform.position = position;
+                portalAudio.Play();
             }
             else if (setPortal)
             {
@@ -43,6 +46,7 @@ public class ContadorPortal : MonoBehaviour
 
         if (setPortal)
         {
+            
             portal.SetActive(true);
             cooldownPortal.SetActive(false);
             cooldownPortalActivo.SetActive(true);
@@ -59,6 +63,7 @@ public class ContadorPortal : MonoBehaviour
 
     public IEnumerator Teleport()
     {
+        tpAudio.Play();
         teleport.SetActive(true);
         portal2.SetActive(true);
         yield return new WaitForSeconds(0.5f);
@@ -73,7 +78,7 @@ public class ContadorPortal : MonoBehaviour
 
     public IEnumerator countdownPortal()
     {
-        int countdown = 10;
+        int countdown = 15;
         contPortal.gameObject.SetActive(true);
 
         while (countdown > 0)

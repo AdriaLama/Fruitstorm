@@ -4138,7 +4138,7 @@ MonoBehaviour:
   Bala: {fileID: 7630763377150100793, guid: 6d6ddac3ad93b7545bcb87c218be6f9b, type: 3}
   RiflePersonaje: {fileID: 288286604}
   Arma: {fileID: 1603993894}
-  Disparo: {fileID: 8300000, guid: d632e94a66bca6c4581092715cb8f6cf, type: 3}
+  Disparo: {fileID: 8300000, guid: c19588c1135a78f4b8472acbf33c2c92, type: 3}
 --- !u!50 &288286607
 Rigidbody2D:
   serializedVersion: 4
@@ -6340,7 +6340,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 09ee9b0e23a9f914081c68c423e7e9a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
