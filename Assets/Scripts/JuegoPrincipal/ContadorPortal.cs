@@ -27,16 +27,18 @@ public class ContadorPortal : MonoBehaviour
             portal.SetActive(true);
             cooldownPortal.SetActive(false);
             cooldownPortalActivo.SetActive(true);
-            if (portal.activeSelf && Input.GetKey(KeyCode.E))
-            {
-                player.transform.position = portal.transform.position;
-                cooldownPortalActivo.SetActive(false);
-                portal.SetActive(false);
-                currTime = 0;
-                StartCoroutine(countdownPortal());
+          
+        }
+
+        if (portal.activeSelf && Input.GetKey(KeyCode.E))
+        {
+            player.transform.position = portal.transform.position;
+            cooldownPortalActivo.SetActive(false);
+            portal.SetActive(false);
+            currTime = 0;
+            StartCoroutine(countdownPortal());
 
 
-            }
         }
 
     }
